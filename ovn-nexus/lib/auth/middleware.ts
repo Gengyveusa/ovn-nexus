@@ -56,7 +56,18 @@ export async function updateSession(request: NextRequest) {
 
   // Redirect unauthenticated users to login.
   // Exact-match paths:
-  const publicPaths = ["/", "/science", "/education", "/login", "/signup", "/auth/callback", "/privacy", "/terms"];
+  const publicPaths = [
+    "/",
+    "/science",
+    "/education",
+    "/login",
+    "/signup",
+    "/auth/callback",
+    "/privacy",
+    "/terms",
+    "/sitemap.xml",
+    "/robots.txt",
+  ];
   // Prefix-match paths (e.g. /blog and /blog/[slug] should both be public):
   const publicPrefixes = ["/blog"];
   const pathname = request.nextUrl.pathname;
