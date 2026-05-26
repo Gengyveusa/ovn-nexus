@@ -1,0 +1,255 @@
+[
+  {
+    "title": "The Collapse",
+    "url": "https://www.linkedin.com/pulse/collapse-stephen-thaddeus-connelly-cwsmc",
+    "published_at": "2026-05-20",
+    "excerpt": "For decades, dentistry has described disease as invasion. Pathogens arrive. Tissue breaks down. Infection spreads. The enemy is identified, targeted, eliminated. It is a clean story. It is also biologically incomplete. The oral ecosystem does not collapse because bacteria suddenly appear. The mouth has never been sterile. Even the healthiest oral cavity contains billions of microorganisms organized into structured, metabolically active communities. Health is not the absence of microbes. Health is the successful management of ecology.",
+    "tags": [
+      "Oral Ecology",
+      "Biofilm",
+      "Dysbiosis",
+      "BIOTECH FRONTIERS"
+    ],
+    "slug": "the-collapse",
+    "series": "BIOTECH FRONTIERS"
+  },
+  {
+    "title": "The Hidden Architects",
+    "url": "https://www.linkedin.com/pulse/hidden-architects-stephen-thaddeus-connelly-kzpzc",
+    "published_at": "2026-05-13",
+    "excerpt": "Modern dentistry often focuses on what is visible: plaque, inflammation, recession, lesions, ulceration. We inspect the surface, diagnose the surface, and treat the surface. But every biological surface is an output, not an origin. What you see clinically is the final expression of a deeper conversation occurring between cell layers that continuously build, repair, and regulate the tissue above. In the oral cavity, that conversation is driven largely by two cell populations: fibroblasts in the connective tissue below, and keratinocytes in the epithelial layer above.",
+    "tags": [
+      "Oral Tissue",
+      "Fibroblasts",
+      "Keratinocytes",
+      "Oral Terrain"
+    ],
+    "slug": "the-hidden-architects",
+    "series": "BIOTECH FRONTIERS"
+  },
+  {
+    "title": "Where Biofilms Hide: Surface Topography and Oral Ecology",
+    "url": "https://www.linkedin.com/pulse/where-biofilms-hide-surface-topography-oral-ecology-connelly-x9ppc",
+    "published_at": "2026-05-06",
+    "excerpt": "The answer is often not motivation, but geography. Biofilms do not colonize the mouth randomly. They establish themselves where the physical landscape allows attachment, protection, nutrient retention, and survival. To understand persistent oral disease, clinicians must study not only microbes, but the surfaces that shelter them. For decades, dentistry has focused primarily on bacterial identification and reduction. This model remains useful, but incomplete. Microorganisms respond to terrain.",
+    "tags": [
+      "Biofilm",
+      "Oral Ecology",
+      "Surface Topography",
+      "Microbiology"
+    ],
+    "slug": "where-biofilms-hide-surface-topography-and-oral-ecology",
+    "series": "Biofilm Architecture"
+  },
+  {
+    "title": "Microscopic Surface Topography of Oral Tissues",
+    "url": "https://www.linkedin.com/pulse/microscopic-surface-topography-oral-tissues-stephen-thaddeus-connelly-kpgfc",
+    "published_at": "2026-04-29",
+    "excerpt": "Whether Louis Pasteur truly said these words is uncertain, yet the principle captures an emerging truth in oral biology. Microorganisms do not colonize empty space. They colonize landscapes. Every attachment event, every microbial community, and every inflammatory shift begins with the surface beneath it. While dentistry has traditionally emphasized bacteria, the more fundamental determinant is often the terrain that selects them.",
+    "tags": [
+      "Oral Tissues",
+      "Microscopy",
+      "Biofilm",
+      "Terrain"
+    ],
+    "slug": "microscopic-surface-topography-of-oral-tissues",
+    "series": "Biofilm Architecture"
+  },
+  {
+    "title": "7: The Terrain",
+    "url": "https://www.linkedin.com/pulse/terrain-stephen-thaddeus-connelly-jivbc",
+    "published_at": "2026-04-22",
+    "excerpt": "Whether or not Louis Pasteur truly said this in his final moments, the principle aligns more closely with the vision of Claude Bernard than with modern clinical practice. For over a century, oral biology has focused on microorganisms classifying them, sequencing them, and attempting to eliminate them. From Sigmund Socransky's microbial complexes to contemporary microbiome mapping, the dominant paradigm has been clear: identify the pathogen and remove it. Yet this approach has not produced lasting health.",
+    "tags": [
+      "Oral Terrain",
+      "Microbiome",
+      "Periodontology",
+      "Enamel",
+      "Pellicle"
+    ],
+    "slug": "7-the-terrain",
+    "series": "Oral Biofilm Society Series"
+  },
+  {
+    "title": "6: The Architect's Hand",
+    "url": "https://www.linkedin.com/pulse/6-architects-hand-stephen-thaddeus-connelly-403sc",
+    "published_at": "2026-04-15",
+    "excerpt": "Over the past few days, you've seen how network structure shapes behavior. You've learned that cooperation, defection, cascades, and influence are not properties of individuals they are emergent outcomes of topology and interaction. But there's a deeper layer. You are not just a participant in these systems. You are the one designing them. This is the domain of mechanism design often called 'reverse game theory.' Instead of asking what will rational agents do under fixed rules, it asks a more powerful question.",
+    "tags": [
+      "Network Science",
+      "Mechanism Design",
+      "Game Theory",
+      "Oral Biofilm"
+    ],
+    "slug": "6-the-architects-hand",
+    "series": "Oral Biofilm Society Series"
+  },
+  {
+    "title": "5: The Cooperator's Gambit",
+    "url": "https://www.linkedin.com/pulse/5-cooperators-gambit-stephen-thaddeus-connelly-fuyfe",
+    "published_at": "2026-04-09",
+    "excerpt": "You've now spent several days understanding the architecture of networks topology, hubs, communities, and centrality and the dynamics that operate on them: contagion, cascades, and thresholds. You can see what spreads, how it spreads, and where the leverage lies. But a deeper question remains: Why do agents in a network cooperate at all? This is not a philosophical curiosity. It is a mathematical problem. And the answer depends critically on the structure of the network itself.",
+    "tags": [
+      "Game Theory",
+      "Network Science",
+      "Cooperation",
+      "Oral Biofilm"
+    ],
+    "slug": "5-the-cooperators-gambit",
+    "series": "Oral Biofilm Society Series"
+  },
+  {
+    "title": "4: The Broker's Dilemma",
+    "url": "https://www.linkedin.com/pulse/essay-4-brokers-dilemma-stephen-thaddeus-connelly-jie5c",
+    "published_at": "2026-04-02",
+    "excerpt": "Here's a question that should keep you up tonight: who is more powerful the node with the most connections, or the one positioned between the most communities? Intuitively, you already know the answer. Power in networks is not just about how many connections you have, but where those connections place you within the overall structure. A node can have fewer connections yet exert far greater influence if it controls the pathways through which information, resources, or interactions must flow.",
+    "tags": [
+      "Network Science",
+      "Betweenness Centrality",
+      "Oral Biofilm",
+      "Microbiology"
+    ],
+    "slug": "4-the-brokers-dilemma",
+    "series": "Oral Biofilm Society Series"
+  },
+  {
+    "title": "3: The Map of Clans",
+    "url": "https://www.linkedin.com/pulse/3-map-clans-stephen-thaddeus-connelly-jwblc",
+    "published_at": "2026-03-25",
+    "excerpt": "Yesterday you learned that networks have topology hubs and peripherals, power laws and preferential attachment. You learned that this topology creates an asymmetry you can exploit: targeted removal of hubs shatters what random attack cannot touch. Today we learn the physics of organization. Because real networks aren't just hairballs of random connections with a few hubs thrown in. They have structure within the structure. Communities. Modules. Clans.",
+    "tags": [
+      "Network Science",
+      "Community Structure",
+      "Oral Biofilm",
+      "Microbiology"
+    ],
+    "slug": "3-the-map-of-clans",
+    "series": "Oral Biofilm Society Series"
+  },
+  {
+    "title": "2: The Bridge and the Bomb",
+    "url": "https://www.linkedin.com/pulse/2-bridge-bomb-stephen-thaddeus-connelly-yrp5c",
+    "published_at": "2026-03-19",
+    "excerpt": "You're a surgeon. You don't irradiate the whole jaw when the tumor is in one quadrant. You don't replace both condyles when only one is destroyed. Precision matters. But most of medicine and most of business still operates like carpet bombing. Broad-spectrum antibiotics. Mass marketing. Across-the-board cost cutting. Network science gives you the mathematical proof for why precision always wins in scale-free systems. And it starts with a beautiful asymmetry.",
+    "tags": [
+      "Oral Biofilm",
+      "Network Science",
+      "Biofilm Fragmentation",
+      "Periodontology"
+    ],
+    "slug": "2-the-bridge-and-the-bomb",
+    "series": "Oral Biofilm Society Series"
+  },
+  {
+    "title": "Oral Biofilm: Democracy or Aristocracy?",
+    "url": "https://www.linkedin.com/pulse/oral-biofilm-democracy-aristocracy-stephen-thaddeus-connelly-hvd1c",
+    "published_at": "2026-03-11",
+    "excerpt": "You've spent your career cutting into tissue and observing structure: bone architecture, vascular supply, nerve pathways. You think in anatomy. But anatomy is just network science that hasn't yet been formalized. Here's the shift: stop thinking about things and start thinking about connections between things. A node means nothing by itself. A bacterium floating in saliva is irrelevant. That same bacterium embedded in a biofilm \u2014 feeding three neighbors, receiving metabolites from two others, shielding an anaerobe from oxygen \u2014 is now a position in a network, and its importance is defined entirely by its connections.",
+    "tags": [
+      "Oral Biofilm",
+      "Network Science",
+      "Topology",
+      "Microbiology"
+    ],
+    "slug": "oral-biofilm-democracy-or-aristocracy",
+    "series": "Biofilm Architecture"
+  },
+  {
+    "title": "Part IV: Systemic Coupling and Attractor States",
+    "url": "https://www.linkedin.com/pulse/part-iv-systemic-coupling-attractor-states-stephen-thaddeus-connelly-ek2nc",
+    "published_at": "2026-03-04",
+    "excerpt": "Periodontal disease operates not as a simple infection, but as a highly complex, nonlinear dynamical system governed by stable attractor states and deeply integrated with whole-body physiology through systemic coupling (\u03a8). Within this framework, disease does not emerge from the linear accumulation of bacteria alone. Instead, it reflects a systemic phase transition in which local oral dysbiosis and body-wide inflammatory networks become mutually reinforcing. The periodontium is not an isolated tissue compartment; it is a regulatory node embedded within a multiscale biological network.",
+    "tags": [
+      "Systemic Health",
+      "Periodontitis",
+      "Attractor States",
+      "Complex Biology"
+    ],
+    "slug": "part-iv-systemic-coupling-and-attractor-states",
+    "series": "Information Collapse Series"
+  },
+  {
+    "title": "Part III: Immune Signaling Subversion and Information Collapse",
+    "url": "https://www.linkedin.com/pulse/part-iii-immune-signaling-subversion-information-connelly-p5gkc",
+    "published_at": "2026-02-26",
+    "excerpt": "Within the Epoch #4 framework of complexity biology, periodontal disease can be understood not simply as bacterial overgrowth, but as a breakdown in communication across an integrated host\u2013microbe network. In health, the periodontal interface functions as a low-entropy signaling ecosystem. Cytokines, chemokines, bioelectric gradients, microbial metabolites, and immune cells exchange information continuously to maintain tissue stability. In periodontitis, that coherence collapses. Signals become distorted, amplified, suppressed, or misinterpreted.",
+    "tags": [
+      "Immune Signaling",
+      "Periodontitis",
+      "Information Collapse",
+      "Complexity Biology"
+    ],
+    "slug": "part-iii-immune-signaling-subversion-and-information-collapse",
+    "series": "Information Collapse Series"
+  },
+  {
+    "title": "Part II: From Symbiosis to Dysbiosis: The Tipping Point",
+    "url": "https://www.linkedin.com/pulse/part-ii-from-symbiosis-dysbiosis-tipping-point-connelly-xb5gc",
+    "published_at": "2026-02-19",
+    "excerpt": "Within the Epoch #4 framework of complexity biology, the transition from symbiosis to dysbiosis is not a gradual accumulation of pathogenic bacteria. It is a nonlinear ecological phase transition a bifurcation event in which the oral ecosystem shifts from a stable Health Attractor to a self-reinforcing Disease Attractor. This tipping point is not driven by bacterial quantity alone, but by coordinated shifts in Terrain (T), Information flow (I), and Energy dynamics (E).",
+    "tags": [
+      "Dysbiosis",
+      "Oral Microbiome",
+      "Tipping Point",
+      "Complexity Biology"
+    ],
+    "slug": "part-ii-from-symbiosis-to-dysbiosis-the-tipping-point",
+    "series": "Information Collapse Series"
+  },
+  {
+    "title": "Part I: Biofilm as a Structured Microbial Ecosystem",
+    "url": "https://www.linkedin.com/pulse/part-i-biofilm-structured-microbial-ecosystem-connelly-j7kec",
+    "published_at": "2026-02-12",
+    "excerpt": "Within the Epoch #4 framework of complexity biology, the biofilm must be redefined. It is not merely a surface-attached bacterial cluster or protective matrix. Rather, it represents a structured, adaptive ecosystem functioning as a coordinated microbial community with emergent properties that exceed those of individual planktonic cells. In this systems-based view, the extracellular matrix constitutes the physical Terrain (T), metabolic cooperation defines the Energy (E) vector, quorum sensing forms the Information (I) network, and the collective adaptive behavior reflects emergent Dynamics (\u0394).",
+    "tags": [
+      "Biofilm",
+      "Microbial Ecosystem",
+      "Oral Microbiome",
+      "Complexity Biology"
+    ],
+    "slug": "part-i-biofilm-as-a-structured-microbial-ecosystem",
+    "series": "Information Collapse Series"
+  },
+  {
+    "title": "Part IV: Therapeutic Recalibration, Information Restoration, and the Next Epoch of Periodontal Medicine",
+    "url": "https://www.linkedin.com/pulse/part-iv-therapeutic-recalibration-information-next-epoch-connelly-cwf6c",
+    "published_at": "2026-02-05",
+    "excerpt": "The field of periodontal medicine is undergoing a profound conceptual and therapeutic transformation. Traditional linear models largely predicated on the assumption that bacterial load alone drives disease have proven insufficient to explain the persistence, recurrence, and systemic associations of periodontitis. Within the Epoch #4 framework, periodontal disease is increasingly understood as an emergent property of a complex adaptive system, governed by non-linear immune signaling, metabolic feedback loops, and potentially quantum-enabled microbial processes.",
+    "tags": [
+      "Periodontal Medicine",
+      "Therapeutic Innovation",
+      "Complexity Biology",
+      "Systemic Health"
+    ],
+    "slug": "part-iv-therapeutic-recalibration-information-restoration-and-the-next-epoch-of-periodontal-medicine",
+    "series": "Information Collapse Series"
+  },
+  {
+    "title": "Part III \u2014 Clinical Biomarkers, Diagnostic Signatures, and Systemic Phenotypes",
+    "url": "https://www.linkedin.com/pulse/part-iii-clinical-biomarkers-diagnostic-signatures-connelly-hwusf",
+    "published_at": "2026-01-29",
+    "excerpt": "As periodontitis advances beyond a localized dysbiosis of the oral microbiome, it generates a constellation of measurable clinical signatures that reflect deeper disruptions in immune signaling, metabolic regulation, and systemic communication. Within the Epoch #4 framework, periodontal disease is understood not simply as a microbial burden or an inflammatory lesion, but as a dynamic, state-dependent disorder of biological information and energy flow. Clinical biomarkers therefore function as readouts of how microbial biofilms, host immunity, and metabolic systems interact across scales.",
+    "tags": [
+      "Clinical Biomarkers",
+      "Diagnostics",
+      "Periodontitis",
+      "Systemic Health"
+    ],
+    "slug": "part-iii-clinical-biomarkers-diagnostic-signatures-and-systemic-phenotypes",
+    "series": "Information Collapse Series"
+  },
+  {
+    "title": "Part II System-Level Consequences: From Local Dysbiosis to Systemic Immune Noise",
+    "url": "https://www.linkedin.com/pulse/part-ii-system-level-consequences-from-local-systemic-connelly-pebpc",
+    "published_at": "2026-01-23",
+    "excerpt": "The information collapse observed within the periodontal pocket does not operate in isolation. While its earliest manifestations arise locally within millimeters of gingival tissue the downstream consequences radiate across the immune and metabolic landscape of the host. Periodontitis leaves a systemic immunological footprint, altering inflammatory set points, metabolic homeostasis, endothelial signaling, and communication between organ systems. In this sense, the periodontal pocket becomes both a generator and amplifier of immunological noise: a decentralized source of distorted inflammatory information that propagates beyond the oral cavity.",
+    "tags": [
+      "Systemic Immune Noise",
+      "Periodontitis",
+      "Immune System",
+      "Inflammation"
+    ],
+    "slug": "part-ii-system-level-consequences-from-local-dysbiosis-to-systemic-immune-noise",
+    "series": "Information Collapse Series"
+  }
+]

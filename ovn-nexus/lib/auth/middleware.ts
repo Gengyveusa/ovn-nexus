@@ -54,9 +54,15 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Redirect unauthenticated users to login
-  const publicPaths = ["/", "/science", "/education", "/login", "/signup", "/auth/callback"];
-  const isPublicPath = publicPaths.some((p) => request.nextUrl.pathname === p);
+  // Redirect unauthenticated users to login.
+  // Exact-match paths:
+  const publicPaths = ["/", "/science", "/education", "/login", "/signup", "/auth/callback", "/privacy", "/terms"];
+  // Prefix-match paths (e.g. /blog and /blog/[slug] should both be public):
+  const publicPrefixes = ["/blog"];
+  const pathname = request.nextUrl.pathname;
+  const isPublicPath =
+    publicPaths.some((p) => pathname === p) ||
+    publicPrefixes.some((p) => pathname === p || pathname.startsWith(p + "/"));
 
   if (!user && !isPublicPath && !request.nextUrl.pathname.startsWith("/api/")) {
     const url = request.nextUrl.clone();
@@ -66,8 +72,6 @@ export async function updateSession(request: NextRequest) {
 
   // For authenticated users, enforce research access on protected routes
   if (user) {
-    const pathname = request.nextUrl.pathname;
-
     const isResearchRoute = RESEARCH_ROUTES.some((r) => pathname.startsWith(r));
     const isAdminRoute = ADMIN_ROUTES.some((r) => pathname.startsWith(r));
 
