@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink, GraduationCap, Stethoscope, FlaskConical, Heart } from "lucide-react";
-import { AuthNavButtons } from "@/components/auth-nav-buttons";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "About — OVN Nexus",
@@ -14,47 +16,35 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* ── Header ─────────────────────────────────────────────── */}
-      <header className="border-b bg-background/95 backdrop-blur sticky top-0 z-50">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-              OVN
-            </div>
-            <span className="text-xl font-bold">Nexus</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link href="/education" className="text-muted-foreground hover:text-foreground transition-colors">Education</Link>
-            <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Bulletin</Link>
-            <Link href="/showcase" className="text-muted-foreground hover:text-foreground transition-colors">Showcase</Link>
-            <Link href="/music" className="text-muted-foreground hover:text-foreground transition-colors">Music Studio</Link>
-            <Link href="/#community" className="text-muted-foreground hover:text-foreground transition-colors">Community</Link>
-            <Link href="/about" className="text-foreground transition-colors">About</Link>
-          </nav>
-          <AuthNavButtons />
-        </div>
-      </header>
+      <SiteHeader active="about" />
 
       <main className="flex-1">
         {/* ── Hero ──────────────────────────────────────────────── */}
-        <section className="container py-16 sm:py-20">
-          <div className="mx-auto max-w-3xl">
-            <Badge variant="secondary" className="mb-4">About</Badge>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              A research platform built by a clinician, for clinicians.
-            </h1>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              OVN Nexus exists because the mouth-body connection deserves to be studied with
-              the same rigor we apply to any other part of medicine — and because the people
-              best positioned to move that science forward are the dentists, surgeons,
-              physicians, and researchers who see patients every week.
-            </p>
+        <section className="bg-aurora">
+          <div className="container py-20 sm:py-28">
+            <div className="mx-auto max-w-3xl">
+              <Reveal>
+                <Badge variant="secondary" className="mb-5">About</Badge>
+                <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl text-balance">
+                  A research platform built by a clinician, for clinicians.
+                </h1>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-balance">
+                  OVN Nexus exists because the mouth-body connection deserves to be studied with
+                  the same rigor we apply to any other part of medicine — and because the people
+                  best positioned to move that science forward are the dentists, surgeons,
+                  physicians, and researchers who see patients every week.
+                </p>
+              </Reveal>
+            </div>
           </div>
         </section>
 
         {/* ── Founder section ──────────────────────────────────── */}
-        <section className="border-t bg-muted/50 py-16">
-          <div className="container">
+        <section className="container py-16 sm:py-20">
+          <Reveal>
+          <div className="rounded-3xl bg-secondary/60 p-10 sm:p-16 shadow-soft">
             <div className="mx-auto max-w-3xl">
               <div className="mb-8">
                 <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Founder</p>
@@ -105,7 +95,7 @@ export default function AboutPage() {
                   { icon: FlaskConical, label: "UCSF / SFVAMC", sub: "Academic and VA clinical affiliations" },
                   { icon: Heart, label: "Gengyve USA · Boutique Venture Partners", sub: "Founder / Co-founder" },
                 ].map((c) => (
-                  <div key={c.label} className="flex items-start gap-3 rounded-lg border bg-card p-4">
+                  <div key={c.label} className="flex items-start gap-3 rounded-2xl border bg-card p-5 shadow-soft">
                     <c.icon className="h-5 w-5 mt-0.5 text-primary shrink-0" />
                     <div>
                       <div className="font-semibold text-sm">{c.label}</div>
@@ -116,6 +106,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+          </Reveal>
         </section>
 
         {/* ── Why this platform ─────────────────────────────── */}
@@ -152,8 +143,9 @@ export default function AboutPage() {
         </section>
 
         {/* ── Gengyve CTA ─────────────────────────────────────── */}
-        <section className="border-t bg-primary/5 py-16">
-          <div className="container">
+        <section className="container py-16 sm:py-20">
+          <Reveal>
+          <div className="rounded-3xl bg-primary/5 border border-primary/10 p-10 sm:p-16">
             <div className="mx-auto max-w-3xl">
               <Badge className="mb-4">A small ask</Badge>
               <h2 className="text-3xl font-bold">If this work has been useful, take a look at Gengyve.</h2>
@@ -202,6 +194,7 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+          </Reveal>
         </section>
 
         {/* ── Contact ─────────────────────────────────────────── */}
@@ -225,36 +218,7 @@ export default function AboutPage() {
         </section>
       </main>
 
-      {/* ── Footer ──────────────────────────────────────────────── */}
-      <footer className="border-t bg-muted/50 py-10">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-                OVN
-              </div>
-              <div>
-                <div className="font-bold text-sm">OVN Nexus</div>
-                <div className="text-xs text-muted-foreground">Oral-Vascular-Neural Research Network</div>
-              </div>
-            </Link>
-            <div className="text-center text-sm text-muted-foreground">
-              <p className="font-medium">S. Thaddeus Connelly, DDS, MD, PhD, FACS</p>
-              <p>UCSF / SFVAMC / Gengyve USA</p>
-            </div>
-            <div className="flex items-center gap-4 text-sm">
-              <Link href="/about" className="text-foreground">About</Link>
-              <Link href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy</Link>
-              <Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms</Link>
-            </div>
-          </div>
-          <div className="mt-8 border-t pt-6 text-center text-xs text-muted-foreground">
-            Content on this platform is for professional education. It does not constitute medical
-            advice and does not establish a causal relationship between periodontal disease and any
-            systemic condition.
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: { "2xl": "1400px" },
+      padding: "1.5rem",
+      screens: { "2xl": "1280px" },
     },
     extend: {
       colors: {
@@ -47,8 +47,31 @@ const config: Config = {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
+      },
+      fontFamily: {
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "SF Pro Display",
+          "SF Pro Text",
+          "Inter",
+          "Segoe UI",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+      },
+      fontSize: {
+        // Apple-ish display sizing for hero headlines
+        "display-sm": ["2.5rem", { lineHeight: "1.08", letterSpacing: "-0.03em" }],
+        "display": ["3.5rem", { lineHeight: "1.05", letterSpacing: "-0.035em" }],
+        "display-lg": ["4.5rem", { lineHeight: "1.02", letterSpacing: "-0.04em" }],
+      },
+      boxShadow: {
+        soft: "0 1px 2px rgba(15,15,20,0.04), 0 8px 24px rgba(15,15,20,0.06)",
+        lift: "0 2px 4px rgba(15,15,20,0.06), 0 16px 40px rgba(15,15,20,0.10)",
       },
     },
   },

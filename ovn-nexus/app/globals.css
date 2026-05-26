@@ -2,58 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────────────────────────
+   Design tokens — Apple-esque polish
+   • Off-white #fbfbfd page background (light), near-black foreground
+   • Desaturated purple primary (still recognizable, more refined)
+   • Tighter heading tracking, larger radii, hairline borders
+   ───────────────────────────────────────────────────────────────── */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 20% 99%;          /* #fbfbfd */
+    --foreground: 222 30% 8%;            /* near-black, slight blue */
+
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 30% 8%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 262.1 83.3% 57.8%;
-    --radius: 0.5rem;
+    --popover-foreground: 222 30% 8%;
+
+    /* Desaturated purple — recognizable, less candy */
+    --primary: 262 55% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 15% 96%;
+    --secondary-foreground: 222 30% 12%;
+
+    --muted: 240 15% 96%;
+    --muted-foreground: 222 12% 42%;
+
+    --accent: 240 15% 96%;
+    --accent-foreground: 222 30% 12%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 90%;               /* hairline */
+    --input: 240 10% 90%;
+    --ring: 262 55% 52%;
+
+    --radius: 1rem;                      /* 16px default; cards use rounded-2xl/3xl */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 262.1 83.3% 57.8%;
+    --background: 222 30% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 30% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 30% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 60% 65%;
+    --primary-foreground: 222 30% 8%;
+
+    --secondary: 222 20% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 222 20% 14%;
+    --muted-foreground: 222 10% 65%;
+
+    --accent: 222 20% 14%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 20% 18%;
+    --input: 222 20% 18%;
+    --ring: 262 60% 65%;
   }
 }
 
+/* ─── Typography & body ─────────────────────────────────────────── */
 @layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    /* Prefer SF Pro on Apple OSes; fall back to Inter elsewhere */
+    font-family:
+      -apple-system, BlinkMacSystemFont,
+      "SF Pro Display", "SF Pro Text",
+      "Inter", "Segoe UI", "Helvetica Neue",
+      Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01", "cv11";
+  }
+
+  /* Tighter, lower-weight headlines — Apple uses ~590 weight, not 700 */
+  h1, h2, h3, h4 {
+    letter-spacing: -0.022em;
+    font-weight: 600;
+  }
+  h1 {
+    letter-spacing: -0.035em;
+  }
+  h2 {
+    letter-spacing: -0.028em;
+  }
+}
+
+/* ─── Subtle radial gradient backdrop utility ──────────────────── */
+@layer utilities {
+  .bg-aurora {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, hsl(var(--primary) / 0.10), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 100% 100%, hsl(var(--primary) / 0.06), transparent 60%),
+      linear-gradient(to bottom, hsl(var(--background)), hsl(var(--background)));
+  }
+
+  .text-balance {
+    text-wrap: balance;
   }
 }

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ExternalLink } from "lucide-react";
-import { AuthNavButtons } from "@/components/auth-nav-buttons";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — OVN Nexus",
@@ -14,25 +15,7 @@ const LAST_UPDATED = "May 25, 2026";
 export default function PrivacyPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* ── Header ─────────────────────────────────────────────── */}
-      <header className="border-b bg-background/95 backdrop-blur sticky top-0 z-50">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-              OVN
-            </div>
-            <span className="text-xl font-bold">Nexus</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link href="/education" className="text-muted-foreground hover:text-foreground transition-colors">Education</Link>
-            <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Bulletin</Link>
-            <Link href="/showcase" className="text-muted-foreground hover:text-foreground transition-colors">Showcase</Link>
-            <Link href="/music" className="text-muted-foreground hover:text-foreground transition-colors">Music Studio</Link>
-            <Link href="/#community" className="text-muted-foreground hover:text-foreground transition-colors">Community</Link>
-          </nav>
-          <AuthNavButtons />
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1">
         <section className="container py-16 sm:py-20">
@@ -179,38 +162,7 @@ export default function PrivacyPage() {
         </section>
       </main>
 
-      {/* ── Footer ──────────────────────────────────────────────── */}
-      <footer className="border-t bg-muted/50 py-10">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-                OVN
-              </div>
-              <div>
-                <div className="font-bold text-sm">OVN Nexus</div>
-                <div className="text-xs text-muted-foreground">Oral-Vascular-Neural Research Network</div>
-              </div>
-            </Link>
-            <div className="text-center text-sm text-muted-foreground">
-              <p className="font-medium">S. Thaddeus Connelly, DDS, MD, PhD, FACS</p>
-              <p>UCSF / SFVAMC / GengyeUSA</p>
-            </div>
-            <div className="flex items-center gap-4 text-sm">
-              <Link href="/science" className="inline-flex items-center gap-1 text-primary hover:underline">
-                Explore the Science <ExternalLink className="h-3 w-3" />
-              </Link>
-              <Link href="/privacy" className="text-foreground">Privacy</Link>
-              <Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms</Link>
-            </div>
-          </div>
-          <div className="mt-8 border-t pt-6 text-center text-xs text-muted-foreground">
-            Content on this platform is for professional education. It does not constitute medical
-            advice and does not establish a causal relationship between periodontal disease and any
-            systemic condition.
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
