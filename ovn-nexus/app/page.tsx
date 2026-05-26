@@ -23,7 +23,7 @@ export default function HomePage() {
             <Link href="/showcase" className="text-muted-foreground hover:text-foreground transition-colors">Showcase</Link>
             <Link href="/music" className="text-muted-foreground hover:text-foreground transition-colors">Music Studio</Link>
             <a href="#community" className="text-muted-foreground hover:text-foreground transition-colors">Community</a>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
+            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link>
           </nav>
           <AuthNavButtons />
         </div>

@@ -65,6 +65,7 @@ export async function updateSession(request: NextRequest) {
     "/auth/callback",
     "/privacy",
     "/terms",
+    "/about",
     "/sitemap.xml",
     "/robots.txt",
   ];
