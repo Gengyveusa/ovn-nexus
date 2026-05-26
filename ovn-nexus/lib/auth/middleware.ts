@@ -66,6 +66,7 @@ export async function updateSession(request: NextRequest) {
     "/privacy",
     "/terms",
     "/about",
+    "/for-hygienists",
     "/sitemap.xml",
     "/robots.txt",
   ];
