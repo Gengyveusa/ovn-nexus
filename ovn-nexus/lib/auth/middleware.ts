@@ -71,7 +71,7 @@ export async function updateSession(request: NextRequest) {
     "/robots.txt",
   ];
   // Prefix-match paths (e.g. /blog and /blog/[slug] should both be public):
-  const publicPrefixes = ["/blog"];
+  const publicPrefixes = ["/blog", "/education"];
   const pathname = request.nextUrl.pathname;
   const isPublicPath =
     publicPaths.some((p) => pathname === p) ||
