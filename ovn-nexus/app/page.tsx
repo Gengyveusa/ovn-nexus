@@ -18,22 +18,21 @@ export default function HomePage() {
           <div className="container py-24 sm:py-32">
             <div className="mx-auto max-w-3xl text-center">
               <Reveal>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-5">The research arm of Gengyve</p>
+              </Reveal>
+              <Reveal>
                 <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl lg:text-7xl text-balance">
-                  The mouth-body connection is the next frontier of{" "}
-                  <span className="text-primary">medicine</span>.
+                  Everyone else stops at the gums.{" "}
+                  <span className="text-primary">We follow the signal into the body.</span>
                 </h1>
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground text-balance">
-                  Oral microbes release inflammatory signals that travel through the
-                  bloodstream and nervous system to influence the heart, brain, and
-                  immune system.
-                </p>
-              </Reveal>
-              <Reveal delay={0.15}>
-                <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                  The <strong className="text-foreground">OVN Axis</strong>{" "}
-                  (Oral-Vascular-Neural) is a scientific framework for studying it.
+                  Gengyve was built by clinicians and academic scientists who refused to accept
+                  an oral-care industry that masks symptoms.{" "}
+                  <strong className="text-foreground">OVN Nexus</strong> is where we map how oral
+                  disease reaches the heart, brain, and beyond — and turn that science into
+                  products that make a measurable difference.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
@@ -43,9 +42,11 @@ export default function HomePage() {
                       Join the OVN Research Network <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>
-                  <Link href="/science">
-                    <Button variant="outline" size="lg">Explore the Science</Button>
-                  </Link>
+                  <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="lg" className="gap-2">
+                      Shop Gengyve <ExternalLink className="h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
               </Reveal>
             </div>

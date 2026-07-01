@@ -1,296 +1,163 @@
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
+import type { Metadata } from "next";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { ArrowLeft, BookOpen, FileText, ExternalLink } from "lucide-react";
+import { BookOpen, ArrowRight, Clock, Boxes, Atom, LineChart } from "lucide-react";
+import { getSeriesGroups, tierClass, tierLabel } from "@/lib/education/loader";
 
-const SERIES = [
-  {
-    title: "Series 1: Diabetes & Oral Health",
-    modules: [
-      {
-        number: 45,
-        title: "Diabetes, Saliva, and the Silent Acceleration of Cavities",
-        description:
-          "How elevated blood glucose alters salivary chemistry, creating a continuous acidic environment that accelerates enamel breakdown — even with good hygiene.",
-        tags: ["Diabetes", "Saliva", "Caries Risk"],
-        pages: 5,
-      },
-    ],
-  },
-  {
-    title: "Series 2: Oral Pathogens & Systemic Disease",
-    modules: [
-      {
-        number: 46,
-        title: "Do Oral Pathogens Cause Systemic Disease? — Part I",
-        description:
-          "Examining the evidence linking periodontal pathogens to cardiovascular disease, neurodegeneration, and cancer through bacterial translocation and immune activation.",
-        tags: ["Pathogenesis", "Systemic Disease", "OMVs"],
-        pages: 4,
-      },
-      {
-        number: 47,
-        title: "When Pathogens Rewrite the Rules — Part II",
-        description:
-          "How P. gingivalis outer membrane vesicles carry concentrated virulence cargo into distant tissues, hijacking host cell signaling and immune responses.",
-        tags: ["OMVs", "Virulence", "Immune Evasion"],
-        pages: 5,
-      },
-    ],
-  },
-  {
-    title: "Series 3: Information Collapse",
-    modules: [
-      {
-        number: 48,
-        title: "Information Collapse — Part I",
-        description:
-          "Introducing the concept of information collapse: when chronic oral infection degrades biological signaling networks, leading to systemic dysfunction.",
-        tags: ["Information Theory", "Systems Biology", "Oral-Systemic"],
-        pages: 4,
-      },
-      {
-        number: 49,
-        title: "System-Level Consequences — Part II",
-        description:
-          "How disrupted signaling cascades from oral pathogens propagate through vascular, neural, and metabolic systems, compounding disease risk.",
-        tags: ["Systems Biology", "Disease Propagation", "Biomarkers"],
-        pages: 5,
-      },
-      {
-        number: 50,
-        title: "Clinical Biomarkers — Part III",
-        description:
-          "Identifying measurable biomarkers that track the oral-systemic disease axis — from salivary diagnostics to circulating inflammatory markers.",
-        tags: ["Biomarkers", "Diagnostics", "Clinical Application"],
-        pages: 5,
-      },
-      {
-        number: 51,
-        title: "Therapeutic Recalibration — Part IV",
-        description:
-          "Strategies for restoring biological signaling integrity through targeted periodontal intervention, microbiome modulation, and systemic monitoring.",
-        tags: ["Therapeutics", "Intervention", "Microbiome"],
-        pages: 5,
-      },
-    ],
-  },
-  {
-    title: "Series 4: Biofilm Architecture & Disease",
-    modules: [
-      {
-        number: 52,
-        title: "Biofilm as a Structured Information System — Part I",
-        description:
-          "Reframing dental biofilm not as simple plaque, but as a structured microbial community with coordinated signaling, quorum sensing, and adaptive behavior.",
-        tags: ["Biofilm", "Quorum Sensing", "Microbiology"],
-        pages: 5,
-      },
-      {
-        number: 53,
-        title: "From Symbiosis to Dysbiosis — Part II",
-        description:
-          "How the oral microbiome transitions from a balanced, health-promoting community to a dysbiotic state that drives chronic inflammation and tissue destruction.",
-        tags: ["Dysbiosis", "Microbiome", "Inflammation"],
-        pages: 5,
-      },
-      {
-        number: 54,
-        title: "Immune Signaling at the Biofilm Interface — Part III",
-        description:
-          "The immune system's complex dialogue with biofilm communities — from tolerance and surveillance to escalation and tissue damage.",
-        tags: ["Immunology", "Biofilm", "Host Response"],
-        pages: 5,
-      },
-      {
-        number: 55,
-        title: "Systemic Coupling and Attractor States — Part IV",
-        description:
-          "How chronic periodontal disease creates self-reinforcing feedback loops (attractor states) that couple oral inflammation to systemic disease progression.",
-        tags: ["Systems Biology", "Attractor States", "Chronic Disease"],
-        pages: 6,
-      },
-    ],
-  },
+export const metadata: Metadata = {
+  title: "Oral–Systemic Education — OVN Nexus by Gengyve",
+  description:
+    "The deepest, most honest education on the oral–systemic connection — from why your mouth is your body's early-warning system to the frontier science. Written for clinicians and the curious alike.",
+};
+
+const TOOLS = [
+  { icon: Boxes, name: "The OVN Atlas", desc: "A 3-D body-map of how oral signals reach the artery, brain, and liver.", href: "https://ovnnexus.org/ovn_atlas.html" },
+  { icon: Atom, name: "Quantum → Box", desc: "Zoom from a tissue voxel to the electron tunnel inside a mitochondrion.", href: "https://ovnnexus.org/quantum_to_box.html" },
+  { icon: LineChart, name: "Cancer ↔ Aging", desc: "20 mitochondrial genes that split in opposite directions.", href: "https://ovnnexus.org/divergence.html" },
 ];
 
 export default function EducationPage() {
+  const groups = getSeriesGroups();
+
   return (
     <div className="flex min-h-screen flex-col">
-      {/* ── Header ─────────────────────────────────────────────── */}
-      <header className="border-b bg-background/95 backdrop-blur sticky top-0 z-50">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-              OVN
-            </div>
-            <span className="text-xl font-bold">Nexus</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link
-              href="/"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/science"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Science
-            </Link>
-            <Link
-              href="/education"
-              className="text-foreground transition-colors"
-            >
-              Education
-            </Link>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Link href="/">
-              <Button variant="outline" size="sm" className="gap-2">
-                <ArrowLeft className="h-4 w-4" /> Back to Home
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <SiteHeader active="education" />
 
       <main className="flex-1">
-        {/* ── Hero ────────────────────────────────────────────────── */}
-        <section className="container py-16 md:py-24 text-center">
-          <Badge
-            variant="secondary"
-            className="mb-6 text-xs uppercase tracking-wider"
-          >
-            <BookOpen className="mr-1.5 h-3 w-3" />
-            Professional Education
-          </Badge>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl max-w-4xl mx-auto leading-tight">
-            The Oral Health Bulletin{" "}
-            <span className="text-primary">Education Series</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Curated education modules from Dr. Stephen Thaddeus Connelly&apos;s{" "}
-            <em>Oral Health Bulletin</em> newsletter — bridging the gap between
-            emerging oral-systemic science and clinical practice.
-          </p>
-          <div className="mt-4 text-sm text-muted-foreground">
-            <p className="font-medium">
-              Stephen Thaddeus Connelly, DDS, MD, PhD
+        {/* ── Hero ─────────────────────────────────────────────── */}
+        <section className="bg-aurora">
+          <div className="container py-20 sm:py-28 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-5">
+              The research arm of Gengyve
             </p>
-            <p>Professor of Oral &amp; Maxillofacial Surgery, UCSF</p>
-          </div>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-1.5">
-              <FileText className="h-4 w-4" />
-              <span>11 Modules</span>
+            <h1 className="mx-auto max-w-4xl text-4xl font-semibold tracking-tight sm:text-6xl leading-[1.08] text-balance">
+              The oral–systemic connection,{" "}
+              <span className="text-primary">explained deeper than anyone.</span>
+            </h1>
+            <p className="mx-auto mt-7 max-w-2xl text-lg text-muted-foreground leading-relaxed text-balance">
+              Curated from Dr. Stephen Thaddeus Connelly&apos;s <em>Oral Health Bulletin</em> — written for
+              clinicians <em>and</em> the curious. Every claim is tagged by how strong the evidence
+              actually is. That honesty is the point.
+            </p>
+            <div className="mt-4 text-sm text-muted-foreground">
+              <p className="font-medium text-foreground">Stephen Thaddeus Connelly, DDS, MD, PhD, FACS</p>
+              <p>Professor of Oral &amp; Maxillofacial Surgery, UCSF</p>
             </div>
-            <span className="hidden sm:inline">|</span>
-            <div className="flex items-center gap-1.5">
-              <BookOpen className="h-4 w-4" />
-              <span>4 Series</span>
-            </div>
-            <span className="hidden sm:inline">|</span>
-            <span>54 Pages Total</span>
           </div>
         </section>
 
-        {/* ── Module Series ──────────────────────────────────────── */}
-        {SERIES.map((series, seriesIdx) => (
-          <section
-            key={series.title}
-            className={`py-12 md:py-16 ${seriesIdx % 2 === 1 ? "bg-muted/50" : ""}`}
-          >
-            <div className="container">
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold">{series.title}</h2>
-                <div className="mt-2 h-1 w-16 rounded-full bg-primary" />
+        {/* ── Evidence-tier promise ────────────────────────────── */}
+        <section className="container -mt-6 mb-4">
+          <div className="mx-auto max-w-3xl rounded-2xl border bg-card p-6 shadow-soft">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground mb-4 text-center">
+              We separate what is proven from what is promising
+            </p>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div className="flex items-start gap-2">
+                <span className="tier-badge tier-established shrink-0 mt-0.5">Established</span>
+                <span className="text-xs text-muted-foreground">Well-supported by current evidence.</span>
               </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                {series.modules.map((mod) => (
-                  <Card
-                    key={mod.number}
-                    className="flex flex-col transition-shadow hover:shadow-md"
-                  >
-                    <CardHeader>
-                      <div className="flex items-start justify-between gap-3">
-                        <Badge
-                          variant="outline"
-                          className="shrink-0 font-mono text-xs"
-                        >
-                          Module {mod.number}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground shrink-0">
-                          {mod.pages} pages
-                        </span>
-                      </div>
-                      <CardTitle className="text-lg leading-snug mt-2">
-                        {mod.title}
-                      </CardTitle>
-                      <CardDescription className="leading-relaxed">
-                        {mod.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-1">
-                      <div className="flex flex-wrap gap-1.5">
-                        {mod.tags.map((tag) => (
-                          <Badge
-                            key={tag}
-                            variant="secondary"
-                            className="text-xs font-normal"
-                          >
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                    <CardFooter>
-                      <a
-                        href={`/education-pdfs/module-${mod.number}.pdf`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full"
-                      >
-                        <Button className="w-full gap-2" variant="default">
-                          Read Module{" "}
-                          <ExternalLink className="h-4 w-4" />
-                        </Button>
-                      </a>
-                    </CardFooter>
-                  </Card>
-                ))}
+              <div className="flex items-start gap-2">
+                <span className="tier-badge tier-supported shrink-0 mt-0.5">Supported</span>
+                <span className="text-xs text-muted-foreground">Preclinical / associative; not definitive.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="tier-badge tier-hypothesis shrink-0 mt-0.5">Hypothesis</span>
+                <span className="text-xs text-muted-foreground">A model under active test — not a claim.</span>
               </div>
             </div>
-          </section>
-        ))}
+          </div>
+        </section>
 
-        {/* ── CTA ────────────────────────────────────────────────── */}
-        <section className="border-t bg-primary/5 py-12 text-center">
+        {/* ── Module Series ────────────────────────────────────── */}
+        {groups.length === 0 ? (
+          <section className="container py-16 text-center text-muted-foreground">
+            <p>Modules are being published. Check back shortly.</p>
+          </section>
+        ) : (
+          groups.map((group, gi) => (
+            <section key={group.series} className={`py-12 sm:py-16 ${gi % 2 === 1 ? "bg-secondary/40" : ""}`}>
+              <div className="container">
+                <div className="mb-8">
+                  <h2 className="text-2xl font-semibold tracking-tight">{group.series}</h2>
+                  <div className="mt-2 h-1 w-16 rounded-full bg-primary" />
+                </div>
+                <div className="grid gap-6 md:grid-cols-2">
+                  {group.modules.map((mod) => (
+                    <Link
+                      key={mod.slug}
+                      href={`/education/${mod.slug}`}
+                      className="group flex flex-col rounded-2xl border bg-card p-7 shadow-soft transition-shadow hover:shadow-lift"
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="font-mono text-xs text-muted-foreground">Module {mod.module}</span>
+                        {mod.readingTime && (
+                          <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                            <Clock className="h-3.5 w-3.5" /> {mod.readingTime}
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="mt-3 text-lg font-semibold leading-snug tracking-tight group-hover:text-primary transition-colors">
+                        {mod.title}
+                      </h3>
+                      <p className="mt-3 flex-1 text-sm text-muted-foreground leading-relaxed">{mod.summary}</p>
+                      <div className="mt-5 flex items-center justify-between">
+                        <div className="flex flex-wrap gap-1.5">
+                          {mod.tiers.map((t) => (
+                            <span key={t} className={`tier-badge ${tierClass(t)}`}>{tierLabel(t)}</span>
+                          ))}
+                        </div>
+                        <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+                          Read <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
+          ))
+        )}
+
+        {/* ── Show, don't tell — the tools ─────────────────────── */}
+        <section className="container py-16 sm:py-20">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">See it, don&apos;t just read it</h2>
+            <p className="mt-3 text-muted-foreground leading-relaxed">
+              No other oral-care brand can show you this. Explore the mechanism in three interactive models.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {TOOLS.map((t) => (
+              <a
+                key={t.name}
+                href={t.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-2xl border bg-card p-7 shadow-soft transition-shadow hover:shadow-lift"
+              >
+                <t.icon className="h-6 w-6 text-primary" />
+                <h3 className="mt-4 font-semibold tracking-tight group-hover:text-primary transition-colors">{t.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{t.desc}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* ── CTA ──────────────────────────────────────────────── */}
+        <section className="border-t bg-primary/5 py-14 text-center">
           <div className="container max-w-2xl">
-            <h2 className="text-xl font-bold mb-4">
-              Want to Explore the Underlying Science?
-            </h2>
+            <h2 className="text-xl font-semibold mb-3">Go deeper — or bring it to your chair</h2>
             <p className="text-sm text-muted-foreground mb-6">
-              These modules are grounded in a growing body of research on the
-              oral-systemic disease interface. See the full evidence presentation
-              or join the professional network.
+              These modules are grounded in a growing body of oral-systemic research. Explore the full
+              science, or join the professional network.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/science" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg" className="gap-2">
-                  Explore the Science{" "}
-                  <ExternalLink className="h-4 w-4" />
-                </Button>
-              </a>
+              <Link href="/science">
+                <Button variant="outline" size="lg">Explore the Science</Button>
+              </Link>
               <Link href="/signup">
                 <Button size="lg">Join the Network</Button>
               </Link>
@@ -299,20 +166,7 @@ export default function EducationPage() {
         </section>
       </main>
 
-      {/* ── Footer ──────────────────────────────────────────────── */}
-      <footer className="border-t py-8">
-        <div className="container text-center text-sm text-muted-foreground">
-          <p className="font-medium">
-            S. Thaddeus Connelly, DDS, MD, PhD, FACS
-          </p>
-          <p>UCSF / SFVAMC / GengyeUSA</p>
-          <p className="mt-4 text-xs">
-            Content on this platform is for professional education. It does not
-            constitute medical advice and does not establish a causal
-            relationship between periodontal disease and any systemic condition.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

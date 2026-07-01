@@ -20,7 +20,7 @@
     --popover-foreground: 222 30% 8%;
 
     /* Desaturated purple — recognizable, less candy */
-    --primary: 262 55% 52%;
+    --primary: 14 88% 56%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 15% 96%;
@@ -37,7 +37,7 @@
 
     --border: 240 10% 90%;               /* hairline */
     --input: 240 10% 90%;
-    --ring: 262 55% 52%;
+    --ring: 14 88% 56%;
 
     --radius: 1rem;                      /* 16px default; cards use rounded-2xl/3xl */
   }
@@ -52,7 +52,7 @@
     --popover: 222 30% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 262 60% 65%;
+    --primary: 14 90% 60%;
     --primary-foreground: 222 30% 8%;
 
     --secondary: 222 20% 14%;
@@ -69,7 +69,7 @@
 
     --border: 222 20% 18%;
     --input: 222 20% 18%;
-    --ring: 262 60% 65%;
+    --ring: 14 90% 60%;
   }
 }
 
@@ -121,4 +121,35 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* ─── Education article prose (marked-rendered) + evidence tiers ── */
+@layer components {
+  .prose-gengyve { color: hsl(var(--foreground)); font-size: 1.0625rem; line-height: 1.75; }
+  .prose-gengyve > * + * { margin-top: 1.25rem; }
+  .prose-gengyve > :first-child { margin-top: 0; border-top: 0; padding-top: 0; }
+  .prose-gengyve h2 { font-size: 1.6rem; font-weight: 640; letter-spacing: -0.02em; margin-top: 2.75rem; margin-bottom: 0.25rem; padding-top: 1.5rem; border-top: 1px solid hsl(var(--border)); }
+  .prose-gengyve h3 { font-size: 1.2rem; font-weight: 640; margin-top: 1.75rem; }
+  .prose-gengyve p { color: hsl(var(--muted-foreground)); }
+  .prose-gengyve strong { color: hsl(var(--foreground)); font-weight: 640; }
+  .prose-gengyve em { color: hsl(var(--foreground)); }
+  .prose-gengyve a { color: hsl(var(--primary)); text-decoration: underline; text-underline-offset: 2px; }
+  .prose-gengyve ul, .prose-gengyve ol { color: hsl(var(--muted-foreground)); padding-left: 1.4rem; }
+  .prose-gengyve ul { list-style: disc; } .prose-gengyve ol { list-style: decimal; }
+  .prose-gengyve li { margin-top: 0.4rem; }
+  .prose-gengyve blockquote { border-left: 3px solid hsl(var(--primary)); padding: 0.15rem 0 0.15rem 1.25rem; margin: 1.9rem 0; font-size: 1.2rem; line-height: 1.5; color: hsl(var(--foreground)); font-weight: 500; }
+  .prose-gengyve table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 1.6rem 0; }
+  .prose-gengyve th, .prose-gengyve td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid hsl(var(--border)); vertical-align: top; }
+  .prose-gengyve th { font-weight: 640; color: hsl(var(--foreground)); }
+  .prose-gengyve td { color: hsl(var(--muted-foreground)); }
+  .prose-gengyve code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; background: hsl(var(--muted)); padding: 0.1rem 0.35rem; border-radius: 4px; }
+  .prose-gengyve hr { border: 0; border-top: 1px solid hsl(var(--border)); margin: 2.25rem 0; }
+
+  .tier-badge { display: inline-flex; align-items: center; font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 100px; border: 1px solid; letter-spacing: 0.02em; white-space: nowrap; }
+  .tier-established { color: #059669; border-color: #a7f3d0; background: #ecfdf5; }
+  .tier-supported { color: #b45309; border-color: #fcd34d; background: #fffbeb; }
+  .tier-hypothesis { color: #0369a1; border-color: #7dd3fc; background: #f0f9ff; }
+  .dark .tier-established { color: #34d399; border-color: #065f46; background: rgba(6,95,70,0.22); }
+  .dark .tier-supported { color: #fbbf24; border-color: #92400e; background: rgba(146,64,14,0.22); }
+  .dark .tier-hypothesis { color: #38bdf8; border-color: #075985; background: rgba(7,89,133,0.22); }
 }
