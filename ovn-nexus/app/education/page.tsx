@@ -33,8 +33,8 @@ export default function EducationPage() {
               The research arm of Gengyve
             </p>
             <h1 className="mx-auto max-w-4xl text-4xl font-semibold tracking-tight sm:text-6xl leading-[1.08] text-balance">
-              The oral–systemic connection,{" "}
-              <span className="text-primary">explained deeper than anyone.</span>
+              No one explains the oral–systemic connection{" "}
+              <span className="text-primary">this deeply.</span>
             </h1>
             <p className="mx-auto mt-7 max-w-2xl text-lg text-muted-foreground leading-relaxed text-balance">
               Curated from Dr. Stephen Thaddeus Connelly&apos;s <em>Oral Health Bulletin</em> — written for
