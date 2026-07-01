@@ -20,7 +20,7 @@
     --popover-foreground: 222 30% 8%;
 
     /* Desaturated purple — recognizable, less candy */
-    --primary: 262 55% 52%;
+    --primary: 14 88% 56%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 15% 96%;
@@ -37,7 +37,7 @@
 
     --border: 240 10% 90%;               /* hairline */
     --input: 240 10% 90%;
-    --ring: 262 55% 52%;
+    --ring: 14 88% 56%;
 
     --radius: 1rem;                      /* 16px default; cards use rounded-2xl/3xl */
   }
@@ -52,7 +52,7 @@
     --popover: 222 30% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 262 60% 65%;
+    --primary: 14 90% 60%;
     --primary-foreground: 222 30% 8%;
 
     --secondary: 222 20% 14%;
@@ -69,7 +69,7 @@
 
     --border: 222 20% 18%;
     --input: 222 20% 18%;
-    --ring: 262 60% 65%;
+    --ring: 14 90% 60%;
   }
 }
 
