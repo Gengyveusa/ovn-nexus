@@ -52,11 +52,14 @@ export function SiteHeader({ active = null }: SiteHeaderProps) {
       )}
     >
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2.5">
           <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-primary-foreground font-semibold text-sm shadow-sm">
             OVN
           </div>
-          <span className="text-[17px] font-semibold tracking-tight">Nexus</span>
+          <span className="leading-none">
+            <span className="block text-[17px] font-semibold tracking-tight">Nexus</span>
+            <span className="block text-[10px] font-medium uppercase tracking-[0.14em] text-primary">by Gengyve</span>
+          </span>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-[13px] font-medium tracking-tight">
           {link("/education", "Education", "education")}
@@ -65,6 +68,7 @@ export function SiteHeader({ active = null }: SiteHeaderProps) {
           {link("/music", "Music Studio", "music")}
           {link("/#community", "Community", "community")}
           {link("/about", "About", "about")}
+          <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">Shop&nbsp;Gengyve&nbsp;↗</a>
         </nav>
         <AuthNavButtons />
       </div>

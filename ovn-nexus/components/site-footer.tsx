@@ -17,9 +17,12 @@ export function SiteFooter() {
               <span className="text-base font-semibold tracking-tight">Nexus</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
-              A research and education platform for the Oral-Vascular-Neural axis, built and
-              maintained by working clinicians.
+              The research and education arm of <span className="font-medium text-foreground">Gengyve</span> — the
+              oral–systemic connection, studied deeper than anyone, and built by working clinicians.
             </p>
+            <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+              Shop Gengyve ↗
+            </a>
             <p className="mt-6 text-xs text-muted-foreground">
               <span className="font-medium text-foreground">S. Thaddeus Connelly, DDS, MD, PhD, FACS</span>
               <span className="mx-2">·</span>UCSF / SFVAMC / Gengyve USA
