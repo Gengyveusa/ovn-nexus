@@ -68,6 +68,7 @@ export function SiteHeader({ active = null }: SiteHeaderProps) {
           {link("/music", "Music Studio", "music")}
           {link("/#community", "Community", "community")}
           {link("/about", "About", "about")}
+          <Link href="/ce" className="text-muted-foreground hover:text-foreground transition-colors">CE</Link>
           <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">Shop&nbsp;Gengyve&nbsp;↗</a>
         </nav>
         <AuthNavButtons />
