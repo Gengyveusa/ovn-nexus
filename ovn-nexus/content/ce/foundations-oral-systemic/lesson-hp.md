@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 9
 title: "Put the Mouth Back in the History & Physical"
 subtitle: "The oral exam as systemic-exposure quantification"
 readingTime: "20 min"

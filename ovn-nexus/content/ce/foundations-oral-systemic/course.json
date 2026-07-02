@@ -1,12 +1,22 @@
 {
   "slug": "foundations-oral-systemic",
   "title": "Foundations in Oral-Systemic Health",
-  "subtitle": "OSCIH Tier-1 · proof-of-format",
-  "creditHours": "2.0",
+  "subtitle": "OSCIH Tier-1 · 8 lessons + H&P capstone",
+  "creditHours": "3.0",
   "audience": "Dentists, hygienists, and physicians",
-  "accreditationStatement": "Continuing-education credit pending: ADA-CERP (dental) via UCSF School of Dentistry and ACCME (medical) via the SFVAMC History & Physical course. This proof-of-format is for preview.",
+  "accreditationStatement": "Continuing-education credit pending: ADA-CERP (dental) via UCSF School of Dentistry and ACCME (medical) via the SFVAMC History & Physical course. Credit hours shown are estimated seat time; final designation is issued on accreditation.",
   "director": "Stephen Thaddeus Connelly, DDS, MD, PhD, FACS — Professor, Oral & Maxillofacial Surgery, UCSF",
-  "lessons": ["lesson-01", "lesson-hp"],
+  "lessons": [
+    "lesson-01",
+    "lesson-02",
+    "lesson-03",
+    "lesson-04",
+    "lesson-05",
+    "lesson-06",
+    "lesson-07",
+    "lesson-08",
+    "lesson-hp"
+  ],
   "passThreshold": 0.7,
   "quiz": [
     {
@@ -52,6 +62,160 @@
       ],
       "answer": 2,
       "explanation": "Causation for Alzheimer's is a Tier 3 hypothesis under active testing; the framework prohibits stating it as established fact."
+    },
+    {
+      "q": "A colleague drafts a patient handout stating: 'Treating your gum disease will lower your risk of a heart attack.' Under the OVN evidence-tier discipline, what is the correct assessment?",
+      "options": [
+        "Tier 1 (Established) — periodontal therapy improves cardiometabolic markers, so the statement is safe to publish as written",
+        "Tier 3 (Hypothesis) — it makes an outcome-level causal promise and violates the cardinal rule; it should be reworded as something under active investigation",
+        "Tier 2 (Supported) — preclinical models justify stating the benefit directly to patients",
+        "It is acceptable because the vascular arm of the OVN Axis is the best-established of the three routes"
+      ],
+      "answer": 1,
+      "explanation": "Claiming that oral treatment prevents a downstream disease event (a heart attack) is a Tier 3 outcome-level extrapolation and directly breaks the cardinal rule against asserting periodontitis as a proven causal driver of ASCVD. Tier 1 covers the association with inflammation and improvement in surrogate markers, not individual patient outcomes. It is also the immune/systemic arm — not the vascular arm — that is the best-established of the three."
+    },
+    {
+      "q": "Across the three OVN pathways, which correctly pairs a pathway with its endpoint AND its relative confidence level?",
+      "options": [
+        "Oral → Neural maps to neurodegeneration and is the best-established arm because gingipains have been detected in Alzheimer's brain tissue",
+        "Oral → Immune/Systemic maps to chronic inflammatory disease and is the best-established, clinically actionable arm",
+        "Oral → Vascular maps to neurodegeneration and rests only on hypothesis-tier evidence",
+        "All three arms carry equal evidentiary weight, which is why the framework grades them identically"
+      ],
+      "answer": 1,
+      "explanation": "The Oral → Immune/Systemic pathway (chronic periodontal inflammation raising hs-CRP and IL-6) terminates in chronic inflammatory disease and is the best-established of the three routes — the one actionable today. The neural arm maps to neurodegeneration but is the weakest, resting on preclinical and observational data; the vascular arm maps to ASCVD, not neurodegeneration."
+    },
+    {
+      "q": "Which statement best captures the keystone-pathogen hypothesis as applied to Porphyromonas gingivalis in periodontitis?",
+      "options": [
+        "P. gingivalis becomes the most abundant organism in the subgingival biofilm and physically crowds out commensals",
+        "P. gingivalis, though typically present in low relative abundance, remodels the behavior of the entire microbial community out of proportion to its numbers",
+        "P. gingivalis causes disease only after its raw bacterial load crosses a fixed numerical threshold",
+        "P. gingivalis acts alone, and eradicating it reliably resolves periodontitis"
+      ],
+      "answer": 1,
+      "explanation": "A keystone pathogen exerts influence disproportionate to its abundance. P. gingivalis is characteristically low in relative abundance yet reshapes the whole community—e.g., by degrading complement (C3, C5) and liberating peptides that feed anaerobes—rather than winning on numbers. This is the core distinction between ecological dominance and raw load."
+    },
+    {
+      "q": "Why does a 'kill one species' strategy fail to resolve periodontitis, according to the polymicrobial-synergy and dysbiosis (PSD) model?",
+      "options": [
+        "Antibiotics cannot physically reach organisms inside a biofilm",
+        "Disease is a property of a synergistic community and a self-reinforcing dysbiotic niche, so removing one member leaves the conditions—and other pathobionts—in place",
+        "F. nucleatum is resistant to all known antimicrobials",
+        "Total bacterial load is the sole driver of disease, so only complete sterilization works"
+      ],
+      "answer": 1,
+      "explanation": "In the PSD model no single organism is necessary or sufficient; disease emerges from the ensemble and from a self-reinforcing niche (deepened, anaerobic, inflamed pocket). Eliminating one species leaves the community and conditions intact—and can collapse protective diversity—so the correct clinical goal is to disrupt the community, modulate the host, and reset the ecology rather than eradicate a single species."
+    },
+    {
+      "q": "Why are outer membrane vesicles (OMVs), rather than intact bacteria, considered the plausible systemic effector in the OVN cascade?",
+      "options": [
+        "OMVs are larger than bacteria and therefore more easily detected by the immune system",
+        "At 20–250 nm and acellular, OMVs cross epithelial and endothelial barriers, evade immune clearance, and carry concentrated cargo without needing a living organism",
+        "OMVs can only act locally in the periodontal pocket, whereas intact bacteria travel systemically",
+        "OMVs require bacterial lysis to form, so they appear only when the infection resolves"
+      ],
+      "answer": 1,
+      "explanation": "OMVs are 20–250 nm bilayer particles shed constitutively from living gram-negative bacteria. Their small size lets them cross barriers a 0.5–1.5 μm bacterium cannot, they evade immune surveillance tuned to whole organisms, they are acellular (no viability required), and they carry virulence factors like gingipains and LPS at concentrated density — making them the effector that fits the physics of sustained systemic distribution."
+    },
+    {
+      "q": "According to the lesson's evidence-tier discipline, how should the five-step cascade be characterized?",
+      "options": [
+        "All five steps are Established, so the cascade can be cited as proven causation",
+        "The early steps (barrier breach, mitochondrial stress) are Supported, while later steps and the single-unifying-mechanism claim are Hypothesis under active testing",
+        "The entire cascade is Tier 3 Hypothesis with no supporting evidence at any step",
+        "Only the final tissue endpoints are Established; the mechanism itself is unsupported"
+      ],
+      "answer": 1,
+      "explanation": "Confidence follows a gradient. Steps 1–2 (barrier breach and mitochondrial stress) rest on real preclinical and mechanistic data and are Tier 2 Supported. As the cascade proceeds to secondary EV propagation and cross-tissue endpoints, confidence falls to Hypothesis, and the claim of a single conserved OMV-driven mechanism spanning vascular, neural, and oncological disease is explicitly Tier 3 — a hypothesis under active testing, never established fact."
+    },
+    {
+      "q": "A dentist tells a patient with Stage III periodontitis and an hs-CRP of 4.2 mg/L: 'Treating your gums will prevent you from having a heart attack.' Under the OVN evidence-tier framework, what is wrong with this statement?",
+      "options": [
+        "Nothing — periodontitis is an established causal driver of ASCVD",
+        "hs-CRP is not a cardiovascular risk marker, so the reasoning is invalid",
+        "It states a Hypothesis-tier claim (event prevention) as if it were established; periodontal therapy improves inflammatory/endothelial markers but has not been shown to prevent cardiovascular events",
+        "The hs-CRP value is too low to indicate any vascular risk"
+      ],
+      "answer": 2,
+      "explanation": "Periodontitis↔ASCVD is an established association with a coherent mechanism (Tier 1 association), and therapy demonstrably lowers surrogate markers like hs-CRP (~20–30%). But no trial has shown periodontal therapy prevents hard cardiovascular events, so event prevention is a Tier 3 hypothesis and must not be stated as fact. An hs-CRP >3.0 mg/L is in the high-risk band."
+    },
+    {
+      "q": "Which pairing correctly describes the two coupled endothelial failures that link periodontal inflammation to atherogenesis?",
+      "options": [
+        "Upregulation of ICAM-1/VCAM-1/E-selectin (endothelial activation) plus reduced nitric-oxide bioavailability (endothelial dysfunction)",
+        "Increased eNOS activity plus decreased monocyte adhesion",
+        "Downregulation of adhesion molecules plus increased flow-mediated dilation",
+        "Elevated nitric oxide plus suppressed IL-6 production"
+      ],
+      "answer": 0,
+      "explanation": "The vascular arm involves two faces of the same inflamed endothelium: activation, in which adhesion molecules (ICAM-1, VCAM-1, E-selectin) are upregulated to capture monocytes, and dysfunction, in which nitric-oxide bioavailability falls (reduced eNOS activity and NO scavenging), impairing vasodilation. Both are driven by the inflammatory tone periodontitis contributes to."
+    },
+    {
+      "q": "Postmortem studies have detected P. gingivalis DNA and gingipains in Alzheimer's-disease brain tissue at higher levels than in controls. What is the most defensible interpretation of this observation on its own?",
+      "options": [
+        "It proves that P. gingivalis causes Alzheimer's disease",
+        "It demonstrates that treating periodontitis will prevent dementia",
+        "It shows the oral–neural interface is worth studying, but not the direction of causation — the bacteria may be arriving because the barrier is already failing",
+        "It confirms that gingipains are the primary trigger of tau pathology"
+      ],
+      "answer": 2,
+      "explanation": "Detection establishes presence and a plausible mechanism worth investigating, but not causation. In a neurodegenerating brain with a compromised blood–brain barrier, oral-derived material may be a consequence of barrier failure rather than its cause; the direction of the arrow is exactly what the observation cannot resolve."
+    },
+    {
+      "q": "A gingipain-inhibitor drug failed to meet its primary cognitive endpoint in a Phase 2/3 Alzheimer's trial. Which statement best reflects tier-appropriate reasoning about this result?",
+      "options": [
+        "The failed trial proves the gingipain hypothesis is false and the oral–neural link should be abandoned",
+        "The result neither confirms nor refutes the hypothesis; the causal question remains open and should still be framed as a Tier-3 hypothesis, not a proven cause",
+        "The trial confirms that periodontal treatment protects the brain",
+        "Because a drug was tested in humans, the oral–neural link is now Established (Tier 1)"
+      ],
+      "answer": 1,
+      "explanation": "A negative trial does not prove the hypothesis false — the intervention may have arrived too late or targeted the wrong step — but it also does not confirm it. The honest reading keeps the oral–neurodegeneration link at Tier 3 (hypothesis under active investigation) and avoids both overclaim and premature dismissal."
+    },
+    {
+      "q": "A patient with type 2 diabetes and periodontitis asks whether treating their gums will help their diabetes. Which statement reflects the best-supported, tier-correct answer?",
+      "options": [
+        "Periodontal therapy cures type 2 diabetes by removing the source of inflammation.",
+        "Periodontal therapy has no measurable effect on glycemic control.",
+        "Periodontal therapy is associated with a modest HbA1c reduction (roughly 0.3–0.4 percentage points) and is a defensible adjunct to metabolic care, not a substitute for it.",
+        "Periodontal therapy replaces the need for oral hypoglycemic agents in well-controlled patients."
+      ],
+      "answer": 2,
+      "explanation": "Meta-analyses show non-surgical periodontal therapy is associated with a modest HbA1c reduction (~0.3–0.4 points), an adjunct-sized effect. It is Established that the effect exists, but it is not a cure or a substitute for metabolic management, so both the effect and its limits must be stated together."
+    },
+    {
+      "q": "Why can a diabetic patient with excellent plaque control still develop rapidly progressing caries?",
+      "options": [
+        "Hyperglycemia degrades the salivary environment—reducing flow and buffering while raising salivary glucose and acidity—so remineralization is outpaced by demineralization despite good hygiene.",
+        "High blood glucose directly dissolves enamel through the bloodstream without involving saliva.",
+        "Plaque control has no effect on any form of caries in any patient.",
+        "Diabetic patients produce more antimicrobial proteins, which paradoxically erode enamel."
+      ],
+      "answer": 0,
+      "explanation": "Caries in a well-maintained diabetic patient is often a chemistry failure, not a hygiene failure. Hyperglycemia raises salivary glucose and lowers flow, buffering capacity, and pH, so the tooth spends more time below the critical pH of ~5.5 and remineralization can't keep pace—independent of how well plaque is removed."
+    },
+    {
+      "q": "According to the lesson, what four things must a defensible dentist-to-physician co-management letter do?",
+      "options": [
+        "Report objective findings, state the association, disclaim causation, and request defensible actions",
+        "Diagnose the systemic disease, assign a risk score, prescribe therapy, and schedule surgery",
+        "Assert that periodontitis causes the patient's cardiovascular disease and demand referral",
+        "List every oral bacterium found, cite the OMV mechanism, predict the outcome, and bill the visit"
+      ],
+      "answer": 0,
+      "explanation": "The lesson teaches the co-management letter as a four-part artifact: it reports objective periodontal findings, states the association in sourced language, explicitly disclaims causation, and requests concrete Tier-1 actions. Omitting the disclaimer overclaims; omitting the requests makes it useless. Crucially, it never asks the physician to believe anything unproven."
+    },
+    {
+      "q": "A patient's family asks whether treating their mother's periodontitis will halt her cognitive decline. Which response matches the evidence tiers correctly?",
+      "options": [
+        "Decline to recommend treatment, since the dementia link is only a hypothesis",
+        "Recommend periodontal treatment on its own merits (comfort, function, nutrition, reduced inflammatory exposure) while honestly stating you cannot promise a cognitive benefit",
+        "Confirm that treating the gums will slow the Alzheimer's, since gingipains are found in affected brain tissue",
+        "Order gingipain inhibitors as a validated dementia therapy"
+      ],
+      "answer": 1,
+      "explanation": "Treating gums to prevent or slow dementia is a Tier-3 hypothesis with no supporting prospective trials, so it must not be promised. But periodontal treatment is still warranted on its own established merits. The correct move is honest de-escalation: recommend treatment for defensible reasons while explicitly declining to promise a cognitive benefit."
     },
     {
       "q": "In the H&P lesson, how should the three core periodontal findings be read as an inflammatory 'dose'?",
