@@ -50,6 +50,23 @@ export default function CeHub() {
             )}
           </div>
         </section>
+        <section className="container pb-16">
+          <Link
+            href="/ce/dentistry-for-doctors"
+            className="group mx-auto flex max-w-4xl flex-col items-start justify-between gap-4 rounded-2xl border border-primary/30 bg-primary/5 p-7 shadow-soft transition-shadow hover:shadow-lift sm:flex-row sm:items-center"
+          >
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">For physicians · Medical CME (in development)</p>
+              <h2 className="mt-2 text-xl font-semibold tracking-tight">
+                Dentistry for <span className="line-through decoration-2 opacity-40">Dummies</span> Doctors
+              </h2>
+              <p className="mt-1.5 text-sm text-muted-foreground">The oral exam and oral–systemic essentials for physicians who were never taught them.</p>
+            </div>
+            <span className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-primary">
+              See the outline <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
+        </section>
       </main>
       <SiteFooter />
     </div>
