@@ -1,0 +1,250 @@
+{
+  "slug": "cosh-oral-systemic",
+  "title": "Certified Oral-Systemic Hygienist (COSH)",
+  "subtitle": "OSCIH Tier-2 · asynchronous core of the 120-hour certification",
+  "creditHours": "10.0",
+  "audience": "Registered dental hygienists (RDH) who hold OSCIH-F (Foundations) — also open to RDAs and dentists",
+  "accreditationStatement": "COSH is a 120-hour blended certification. This asynchronous core is completed online; two in-person weekend intensives at UCSF and a proctored final assessment complete the credential. Continuing-education credit pending, issued by Amadeo Labs and accredited (ADA-CERP) via UCSF School of Dentistry. Prerequisite: OSCIH-F (Foundations in Oral-Systemic Health). Credit hours shown are estimated async seat time; final designation is issued on accreditation.",
+  "director": "S. Thaddeus Connelly, DDS, MD, PhD, FACS — Full Professor at the University of California, San Francisco; founder of the oral–systemic platform Gengyve; co-founder of Boutique Venture Partners; collaborator on major grants; expert in the oral–systemic connection, pain, cancer, and TMD.",
+  "lessons": [
+    "unit-00",
+    "unit-01",
+    "unit-02",
+    "unit-03",
+    "unit-04",
+    "unit-05",
+    "unit-06",
+    "unit-07",
+    "unit-08",
+    "unit-09"
+  ],
+  "passThreshold": 0.8,
+  "quiz": [
+    {
+      "q": "An Alzheimer's patient's autopsy reveals P. gingivalis gingipains in hippocampal tissue. Which statement is tier-correct for a COSH-level hygienist?",
+      "options": [
+        "The detection of gingipains in the brain tissue is an established finding, but its causal role in the neurodegeneration remains a hypothesis.",
+        "Because the pathogen is physically present in the failing organ, periodontitis is now an established cause of Alzheimer's disease.",
+        "The finding is fringe and should not be cited to patients or colleagues.",
+        "Detecting the organism in brain tissue proves the periodontal pocket seeded the neurodegeneration via the olfactory nerve."
+      ],
+      "answer": 0,
+      "explanation": "Detection of gingipains and P. gingivalis material in Alzheimer's brain tissue is real and citable (Established as a detection), but detection is not causation. Whether the organism initiated, drove, or merely accompanied the disease is a Tier-3 Hypothesis. Conflating 'something was found' with 'something was caused' is the exact error the case is designed to prevent."
+    },
+    {
+      "q": "Across the four Layer-0 cases, which one supports the strongest, most immediately actionable claim a hygienist can make at the chair?",
+      "options": [
+        "The refractory type 2 diabetic: periodontal therapy produces an established, measurable improvement in HbA1c, enabling co-management on an endpoint the physician already tracks.",
+        "The MI at recall: scaling can be stated as the trigger of the specific infarction.",
+        "The preterm birth: treating gingivitis during pregnancy is an established way to prevent preterm delivery.",
+        "The Alzheimer's case: gingipains in the hippocampus establish that treating gums prevents dementia."
+      ],
+      "answer": 0,
+      "explanation": "The periodontitis–diabetes link is bidirectional and Established, and meta-analyses show periodontal therapy improves HbA1c by a few tenths of a percent — a real, measurable systemic endpoint, making co-management actionable now. The MI-trigger claim is only a per-patient hypothesis; the preterm-birth prevention claim actually failed in large RCTs; and the Alzheimer's causal/prevention claim is Hypothesis, not Established."
+    },
+    {
+      "q": "A physician asks how periodontitis could be implicated in preterm birth. Which statement matches the correct evidence tier for the placental arm?",
+      "options": [
+        "Periodontal therapy during pregnancy is a proven way to prevent preterm birth",
+        "The association with preterm birth is real and mechanistically plausible, but intervention trials during pregnancy have generally failed to reduce it, so causation and therapeutic prevention remain unproven",
+        "Periodontitis has no demonstrated relationship to adverse pregnancy outcomes",
+        "Fusobacterium nucleatum in amniotic fluid establishes that the mouth causes preterm labor"
+      ],
+      "answer": 1,
+      "explanation": "The periodontitis–preterm-birth association is Established and the inflammatory mechanism (hematogenous spread of F. nucleatum, elevated TNF-α/IL-6/prostaglandins acting on the myometrium) is Supported, but randomized treatment-in-pregnancy trials have generally been null. Therapy-prevents-preterm-birth is therefore Hypothesis, and the trial record cautions against overstating it. Detection of an organism is not proof of causation."
+    },
+    {
+      "q": "In the proposed five-step OMV cascade, which step is described as the 'convergence node' shared across the vascular, metabolic, and neural arms, and what is its evidence tier?",
+      "options": [
+        "Step 1 barrier disruption, which is Established",
+        "Step 2 mitochondrial dysfunction, which is Supported (Tier 2)",
+        "Step 4 secondary EV propagation, which is Established",
+        "Step 5 tissue endpoint, which is Supported"
+      ],
+      "answer": 1,
+      "explanation": "Step 2, mitochondrial dysfunction (Drp1-driven fragmentation, ROS, membrane-potential collapse, a glycolytic shift), is the convergence node — the shared intermediate every downstream pathway passes through. It sits in the load-bearing floor of the cascade at Supported/Tier 2, alongside Step 1. Steps 4 and 5 are Hypothesis (Tier 3), so neither is Established."
+    },
+    {
+      "q": "In advanced periodontitis, why does the neutrophil become a primary agent of tissue destruction rather than the bacteria directly?",
+      "options": [
+        "It cannot penetrate the biofilm's EPS matrix, undergoes frustrated phagocytosis, and discharges MMPs, elastase, and ROS into host tissue",
+        "It stops producing reactive oxygen species entirely, leaving bacteria to digest the tissue unopposed",
+        "It differentiates into a Th17 cell and secretes IL-17 directly into alveolar bone",
+        "It is cleaved by gingipains before it can reach the sulcus, so the tissue is left undefended"
+      ],
+      "answer": 0,
+      "explanation": "The biofilm's EPS matrix is physically impenetrable to the neutrophil. Unable to phagocytose its target, the cell undergoes frustrated phagocytosis and discharges its arsenal (MMPs, elastase, ROS) into surrounding tissue and bone. This immune-mediated collateral—not bacterial digestion—accounts for much of the destruction, and it is Established immunology."
+    },
+    {
+      "q": "Which statement correctly maps the mechanism to hs-CRP AND applies the right evidence tier?",
+      "options": [
+        "TNF-α travels to the liver and is directly measured as hs-CRP; this is a Hypothesis under active testing",
+        "IL-6 signals hepatocytes to synthesize C-reactive protein, and that oral-activation-to-elevated-hs-CRP chain is Established; periodontal therapy improves these markers",
+        "Complement C5a is converted by the liver into hs-CRP, an Established one-to-one conversion",
+        "IL-17 instructs the liver to make CRP, and lowering oral-driven hs-CRP is proven to prevent heart attacks"
+      ],
+      "answer": 1,
+      "explanation": "IL-6 is the pivotal cytokine that travels to the liver and instructs hepatocytes to synthesize CRP (measured as hs-CRP). The chain from oral immune activation to elevated hs-CRP—and that periodontal therapy improves hs-CRP, IL-6, and TNF-α—is Established via meta-analyses. TNF-α amplifies but is not itself CRP; the claim that lowering hs-CRP prevents heart attacks remains a Hypothesis and must not be stated as proven."
+    },
+    {
+      "q": "Two patients present with similar plaque scores and similar total bacterial load, but one has healthy tissue and the other is actively losing attachment. What best explains the difference, per the network model of dysbiosis?",
+      "options": [
+        "The diseased patient simply has not yet crossed the bacterial-load threshold that triggers breakdown",
+        "The difference is the network state the community is in, not the size of the community",
+        "The healthy patient is carrying a lower-virulence species of Porphyromonas gingivalis",
+        "Total load is measured incorrectly; corrected counts would reveal the diseased patient has far more bacteria"
+      ],
+      "answer": 1,
+      "explanation": "Disease is a property of the community's state (composition and behavior), not its headcount. Two mouths can carry similar loads yet occupy different stable states — symbiosis versus a self-reinforcing dysbiotic attractor. Load is not the disease."
+    },
+    {
+      "q": "Why does antibiotic monotherapy typically fail to resolve established periodontitis in the attractor model?",
+      "options": [
+        "Antibiotics are too weak to lower the bacterial count in a deep pocket",
+        "It knocks the count down but does not reshape the conditions (the 'valley'), so the self-reinforcing state pulls the community back into disease",
+        "It eradicates Fusobacterium nucleatum but spares Porphyromonas gingivalis",
+        "Antibiotics increase microbial diversity, which worsens dysbiosis"
+      ],
+      "answer": 1,
+      "explanation": "The dysbiotic state is a self-reinforcing attractor held in place by local conditions (low oxygen, proteolytic pH, chronic inflammation). Antibiotics perturb the community without changing those conditions, so it regrows along the same lines. Only mechanical disruption plus host modulation reshapes the niche itself — which is why ecological reset, not eradication, is the target."
+    },
+    {
+      "q": "A hygienist records bleeding on probing (BOP) at several sites during a recall exam. In the barrier framework taught in this unit, what does a positive BOP most directly indicate?",
+      "options": [
+        "A transient bacteremia is currently in progress in the bloodstream",
+        "The site's mucosal barrier is ulcerated and permeable — an open boundary between biofilm and capillary",
+        "The patient has proven systemic disease caused by oral bacteria",
+        "Salivary IgA production has permanently ceased at that site"
+      ],
+      "answer": 1,
+      "explanation": "BOP is active permeability made visible: gentle probing ruptures an ulcerated, disrupted pocket epithelium, demonstrating that the last line before the blood has been breached. That a bleeding pocket is permeable and ulcerated is Established; it does not by itself prove systemic disease causation."
+    },
+    {
+      "q": "Why are outer membrane vesicles (OMVs), rather than intact P. gingivalis cells, considered the effector that crosses the degraded mucosal barrier?",
+      "options": [
+        "OMVs are larger than bacteria and physically force the junctions apart",
+        "OMVs require living bacteria to remain attached in order to travel",
+        "At 20–250 nm and carrying concentrated virulence cargo, OMVs slip through cleaved junctional epithelium and evade immune clearance in ways a 0.5–1.5 μm cell cannot",
+        "Intact bacteria cross freely while OMVs are trapped in the mucin layer"
+      ],
+      "answer": 2,
+      "explanation": "Whole bacteria (0.5–1.5 μm) are large, readily cleared, and appear systemically only as brief transient bacteremia. OMVs are one to two orders of magnitude smaller, acellular, immune-evasive, and cargo-dense — including the gingipains that cleave the junctional proteins — making them the plausible effector that crosses a barrier intact bacteria cannot."
+    },
+    {
+      "q": "A patient presents with Stage II periodontitis, 8% BOP, deepest PD 4 mm, and an HbA1c of 8.4% (uncontrolled type 2 diabetes). Using the unit's stratum logic, where does this patient belong and why?",
+      "options": [
+        "Watchful — the periodontal numbers are mild (Stage II, low BOP, shallow pockets)",
+        "Measure — a high-stakes comorbidity pulls the patient up a stratum even though the oral numbers look tidy",
+        "Co-manage — any diabetic with periodontitis is automatically High risk",
+        "Watchful — hs-CRP should be ordered only once BOP exceeds 30%"
+      ],
+      "answer": 1,
+      "explanation": "Host variables decide how much a given oral exposure matters. The unit states the Watchful/Measure line is most often crossed by a comorbidity, not a periodontal number: a tidy Stage II mouth in a patient with HbA1c 8.4% belongs in Measure because the host has changed the stakes. It is not automatically Co-manage (that requires the high-exposure oral picture), and the systemic history — not a BOP threshold — is what drives the escalation."
+    },
+    {
+      "q": "A co-ordered hs-CRP returns at 4.2 mg/L in a patient with Stage III periodontitis and active BOP. Which interpretation is consistent with the unit's tier discipline?",
+      "options": [
+        "The value confirms the periodontitis is driving systemic inflammation, so tell the patient their gums are the cause",
+        "hs-CRP is non-specific, so the mouth is a candidate contributor to treat and re-measure; a ~20–30% drop at 3–6 months would support that it moved the number",
+        "A single value >3 mg/L is diagnostic of periodontal-origin systemic disease and warrants no follow-up test",
+        "IL-6 should replace hs-CRP for routine banding since it is the upstream driver"
+      ],
+      "answer": 1,
+      "explanation": "hs-CRP is non-specific — it rises with obesity, infection, autoimmune flares, and more — so a single elevated value never proves the mouth is the source. The unit's discipline is to treat the periodontitis as a modifiable candidate contributor, then re-measure: hs-CRP commonly falls ~20–30% at 3–6 months post-therapy, and it is the paired baseline-and-follow-up (not one snapshot) that constitutes the evidence. Claiming causation is a Tier 3 overclaim to avoid, and IL-6 is a corroborating marker, not the routinely banded one."
+    },
+    {
+      "q": "A patient with Stage III periodontitis says, \"My gums bleed sometimes, but that's always been normal for me.\" Which response best reflects motivational interviewing delivered in tier-matched language?",
+      "options": [
+        "\"That bleeding means gum disease, and gum disease causes heart attacks and dementia — you can't ignore this.\"",
+        "\"You've noticed the bleeding for a while. It's actually inflammation we can measure and lower — on a 0-to-10 scale, how important is getting it under control right now?\"",
+        "\"You need to floss every single day from now on, no exceptions, or you'll lose these teeth.\"",
+        "\"The science is settled that bad gums cause disease, so trust me and let's schedule treatment today.\""
+      ],
+      "answer": 1,
+      "explanation": "Option 1 (index 1) uses a reflection plus a Tier-1 framing (\"inflammation we can measure and lower\") and a readiness-ruler question that evokes the patient's own change talk. The others either fear-monger and overclaim causation (\"causes heart attacks and dementia,\" \"the science is settled\") or trigger the righting reflex with a lecture — all of which undermine both MI and the tier discipline."
+    },
+    {
+      "q": "Why does presenting the mouth as \"a proven cause of a heart attack\" fail on BOTH motivational-interviewing and evidence-tier grounds?",
+      "options": [
+        "It is a Tier-3 causal overclaim, and fear-based framing produces imposed rather than evoked motivation, which does not sustain behavior change",
+        "It is perfectly accurate but simply too technical for most patients to understand",
+        "It violates MI but is fully supported by the Tier-1 evidence base",
+        "It is fine to say as long as the patient is in the precontemplation stage of change"
+      ],
+      "answer": 0,
+      "explanation": "The claim that periodontitis causes a heart attack is a Tier-3 hypothesis stated as certainty — a causal overclaim the evidence does not support. Separately, fear-based framing generates motivation imposed from outside, which MI research shows does not durably change behavior the way evoked, patient-generated motivation does. The honest, motivating alternative is the Tier-1 framing: a modifiable inflammatory exposure that can be measured and reduced."
+    },
+    {
+      "q": "A hygienist's co-management consult letter to a PCP must do four things to be defensible. Which set correctly describes its purpose?",
+      "options": [
+        "Report objective periodontal findings, state the association in associational language, explicitly disclaim causation, and request concrete defensible actions",
+        "Diagnose the systemic disease, assert the periodontal cause, recommend a cardiac medication, and schedule follow-up",
+        "Summarize the patient's cardiac history, predict their heart-attack risk, and promise marker normalization",
+        "Report findings and request that the physician confirm the mouth is causing the patient's cardiovascular disease"
+      ],
+      "answer": 0,
+      "explanation": "A credible letter reports objective findings, states the periodontitis–inflammation association in associational language, explicitly disclaims causation, and requests defensible actions (baseline marker, shared history, follow-up). Dropping the disclaimer overclaims; dropping the requests is mere gossip. It never diagnoses systemic disease, asserts causation, or suggests medication changes."
+    },
+    {
+      "q": "What single step is required to honestly close the co-management loop after a referral?",
+      "options": [
+        "Confirm the periodontal therapy was actually completed and re-measure hs-CRP at 3–6 months, documenting the change",
+        "Tell the patient the treatment prevented a future heart attack",
+        "Order a cardiac stress test once periodontal therapy is done",
+        "Wait for the physician to declare the mouth the cause of the patient's inflammation"
+      ],
+      "answer": 0,
+      "explanation": "Closing the loop means confirming treatment truly happened (not just scheduled) and re-measuring hs-CRP at 3–6 months to show the intervention moved the signal — commonly a ~20–30% drop. That demonstrates an effect on a surrogate marker only; it never licenses claiming a prevented event, and ordering cardiac tests is outside the hygienist's scope."
+    },
+    {
+      "q": "A COSH-credentialed hygienist is describing scaling and root planing to a patient with generalized moderate periodontitis. Which statement stays within the evidence tier the course requires?",
+      "options": [
+        "\"This debridement will prevent you from having a heart attack.\"",
+        "\"Removing this biofilm lowers your local inflammation and has been shown to improve blood markers of systemic inflammation like hs-CRP.\"",
+        "\"Laser therapy after scaling has been proven to reverse your cardiovascular risk.\"",
+        "\"Antibiotics alone would reset your oral ecology without the need for instrumentation.\""
+      ],
+      "answer": 1,
+      "explanation": "Debridement lowering local inflammation and improving surrogate markers (hs-CRP, IL-6) is Established. Preventing heart attacks and laser-driven systemic disease modification are Hypothesis-tier and must not be claimed, and the ecological reset is mechanical, so antibiotics alone cannot substitute for instrumentation."
+    },
+    {
+      "q": "According to the unit, what is the correct evidence-tiered role of sub-gingival chemotherapeutics such as locally delivered antimicrobials and sub-antimicrobial-dose doxycycline?",
+      "options": [
+        "Primary agents that achieve the ecological reset on their own, replacing mechanical debridement",
+        "Adjuncts to mechanical debridement, where SDD (host modulation) has Established adjunctive surrogate benefit and locally delivered antimicrobials are Supported",
+        "Routine first-line therapy for every periodontitis patient regardless of disease severity",
+        "Systemic disease-modifying drugs proven to lower cardiovascular events"
+      ],
+      "answer": 1,
+      "explanation": "The unit stresses that the ecological reset is mechanical; chemotherapeutics are adjuncts, not substitutes. Sub-antimicrobial-dose doxycycline (MMP/host modulation) carries an Established adjunctive surrogate benefit, while locally delivered antimicrobials are Supported. None are claimed to modify systemic disease."
+    },
+    {
+      "q": "Under the measurement-first discipline this unit re-states, which claim is a hygienist permitted to make at the chair after a patient's hs-CRP falls ~25% at the 3–6 month re-measurement following completed periodontal therapy?",
+      "options": [
+        "That treating the patient's gums prevented a future heart attack",
+        "That the intervention measurably reduced this patient's systemic inflammatory tone",
+        "That periodontal disease has now been proven to cause the patient's cardiovascular risk",
+        "That the falling marker confirms disease modification has occurred"
+      ],
+      "answer": 1,
+      "explanation": "Moving the surrogate marker (~20–30% hs-CRP reduction at 3–6 months) is an Established effect the clinician can state — 'the intervention reduced this patient's inflammatory tone.' Preventing heart attacks, proving causation, and claiming disease modification are all Tier-3 Hypothesis claims that must not be made at the chair; the loop measures the signal and stays silent on hard outcomes."
+    },
+    {
+      "q": "Why does the unit insist that the follow-up dataset confirm 'therapy delivered — actually completed' and record confounders at baseline?",
+      "options": [
+        "Because insurance coding requires both fields for reimbursement",
+        "Because an unchanged hs-CRP is meaningless if the periodontitis was never truly treated, and hs-CRP is non-specific so a flat value may reflect a new inflammatory stimulus rather than treatment failure",
+        "Because IL-6 cannot be interpreted without a completed-therapy flag",
+        "Because these fields are needed to assign the patient a validated salivary-biosensor risk band"
+      ],
+      "answer": 1,
+      "explanation": "A re-measurement only means something if the source was genuinely treated between draws, and because hs-CRP rises with any inflammatory stimulus (infection, obesity, flare), a value that did not fall must be interpreted against recorded confounders — otherwise a flat number is wrongly read as treatment failure. Salivary biosensors remain Supported (not a validated clinical banding), so answer D misstates their tier."
+    }
+  ],
+  "evaluation": [
+    "This activity met its stated learning objectives.",
+    "The content was free of commercial bias.",
+    "I can apply what I learned at the chair.",
+    "What one change will you make in practice after this activity?"
+  ]
+}
