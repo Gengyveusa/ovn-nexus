@@ -37,13 +37,13 @@ export default function EducationPage() {
               <span className="text-primary">this deeply.</span>
             </h1>
             <p className="mx-auto mt-7 max-w-2xl text-lg text-muted-foreground leading-relaxed text-balance">
-              Curated from Dr. Stephen Thaddeus Connelly&apos;s <em>Oral Health Bulletin</em> — written for
+              Curated from Dr. S. Thaddeus Connelly&apos;s <em>Oral Health Bulletin</em> — written for
               clinicians <em>and</em> the curious. Every claim is tagged by how strong the evidence
               actually is. That honesty is the point.
             </p>
             <div className="mt-4 text-sm text-muted-foreground">
-              <p className="font-medium text-foreground">Stephen Thaddeus Connelly, DDS, MD, PhD, FACS</p>
-              <p>Professor of Oral &amp; Maxillofacial Surgery, UCSF</p>
+              <p className="font-medium text-foreground">S. Thaddeus Connelly, DDS, MD, PhD, FACS</p>
+              <p>Full Professor, University of California, San Francisco · Founder of Gengyve</p>
             </div>
           </div>
         </section>

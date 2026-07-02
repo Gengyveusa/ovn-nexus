@@ -8,7 +8,7 @@ import { getAllCourseSlugs, getCourse } from "@/lib/ce/loader";
 export const metadata: Metadata = {
   title: "Continuing Education — OVN Nexus by Gengyve",
   description:
-    "Accredited-track CE / CME on the oral–systemic connection — for dentists, hygienists, and physicians. Evidence-tiered, from a UCSF professor and VA course director.",
+    "Accredited-track CE / CME on the oral–systemic connection — for dentists, hygienists, and physicians. Evidence-tiered, from a full UCSF professor and the founder of Gengyve.",
 };
 
 export default function CeHub() {
@@ -25,8 +25,8 @@ export default function CeHub() {
               <span className="text-primary">seriously.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground text-balance">
-              Evidence-tiered, dual-tracked continuing education — dental CE and medical CME — from a UCSF
-              professor and VA course director. Rigor, not marketing dressed as science.
+              Evidence-tiered, dual-tracked continuing education — dental CE and medical CME — from a full
+              UCSF professor and the founder of Gengyve. Rigor, not marketing dressed as science.
             </p>
           </div>
         </section>
