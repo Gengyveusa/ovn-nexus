@@ -153,3 +153,12 @@
   .dark .tier-supported { color: #fbbf24; border-color: #92400e; background: rgba(146,64,14,0.22); }
   .dark .tier-hypothesis { color: #38bdf8; border-color: #075985; background: rgba(7,89,133,0.22); }
 }
+
+/* ─── CE certificate print isolation ──────────────────── */
+@media print {
+  header, footer { display: none !important; }
+  body { background: #fff !important; }
+  body * { visibility: hidden; }
+  .ce-certificate, .ce-certificate * { visibility: visible; }
+  .ce-certificate { position: absolute; left: 0; top: 0; width: 100%; margin: 0; box-shadow: none !important; border: 2px solid #d4d4d4 !important; }
+}

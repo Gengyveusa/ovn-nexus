@@ -1,0 +1,107 @@
+{
+  "slug": "foundations-oral-systemic",
+  "title": "Foundations in Oral-Systemic Health",
+  "subtitle": "OSCIH Tier-1 · proof-of-format",
+  "creditHours": "2.0",
+  "audience": "Dentists, hygienists, and physicians",
+  "accreditationStatement": "Continuing-education credit pending: ADA-CERP (dental) via UCSF School of Dentistry and ACCME (medical) via the SFVAMC History & Physical course. This proof-of-format is for preview.",
+  "director": "Stephen Thaddeus Connelly, DDS, MD, PhD, FACS — Professor, Oral & Maxillofacial Surgery, UCSF",
+  "lessons": ["lesson-01", "lesson-hp"],
+  "passThreshold": 0.7,
+  "quiz": [
+    {
+      "q": "In Lesson 1, the mouth is described as a 'phase-transition boundary.' What does this phrase mean in the oral-systemic context?",
+      "options": [
+        "The mouth changes temperature faster than other tissues",
+        "It is a permeable interface where a local microbial process converts into a systemic inflammatory signal",
+        "Periodontitis physically changes the phase of saliva from liquid to gel",
+        "Oral bacteria only affect the body during acute infections"
+      ],
+      "answer": 1,
+      "explanation": "The lesson frames the mouth as a thin, vascularized, chronically colonized surface where a local infection becomes a systemic exposure."
+    },
+    {
+      "q": "Which serum finding is described as the gold-standard marker of systemic inflammation, with the threshold noted for increased cardiovascular risk?",
+      "options": [
+        "IL-6 > 10 pg/mL",
+        "Zonulin above the reference range",
+        "hs-CRP > 3.0 mg/L",
+        "TNF-alpha > 5 mg/L"
+      ],
+      "answer": 2,
+      "explanation": "hs-CRP is the gold-standard serum marker, and values above 3.0 mg/L correlate with increased cardiovascular risk."
+    },
+    {
+      "q": "According to the scale statistics in Lesson 1, which figure is correctly matched to its disease domain?",
+      "options": [
+        "Cardiovascular disease accounts for about 32% of global deaths",
+        "Cancer accounts for about 32% of global deaths",
+        "Dementia already affects about 1 billion people today",
+        "Cardiovascular disease is 1 in 6 deaths"
+      ],
+      "answer": 0,
+      "explanation": "The lesson cites cardiovascular disease at 32% of global deaths, cancer at 1 in 6 deaths, and ~1 billion people with dementia projected by 2050."
+    },
+    {
+      "q": "A colleague states: 'Periodontal disease is a proven causal driver of Alzheimer's.' Using the course's evidence tiers, how should this be classified and handled?",
+      "options": [
+        "Tier 1 Established — safe to cite clinically",
+        "Tier 2 Supported — discuss with 'preclinical evidence suggests'",
+        "Tier 3 Hypothesis — must be presented as an unproven hypothesis, not fact",
+        "Tier 1 Established for association, so the causal wording is acceptable"
+      ],
+      "answer": 2,
+      "explanation": "Causation for Alzheimer's is a Tier 3 hypothesis under active testing; the framework prohibits stating it as established fact."
+    },
+    {
+      "q": "In the H&P lesson, how should the three core periodontal findings be read as an inflammatory 'dose'?",
+      "options": [
+        "Probing depth = exposure surface size; BOP = active permeability/inflammation; radiographic bone loss = cumulative chronicity",
+        "All three measure only cosmetic tooth appearance",
+        "Bleeding on probing measures lifetime exposure; bone loss measures current activity",
+        "Probing depth is the only finding with systemic relevance"
+      ],
+      "answer": 0,
+      "explanation": "PD proxies the size of the exposure surface, BOP indicates active ulceration/permeability, and radiographic bone loss records cumulative chronicity."
+    },
+    {
+      "q": "What post-therapy change in hs-CRP does the H&P lesson tell physicians to expect, and over what interval?",
+      "options": [
+        "A complete normalization to zero within 2 weeks",
+        "Roughly a 20–30% drop at 3–6 months after definitive periodontal therapy",
+        "A 50–70% drop within 24 hours",
+        "No measurable change, since hs-CRP is unrelated to periodontitis"
+      ],
+      "answer": 1,
+      "explanation": "Randomized trial data support an approximately 20–30% reduction in hs-CRP at 3–6 months following definitive periodontal therapy."
+    },
+    {
+      "q": "In the diabetic case vignette (HbA1c stuck at 8.4% with Stage III periodontitis), what is the defensible framing of periodontal treatment?",
+      "options": [
+        "A guaranteed cure for her diabetes once the gums are treated",
+        "A replacement for her insulin and metabolic regimen",
+        "A reasonable adjunct to metabolic management, given the bidirectional association",
+        "Irrelevant, because diabetes and periodontitis are unrelated"
+      ],
+      "answer": 2,
+      "explanation": "The diabetes-periodontitis link is bidirectional and well-supported, so periodontal therapy is defensible as an adjunct, not a cure or substitute."
+    },
+    {
+      "q": "What is the correct purpose of the dentist-to-PCP consult letter template in the H&P lesson?",
+      "options": [
+        "To assert that the patient's periodontitis has caused their systemic disease",
+        "To report objective periodontal findings, state the association, disclaim causation, and request defensible co-management actions",
+        "To bill the physician for periodontal services",
+        "To recommend gingipain-inhibitor therapy for dementia prevention"
+      ],
+      "answer": 1,
+      "explanation": "The template models tier-matched discipline: it shares findings, states the association explicitly, disclaims causation, and requests concrete Tier 1 actions."
+    }
+  ],
+  "evaluation": [
+    "This activity met its stated learning objectives.",
+    "The content was free of commercial bias.",
+    "I can apply what I learned in practice.",
+    "What one change will you make in practice after this activity?"
+  ]
+}
