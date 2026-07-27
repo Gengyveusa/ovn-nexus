@@ -1,11 +1,35 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, AlertTriangle, FlaskConical, ArrowLeft } from "lucide-react";
+import { sciencePageGraph, jsonLd } from "@/lib/structured-data";
+
+// This route had no metadata export, so it inherited the root layout's title
+// and shipped as a duplicate of the homepage — on the page carrying the core
+// research presentation.
+export const metadata: Metadata = {
+  title: "The Oral-Vascular-Neural Axis — OVN Nexus",
+  description:
+    "Bacterial extracellular vesicles as a candidate oral-systemic disease interface. Every claim graded as Established, Supported, or Hypothesis Under Active Testing.",
+  alternates: { canonical: "/science" },
+  openGraph: {
+    title: "The Oral-Vascular-Neural Axis — OVN Nexus",
+    description:
+      "Bacterial extracellular vesicles as a candidate oral-systemic disease interface, presented with explicit evidence tiers.",
+    url: "/science",
+    type: "article",
+    authors: ["S. Thaddeus Connelly, DDS, MD, PhD, FACS"],
+  },
+};
 
 export default function SciencePage() {
   return (
     <div className="flex min-h-screen flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(sciencePageGraph())}
+      />
       <header className="border-b bg-background/95 backdrop-blur sticky top-0 z-50">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
