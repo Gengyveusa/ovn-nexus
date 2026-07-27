@@ -12,6 +12,7 @@ import {
   getRelatedEditions,
   formatDate,
 } from "@/lib/bulletin";
+import { bulletinArticleGraph, jsonLd } from "@/lib/structured-data";
 
 export async function generateStaticParams() {
   return getAllEditions().map((e) => ({ slug: e.slug }));
@@ -65,6 +66,10 @@ export default function BulletinDetailPage({
 
   return (
     <div className="flex min-h-screen flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(bulletinArticleGraph(edition))}
+      />
       <SiteHeader active="blog" />
 
       <main className="flex-1">
