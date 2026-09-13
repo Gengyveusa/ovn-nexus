@@ -79,6 +79,14 @@
 .resource-grid p { color:var(--c-muted); font-size:14px; }
 .editorial-note { padding-block:36px 46px; }
 .editorial-note p { margin-top:10px; max-width:1050px; font-size:12px; color:var(--c-muted); }
+.gengyve-brand-note { display:grid; grid-template-columns:.8fr 1.2fr; align-items:center; gap:56px; margin-top:36px; padding:42px; border-top:3px solid #b5442e; border-radius:4px; background:#ebe7da; scroll-margin-top:95px; }
+.gengyve-brand-signature { display:flex; flex-direction:column; align-items:flex-start; }
+.gengyve-brand-signature .clinical-eyebrow { font-size:10px; }
+.gengyve-wordmark { margin-top:14px; font-family:Georgia,'Times New Roman',serif; font-size:58px; line-height:1.1; letter-spacing:-.06em; }
+.gengyve-brand-caption { margin-top:12px; font-size:12px; color:var(--c-muted); }
+.gengyve-brand-note h2 { font-size:36px; }
+.gengyve-brand-note p { margin:16px 0 22px; font-size:15px; color:var(--c-muted); }
+@media (max-width:760px) { .gengyve-brand-note { grid-template-columns:1fr; gap:28px; padding:28px 24px; } .gengyve-wordmark { font-size:50px; } .gengyve-brand-note h2 { font-size:32px; } }
 .brief-hero { padding:65px 0 44px; max-width:880px; }
 .brief-hero h1 { margin:23px 0; font-size:clamp(42px,5vw,66px); }
 .brief-hero>p { max-width:700px; font-size:19px; color:var(--c-muted); }

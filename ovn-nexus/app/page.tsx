@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { EvidenceExplorer } from "@/components/clinical/evidence-explorer";
-import { EditorialNote, FounderNote } from "@/components/clinical/editorial";
+import { EditorialNote, FounderNote, GengyveBrandNote } from "@/components/clinical/editorial";
 
 function SignalFigure() {
   return <figure className="hero-figure"><div className="hero-figure-top"><span>Oral · Vascular · Neural</span><span>Field notes / 01</span></div>
@@ -29,6 +29,6 @@ export default function HomePage() {
     <section className="brief-invitation"><div><span className="clinical-eyebrow">Made for a busy practice</span><h2>Read it today.<br />Discuss it tomorrow.</h2></div><p>The clinical brief puts the essentials in one place, with a patient-friendly explanation and a one-page guide for your next team conversation.</p><Link href="/for-dentists" className="clinical-button">Open the brief <ArrowRight size={17} aria-hidden="true" /></Link></section>
     <FounderNote />
     <div className="resource-grid"><Link href="/science"><span className="clinical-eyebrow">01 / Go deeper</span><h3>The research framework</h3><p>Explore the oral-vascular-neural axis and the hypotheses driving the next questions.</p><ArrowUpRight size={19} aria-hidden="true" /></Link><Link href="/education"><span className="clinical-eyebrow">02 / Keep learning</span><h3>Clinical education</h3><p>Build your understanding through modules on oral-systemic science.</p><ArrowUpRight size={19} aria-hidden="true" /></Link><Link href="/blog"><span className="clinical-eyebrow">03 / Follow the field</span><h3>The Oral Health Bulletin</h3><p>Read perspectives on the research and the questions it raises for practice.</p><ArrowUpRight size={19} aria-hidden="true" /></Link></div>
-    <EditorialNote />
+    <GengyveBrandNote /><EditorialNote />
   </main><SiteFooter /></div>;
 }
