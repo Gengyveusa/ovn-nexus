@@ -80,7 +80,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   He writes <Link href="/blog">The Oral Health Bulletin</Link>, a weekly clinical
-                  newsletter on the oral-vascular-neural axis. The point of the writing — and of OVN Nexus — isn&rsquo;t to
+                  newsletter on the oral-vascular-neural axis, and <a href="https://ledger.gengyveusa.com" target="_blank" rel="noopener noreferrer">The Practice Ledger</a>, a weekly briefing on the business of dentistry. The point of the writing — and of OVN Nexus — isn&rsquo;t to
                   overclaim. It&rsquo;s to give the field a careful, evidence-tiered way to talk
                   about what we know, what we suspect, and what we are still testing.
                 </p>

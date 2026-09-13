@@ -63,6 +63,7 @@
 .evidence-sources { display:flex; flex-wrap:wrap; gap:12px 20px; margin-top:24px; }
 .evidence-sources a { display:flex; gap:5px; align-items:center; font-size:11px; text-decoration:underline; }
 .brief-invitation { border-top:1px solid var(--c-rule); border-bottom:1px solid var(--c-rule); padding-block:55px; display:grid; grid-template-columns:.7fr 1fr auto; align-items:center; gap:40px; }
+.brief-invitation + .brief-invitation { border-top:0; }
 .brief-invitation h2 { font-size:36px; margin-top:12px; }
 .brief-invitation p { font-size:15px; color:var(--c-muted); }
 .founder-note { display:grid; grid-template-columns:230px 1fr; gap:70px; padding:80px 0; max-width:980px; margin-inline:auto; align-items:center; scroll-margin-top:95px; }
@@ -70,7 +71,7 @@
 .founder-monogram span { font-family:Arial,sans-serif; letter-spacing:.1em; font-size:9px; margin-top:8px; }
 .founder-note h2 { font-size:36px; margin:16px 0; }
 .founder-note p { font-size:15px; color:var(--c-muted); }
-.resource-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--c-rule); border-bottom:1px solid var(--c-rule); }
+.resource-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--c-rule); border-bottom:1px solid var(--c-rule); }
 .resource-grid a { padding:32px 28px; border-right:1px solid var(--c-rule); position:relative; }
 .resource-grid a:first-child { padding-left:0; }
 .resource-grid a:last-child { border:0; }
@@ -115,7 +116,7 @@
 .guide-page section p { font-size:15px; color:var(--c-muted); }
 .guide-page ul { list-style:disc; padding-left:22px; font-size:15px; line-height:1.8; }
 .guide-page .clinical-actions { margin-block:24px; }
-@media (max-width:1000px) { .clinical-hero { gap:32px; padding-top:50px; } .clinical-hero h1 { font-size:56px; } .hero-figure { min-height:430px; } .clinical-wrap { width:calc(100% - 48px); } .brief-invitation { grid-template-columns:1fr 1fr; } .brief-invitation .clinical-button { justify-self:start; } .evidence-map { padding:23px; } .evidence-detail { padding:28px; } }
+@media (max-width:1000px) { .resource-grid { grid-template-columns:repeat(2,1fr); } .resource-grid a:nth-child(2n) { border-right:0; } .resource-grid a:nth-child(-n+2) { border-bottom:1px solid var(--c-rule); } .resource-grid a:nth-child(3) { padding-left:0; } .clinical-hero { gap:32px; padding-top:50px; } .clinical-hero h1 { font-size:56px; } .hero-figure { min-height:430px; } .clinical-wrap { width:calc(100% - 48px); } .brief-invitation { grid-template-columns:1fr 1fr; } .brief-invitation .clinical-button { justify-self:start; } .evidence-map { padding:23px; } .evidence-detail { padding:28px; } }
 @media (max-width:760px) { .clinical-wrap { width:calc(100% - 40px); } .clinical-hero { grid-template-columns:1fr; gap:36px; padding-block:40px; } .clinical-hero h1 { font-size:clamp(44px,8.5vw,64px); } .hero-figure { min-height:0; } .hero-figure svg { max-height:360px; } .clinical-trust { flex-wrap:wrap; justify-content:flex-start; column-gap:35px; } .clinical-section { padding-block:50px; } .section-heading { grid-template-columns:1fr; gap:20px; } .evidence-explorer { grid-template-columns:1fr; } .map-origin { padding-top:35px; } .evidence-detail { padding:28px 24px; min-height:420px; } .brief-invitation { grid-template-columns:1fr; gap:22px; padding-block:36px; } .founder-note { grid-template-columns:1fr; gap:26px; padding-block:50px; } .founder-monogram { width:130px; font-size:48px; } .founder-monogram span { font-size:7px; } .founder-note h2 { font-size:32px; } .resource-grid { grid-template-columns:1fr; } .resource-grid a { border-right:0; border-bottom:1px solid var(--c-rule); padding:26px 0; } .resource-grid a>svg { right:0; } .brief-takeaways { grid-template-columns:1fr; gap:28px; } .brief-hero { padding-top:40px; } .brief-quote { padding:28px 24px; } .guide-page h1 { font-size:38px; } }
 @media (prefers-reduced-motion:reduce) { .clinical * { scroll-behavior:auto!important; transition:none!important; } }
 @media print { body:has(.clinical-print) * { visibility:visible; } body:has(.clinical-print) :is(header,footer,.clinical-actions,.share-brief,.no-print) { display:none!important; } .clinical-print { background:white; color:black; } .guide-page { width:100%; max-width:none; padding:0; } .guide-page section { break-inside:avoid; padding-block:14px; } .guide-page h1 { font-size:30px; } .guide-page h2 { font-size:20px; } }

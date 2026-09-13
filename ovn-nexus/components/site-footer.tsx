@@ -37,6 +37,7 @@ export function SiteFooter() {
               <li><Link href="/science" className="text-muted-foreground hover:text-foreground">Science</Link></li>
               <li><Link href="/education" className="text-muted-foreground hover:text-foreground">Education</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-foreground">The Bulletin</Link></li>
+              <li><a href="https://ledger.gengyveusa.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">The Practice Ledger ↗</a></li>
               <li><Link href="/for-hygienists" className="text-muted-foreground hover:text-foreground">For Hygienists</Link></li>
               <li><Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link></li>
             </ul>
