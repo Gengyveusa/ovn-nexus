@@ -16,10 +16,10 @@ Source records live in `lib/clinical-evidence.ts`. They point to the AHA 2026 st
 
 ## Run and verify
 
-Run from the `ovn-nexus` application directory:
+Run from the `ovn-nexus` application directory with Node 22 or 24 and npm 11. npm 10.9.4 hit an upstream peer-resolution error when updating the test tools; npm 11 resolves and installs this lockfile successfully:
 
 ```sh
-npm ci
+npx --yes npm@11 ci
 npm test
 npm run build
 npm run verify:clinical
@@ -38,7 +38,7 @@ These values are exclusively for local build checks; do not deploy them. They ca
 
 ## Framework maintenance
 
-Next.js moved from 14.1.0 to 15.5.24, the patched maintenance release identified in the August 25, 2026 security advisory: https://nextjs.org/blog/august-2026-security-release . Server cookies, headers, route parameters, and their callers now await the Next 15 request APIs. Database operations and research/admin authorization rules remain in place. Only the three exact public editorial routes bypass authentication initialization.
+Next.js moved from 14.1.0 to 15.5.25, a patched maintenance release following the August 25, 2026 security advisory: https://nextjs.org/blog/august-2026-security-release . Sharp was updated to 0.35.4. Next uses a PostCSS 8.5.28 override to avoid its vulnerable pinned CSS dependency; remove that override when the framework ships a fixed dependency. Compatible transitive dependency fixes were also applied. Server cookies, headers, route parameters, and their callers now await the Next 15 request APIs. Database operations and research/admin authorization rules remain in place. Only the three exact public editorial routes bypass authentication initialization.
 
 ## Validation and limits
 
@@ -49,6 +49,7 @@ Next.js moved from 14.1.0 to 15.5.24, the patched maintenance release identified
 - Built HTML checks for anchors, headings, corrected claims, canonical sharing metadata, download reference, and sitemap entries.
 - One-page PDF text and five link annotations checked; PDF and share image rendered and visually inspected.
 - Desktop/mobile browser walkthrough could not run because Codex's admin policy verification service denied browser access. Do not treat source and component checks as a completed browser walkthrough.
+- Final dependency audit: zero critical, high, or moderate findings; two low findings remain in the pre-existing Supabase SSR/cookie chain. A separate authentication-library migration can address those.
 - No live login, patient records, AI generation, or outbound messages were exercised.
 
 ## Publication
