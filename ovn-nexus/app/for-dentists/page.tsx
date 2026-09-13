@@ -4,7 +4,7 @@ import { ArrowRight, Download } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { EvidenceExplorer } from "@/components/clinical/evidence-explorer";
-import { EditorialNote, FounderNote } from "@/components/clinical/editorial";
+import { EditorialNote, FounderNote, GengyveBrandNote } from "@/components/clinical/editorial";
 import { ShareBrief } from "@/components/clinical/share-brief";
 import { briefUrl, evidence, evidenceReviewed, guideUrl, patientExplanation } from "@/lib/clinical-evidence";
 
@@ -30,6 +30,6 @@ export default function DentistBrief() {
     <section className="brief-quote"><span className="clinical-eyebrow">A patient conversation starter</span><blockquote>“{patientExplanation}”</blockquote><p>Suggested language to adapt to the patient and clinical context.</p></section>
     <section className="clinical-section"><div className="section-heading"><div><span className="clinical-eyebrow">Bring your team into the conversation</span><h2>One page.<br />A better starting point.</h2></div><p>Use the discussion guide at your next team meeting: three evidence checks, practical questions, and the sources to explore together.</p></div><div className="clinical-actions"><a href={guideUrl} className="clinical-button" download>Download the one-page guide <Download size={17} aria-hidden="true" /></a><Link href="/for-dentists/guide" className="clinical-button secondary">Read the guide online</Link></div></section>
     <div className="brief-invitation"><div><span className="clinical-eyebrow">Keep the discussion going</span><h2>What are your patients asking?</h2></div><p>Questions, corrections, and thoughtful disagreement are welcome. Bring a clinical question to Thad and help shape the next brief.</p><a href="mailto:thad@gengyveusa.com?subject=Question%20about%20the%20OVN%20clinical%20brief" className="clinical-button">Ask Thad a question <ArrowRight size={17} aria-hidden="true" /></a></div>
-    <FounderNote /><EditorialNote />
+    <FounderNote /><GengyveBrandNote /><EditorialNote />
   </main><SiteFooter /></div>;
 }
