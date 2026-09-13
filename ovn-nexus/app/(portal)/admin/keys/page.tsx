@@ -4,7 +4,7 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { AdminKeysClient } from "./client";
 
 export default async function AdminKeysPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();

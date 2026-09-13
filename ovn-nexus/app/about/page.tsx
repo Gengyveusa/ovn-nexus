@@ -18,7 +18,7 @@ export default function AboutPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader active="about" />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── Hero ──────────────────────────────────────────────── */}
         <section className="bg-aurora">
           <div className="container py-20 sm:py-28">
@@ -80,8 +80,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   He writes <Link href="/blog">The Oral Health Bulletin</Link>, a weekly clinical
-                  newsletter on the oral-vascular-neural axis, read by roughly 2,800 clinicians
-                  and researchers. The point of the writing — and of OVN Nexus — isn&rsquo;t to
+                  newsletter on the oral-vascular-neural axis. The point of the writing — and of OVN Nexus — isn&rsquo;t to
                   overclaim. It&rsquo;s to give the field a careful, evidence-tiered way to talk
                   about what we know, what we suspect, and what we are still testing.
                 </p>
@@ -154,10 +153,9 @@ export default function AboutPage() {
                   OVN Nexus is free and will stay free. The work behind it — the writing, the
                   research, the platform — is supported in part by{" "}
                   <strong>Gengyve USA</strong>, the oral-health company Thad founded with the
-                  same science in mind. The flagship product is a fluoride-free, chlorhexidine-free
-                  daily mouthwash built around hyaluronic acid and a short list of natural
-                  ingredients, developed for the kind of long-term, low-irritation use that a
-                  prescription rinse can&rsquo;t support.
+                  same science in mind. The clinical literature discussed here is distinct from evidence about any
+                  Gengyve product. Periodontal treatment trials and experimental studies cannot
+                  establish a mouthwash’s effects on systemic disease.
                 </p>
                 <p>
                   If you&rsquo;ve gotten value from anything on this site — the Bulletin, the
@@ -189,8 +187,8 @@ export default function AboutPage() {
               </div>
 
               <p className="mt-6 text-xs text-muted-foreground">
-                Gengyve USA is a separate company from OVN Nexus. Nothing on this platform is a
-                product endorsement of any specific therapy for any specific systemic condition.
+                The founder of OVN Nexus also founded Gengyve USA. Academic and VA affiliations
+                describe his background and do not imply institutional endorsement.
               </p>
             </div>
           </div>

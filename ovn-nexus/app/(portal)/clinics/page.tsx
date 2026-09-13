@@ -9,7 +9,7 @@ import Link from "next/link";
 import { formatNumber } from "@/lib/utils/format";
 
 export default async function ClinicsPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: clinics } = await supabase
     .from("clinics")
     .select("*, institutions(name)")

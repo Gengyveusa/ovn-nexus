@@ -9,19 +9,19 @@ export function generateStaticParams() {
   return getAllCourseSlugs().map((course) => ({ course }));
 }
 
-export function generateMetadata({ params }: { params: { course: string } }): Metadata {
-  const c = getCourse(params.course);
+export async function generateMetadata({ params }: { params: Promise<{ course: string }> }): Promise<Metadata> {
+  const c = getCourse((await params).course);
   if (!c) return { title: "Not found — OVN Nexus" };
   return { title: `${c.title} — CE · OVN Nexus`, description: c.subtitle };
 }
 
-export default function CeCoursePage({ params }: { params: { course: string } }) {
-  const course = getCourse(params.course);
+export default async function CeCoursePage({ params }: { params: Promise<{ course: string }> }) {
+  const course = getCourse((await params).course);
   if (!course) notFound();
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1 py-12 sm:py-16">
+      <main id="main-content" className="flex-1 py-12 sm:py-16">
         <div className="container">
           <CeCourse course={course} />
         </div>

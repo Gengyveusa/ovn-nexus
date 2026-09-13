@@ -6,9 +6,9 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   try {
     const body = await req.json();
@@ -22,7 +22,7 @@ export async function POST(
     const { data: request, error: reqErr } = await supabase
       .from("music_requests")
       .select("*")
-      .eq("id", params.id)
+      .eq("id", (await params).id)
       .single();
 
     if (reqErr || !request) {
@@ -34,7 +34,7 @@ export async function POST(
       .from("music_versions")
       .select("*")
       .eq("id", version_id)
-      .eq("request_id", params.id)
+      .eq("request_id", (await params).id)
       .single();
 
     if (verErr || !version) {
@@ -47,7 +47,7 @@ export async function POST(
     const { data: published, error: pubErr } = await supabase
       .from("music_published")
       .insert({
-        request_id: params.id,
+        request_id: (await params).id,
         version_id,
         title: title || request.title,
         description: description || null,
@@ -70,7 +70,7 @@ export async function POST(
     await supabase
       .from("music_requests")
       .update({ status: "published" })
-      .eq("id", params.id);
+      .eq("id", (await params).id);
 
     return NextResponse.json({
       data: published,

@@ -21,7 +21,7 @@ const RESEARCH_ROUTES = [
 const ADMIN_ROUTES = ["/admin"];
 
 export default async function PortalLayout({ children }: { children: React.ReactNode }) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -42,7 +42,7 @@ export default async function PortalLayout({ children }: { children: React.React
   const isAdmin = profile?.role === "admin";
 
   // Determine the current pathname from the x-pathname header set by middleware
-  const headersList = headers();
+  const headersList = await headers();
   const pathname = headersList.get("x-pathname") ?? "";
 
   // Protect admin routes

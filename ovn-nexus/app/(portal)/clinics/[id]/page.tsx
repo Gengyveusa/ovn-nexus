@@ -3,13 +3,13 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { notFound } from "next/navigation";
 import { ClinicDetailClient } from "./client";
 
-export default async function ClinicDetailPage({ params }: { params: { id: string } }) {
-  const supabase = createServerSupabaseClient();
+export default async function ClinicDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const supabase = await createServerSupabaseClient();
 
   const { data: clinic, error } = await supabase
     .from("clinics")
     .select("*, institutions(id, name, country)")
-    .eq("id", params.id)
+    .eq("id", (await params).id)
     .single();
 
   if (error || !clinic) notFound();
@@ -17,7 +17,7 @@ export default async function ClinicDetailPage({ params }: { params: { id: strin
   const { data: patients } = await supabase
     .from("patients")
     .select("*")
-    .eq("clinic_id", params.id)
+    .eq("clinic_id", (await params).id)
     .order("enrollment_date", { ascending: false });
 
   const { count: sampleCount } = await supabase

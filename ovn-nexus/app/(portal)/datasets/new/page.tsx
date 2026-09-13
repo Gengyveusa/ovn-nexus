@@ -2,8 +2,8 @@
 import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { DatasetForm } from "@/components/forms/dataset-form";
 
-export default async function NewDatasetPage({ searchParams }: { searchParams: { experiment_id?: string } }) {
-  const supabase = createServerSupabaseClient();
+export default async function NewDatasetPage({ searchParams }: { searchParams: Promise<{ experiment_id?: string }> }) {
+  const supabase = await createServerSupabaseClient();
 
   const { data: experiments } = await supabase
     .from("experiments")
@@ -19,7 +19,7 @@ export default async function NewDatasetPage({ searchParams }: { searchParams: {
       </div>
       <DatasetForm
         experiments={experiments ?? []}
-        defaultExperimentId={searchParams.experiment_id}
+        defaultExperimentId={(await searchParams).experiment_id}
       />
     </div>
   );

@@ -1,78 +1,32 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { AuthNavButtons } from "@/components/auth-nav-buttons";
-import { cn } from "@/lib/utils/cn";
+import { ArrowUpRight } from "lucide-react";
 
 interface SiteHeaderProps {
-  /**
-   * The current section to highlight in the nav (e.g. "blog", "about").
-   * Optional — if omitted, no link is highlighted.
-   */
-  active?: "education" | "blog" | "showcase" | "music" | "community" | "about" | null;
+  active?: "dentists" | "science" | "education" | "blog" | "showcase" | "music" | "community" | "about" | null;
 }
+const primaryLinks = [
+  { href: "/for-dentists", label: "For dentists", key: "dentists" },
+  { href: "/science", label: "Science", key: "science" },
+  { href: "/education", label: "Education", key: "education" },
+  { href: "/blog", label: "Bulletin", key: "blog" },
+  { href: "/about", label: "About", key: "about" },
+];
+const moreLinks = [
+  { href: "/for-hygienists", label: "For hygienists" },
+  { href: "/ce", label: "Continuing education" },
+  { href: "/showcase", label: "Showcase" },
+  { href: "/music", label: "Music Studio" },
+  { href: "/#community", label: "Community" },
+];
 
-/**
- * Apple-style sticky nav:
- * - Solid at top of page, translucent + backdrop-blur on scroll
- * - Hairline bottom border appears on scroll
- * - Tight, low-weight nav links
- */
 export function SiteHeader({ active = null }: SiteHeaderProps) {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const link = (href: string, label: string, key: SiteHeaderProps["active"]) => (
-    <Link
-      key={href}
-      href={href}
-      className={cn(
-        "transition-colors",
-        active === key ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-      )}
-    >
-      {label}
-    </Link>
-  );
-
-  return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/75 backdrop-blur-xl border-b border-border/60"
-          : "bg-background/0 border-b border-transparent"
-      )}
-    >
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-primary-foreground font-semibold text-sm shadow-sm">
-            OVN
-          </div>
-          <span className="leading-none">
-            <span className="block text-[17px] font-semibold tracking-tight">Nexus</span>
-            <span className="block text-[10px] font-medium uppercase tracking-[0.14em] text-primary">by Gengyve</span>
-          </span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-7 text-[13px] font-medium tracking-tight">
-          {link("/education", "Education", "education")}
-          {link("/blog", "Bulletin", "blog")}
-          {link("/showcase", "Showcase", "showcase")}
-          {link("/music", "Music Studio", "music")}
-          {link("/#community", "Community", "community")}
-          {link("/about", "About", "about")}
-          <Link href="/ce" className="text-muted-foreground hover:text-foreground transition-colors">CE</Link>
-          <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">Shop&nbsp;Gengyve&nbsp;↗</a>
-        </nav>
-        <AuthNavButtons />
-      </div>
-    </header>
-  );
+  return <header className="public-header sticky top-0 z-50 border-b border-[#d4dcd5] bg-[#f6f4ed] text-[#172d30]">
+    <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:p-3">Skip to content</a>
+    <div className="mx-auto flex h-[76px] w-[calc(100%-40px)] max-w-[1200px] items-center justify-between gap-6">
+      <Link href="/" aria-label="OVN Nexus home" className="flex shrink-0 items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#7d9386] text-[11px] font-bold tracking-tight">OVN</span><span><span className="block font-serif text-[23px] leading-none tracking-tight">Nexus</span><span className="mt-1 block text-[8px] font-semibold uppercase tracking-[.19em]">Research & education</span></span></Link>
+      <nav aria-label="Main navigation" className="hidden items-center gap-6 text-[12px] font-medium lg:flex">{primaryLinks.map(link => <Link key={link.href} href={link.href} aria-current={active === link.key ? "page" : undefined} className={active === link.key ? "text-[#b5442e]" : "hover:underline"}>{link.label}</Link>)}<details className="relative"><summary className="cursor-pointer">More</summary><div className="absolute right-0 top-8 w-56 rounded border border-[#d4dcd5] bg-[#f6f4ed] p-4 shadow-lg">{moreLinks.map(link => <Link className="block py-2 hover:underline" key={link.href} href={link.href}>{link.label}</Link>)}</div></details></nav>
+      <Link href="/hub" className="hidden items-center gap-2 rounded border border-[#aabbb1] px-4 py-2 text-xs font-medium lg:inline-flex">Member hub <ArrowUpRight size={14} aria-hidden="true" /></Link>
+      <details className="relative lg:hidden"><summary className="cursor-pointer rounded border border-[#aabbb1] px-4 py-2 text-sm">Menu</summary><nav aria-label="Mobile navigation" className="absolute right-0 top-12 max-h-[75vh] w-64 overflow-y-auto rounded border border-[#d4dcd5] bg-[#f6f4ed] p-5 shadow-lg">{[...primaryLinks, ...moreLinks, { href: "/hub", label: "Member hub / Sign in" }].map(link => <Link key={link.href} href={link.href} className="block py-2.5 text-sm hover:underline">{link.label}</Link>)}</nav></details>
+    </div>
+  </header>;
 }

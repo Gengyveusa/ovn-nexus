@@ -17,15 +17,14 @@ export function SiteFooter() {
               <span className="text-base font-semibold tracking-tight">Nexus</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
-              The research and education arm of <span className="font-medium text-foreground">Gengyve</span> — the
-              oral–systemic connection, studied deeper than anyone, and built by working clinicians.
+              Oral-systemic research and clinical education, supported in part by <span className="font-medium text-foreground">Gengyve USA</span>. Explore the evidence, its limitations, and its relevance to practice.
             </p>
             <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-              Shop Gengyve ↗
+              Visit Gengyve USA ↗
             </a>
             <p className="mt-6 text-xs text-muted-foreground">
               <span className="font-medium text-foreground">S. Thaddeus Connelly, DDS, MD, PhD, FACS</span>
-              <span className="mx-2">·</span>UCSF / SFVAMC / Gengyve USA
+              <span className="mx-2">·</span>Founder, OVN Nexus and Gengyve USA
             </p>
           </div>
           <div>
@@ -33,6 +32,8 @@ export function SiteFooter() {
               Explore
             </p>
             <ul className="space-y-3 text-sm">
+              <li><Link href="/for-dentists" className="text-muted-foreground hover:text-foreground">For Dentists</Link></li>
+              <li><Link href="/for-dentists/guide" className="text-muted-foreground hover:text-foreground">Team Discussion Guide</Link></li>
               <li><Link href="/science" className="text-muted-foreground hover:text-foreground">Science</Link></li>
               <li><Link href="/education" className="text-muted-foreground hover:text-foreground">Education</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-foreground">The Bulletin</Link></li>

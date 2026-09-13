@@ -3,7 +3,7 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { PatientForm } from "@/components/forms/patient-form";
 
 export default async function NewPatientPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: clinics } = await supabase
     .from("clinics")
     .select("id, name, clinic_code")

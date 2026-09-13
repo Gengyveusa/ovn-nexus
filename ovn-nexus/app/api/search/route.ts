@@ -3,7 +3,7 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { searchParams } = new URL(request.url);
   const q = searchParams.get("q");
 

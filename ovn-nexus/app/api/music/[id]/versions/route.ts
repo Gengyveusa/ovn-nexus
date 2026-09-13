@@ -7,14 +7,14 @@ const AUDIO_BUCKET = process.env.SUPABASE_MUSIC_BUCKET || "music-uploads";
 // GET /api/music/[id]/versions — list versions for a request
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   const { data, error } = await supabase
     .from("music_versions")
     .select("*")
-    .eq("request_id", params.id)
+    .eq("request_id", (await params).id)
     .order("version_number", { ascending: true });
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
@@ -25,16 +25,16 @@ export async function GET(
 // POST /api/music/[id]/versions — upload a new version (operator uploads audio)
 export async function POST(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   try {
     // Verify request exists
     const { data: request, error: reqError } = await supabase
       .from("music_requests")
       .select("id, status")
-      .eq("id", params.id)
+      .eq("id", (await params).id)
       .single();
 
     if (reqError || !request) {
@@ -66,12 +66,12 @@ export async function POST(
     const { count } = await supabase
       .from("music_versions")
       .select("id", { count: "exact", head: true })
-      .eq("request_id", params.id);
+      .eq("request_id", (await params).id);
 
     const versionNumber = (count || 0) + 1;
 
     // Upload audio to Supabase Storage
-    const audioPath = `${params.id}/v${versionNumber}/audio.${format}`;
+    const audioPath = `${(await params).id}/v${versionNumber}/audio.${format}`;
     const audioBuffer = Buffer.from(await audioFile.arrayBuffer());
 
     const { error: uploadError } = await supabase.storage
@@ -93,7 +93,7 @@ export async function POST(
     let coverImageUrl: string | null = null;
     if (coverImage) {
       const coverExt = coverImage.name.split(".").pop()?.toLowerCase() || "jpg";
-      const coverPath = `${params.id}/v${versionNumber}/cover.${coverExt}`;
+      const coverPath = `${(await params).id}/v${versionNumber}/cover.${coverExt}`;
       const coverBuffer = Buffer.from(await coverImage.arrayBuffer());
 
       const { error: coverUploadError } = await supabase.storage
@@ -113,7 +113,7 @@ export async function POST(
     const { data: version, error: insertError } = await supabase
       .from("music_versions")
       .insert({
-        request_id: params.id,
+        request_id: (await params).id,
         version_number: versionNumber,
         audio_url: audioUrl,
         audio_format: format,
@@ -135,7 +135,7 @@ export async function POST(
       await supabase
         .from("music_requests")
         .update({ status: "generated" })
-        .eq("id", params.id);
+        .eq("id", (await params).id);
     }
 
     return NextResponse.json({

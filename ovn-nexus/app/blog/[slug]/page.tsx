@@ -21,9 +21,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const edition = getEdition(params.slug);
+  const edition = getEdition((await params).slug);
   if (!edition) return { title: "Not found — OVN Nexus" };
   return {
     title: `${edition.title} — The Oral Health Bulletin`,
@@ -48,12 +48,12 @@ export async function generateMetadata({
   };
 }
 
-export default function BulletinDetailPage({
+export default async function BulletinDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const edition = getEdition(params.slug);
+  const edition = getEdition((await params).slug);
   if (!edition) notFound();
 
   const related = getRelatedEditions(edition.slug, 3);
@@ -72,7 +72,7 @@ export default function BulletinDetailPage({
       />
       <SiteHeader active="blog" />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <article className="container py-16 sm:py-20">
           <div className="mx-auto max-w-3xl">
             <Link

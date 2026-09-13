@@ -7,9 +7,9 @@ import { musicStatusUpdateSchema } from "@/lib/music/validations";
 
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   try {
     const body = await req.json();
@@ -25,7 +25,7 @@ export async function PATCH(
     const { data, error } = await supabase
       .from("music_requests")
       .update({ status: parsed.data.status })
-      .eq("id", params.id)
+      .eq("id", (await params).id)
       .select()
       .single();
 

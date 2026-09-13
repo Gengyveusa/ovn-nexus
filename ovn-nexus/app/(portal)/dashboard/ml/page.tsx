@@ -3,7 +3,7 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { MlLabClient } from "./client";
 
 export default async function MlLabPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   const [modelsRes, predictionsRes, trialsRes, patientsRes, visitsRes] = await Promise.all([
     supabase

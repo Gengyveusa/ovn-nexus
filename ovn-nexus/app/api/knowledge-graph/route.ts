@@ -4,7 +4,7 @@ import { knowledgeGraphEdgeSchema } from "@/lib/validations/schemas";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { searchParams } = new URL(request.url);
   const sourceType = searchParams.get("source_type");
   const sourceId = searchParams.get("source_id");
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const body = await request.json();
   const parsed = knowledgeGraphEdgeSchema.safeParse(body);
 

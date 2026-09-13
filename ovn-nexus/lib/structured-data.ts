@@ -62,7 +62,7 @@ export const organizationNode = {
   alternateName: "Oral-Vascular-Neural Nexus",
   url: SITE_URL,
   description:
-    "The research platform behind Gengyve, mapping how oral disease reaches the heart, brain, and body. Every claim is graded against a three-tier evidence framework.",
+    "An oral-systemic research and education platform supported in part by Gengyve USA. Clinical briefs distinguish human evidence, preclinical models, and open research questions.",
   founder: { "@id": PERSON_ID },
   parentOrganization: { "@type": "Organization", name: "GengyveUSA" },
   knowsAbout: [
@@ -80,7 +80,7 @@ export const websiteNode = {
   "@id": WEBSITE_ID,
   url: SITE_URL,
   name: "OVN Nexus",
-  description: "The oral–systemic connection, studied deeper than anyone.",
+  description: "Oral-systemic science, translated for the dental chair.",
   publisher: { "@id": ORG_ID },
   inLanguage: "en-US",
 };

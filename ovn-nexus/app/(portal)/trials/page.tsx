@@ -17,7 +17,7 @@ const PHASE_COLORS: Record<string, "default" | "secondary" | "outline"> = {
 };
 
 export default async function TrialsPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: trials } = await supabase
     .from("clinical_trials")
     .select("*, institutions(name)")

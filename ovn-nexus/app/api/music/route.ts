@@ -10,7 +10,7 @@ import type { MusicRequestInput } from "@/lib/music/types";
 // POST /api/music  — create a new music generation request
 
 export async function GET(req: NextRequest) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { searchParams } = new URL(req.url);
   const status = searchParams.get("status");
   const limit = parseInt(searchParams.get("limit") || "50", 10);
@@ -33,7 +33,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   try {
     const body = await req.json();
