@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./clinical.css";
 import { siteGraph, jsonLd, SITE_URL } from "@/lib/structured-data";
 
-const TITLE = "OVN Nexus — the research arm of Gengyve";
-const DESCRIPTION =
-  "The oral–systemic connection, studied deeper than anyone. OVN Nexus is the research platform behind Gengyve — mapping how oral disease reaches the heart, brain, and body, and turning that science into products that make a difference.";
-const SHORT_DESCRIPTION =
-  "The oral–systemic connection, studied deeper than anyone. The research platform behind Gengyve.";
+const TITLE = "OVN Nexus | Oral-systemic science for the dental chair";
+const DESCRIPTION = "Explore the oral-systemic connection with a free clinical brief, an interactive evidence map, and a discussion guide for dental teams. Sources and limitations included.";
+const SHORT_DESCRIPTION = "Oral-systemic science, translated for the dental chair. A free clinical brief for dentists and their teams.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -25,18 +24,18 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og-image.png",
+        url: "/clinical-brief-og.png",
         width: 1200,
         height: 630,
-        alt: "OVN Nexus — the oral–systemic connection, studied deeper than anyone",
+        alt: "OVN Nexus — Oral-systemic science for the dental chair",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
-    description: "The oral–systemic connection, studied deeper than anyone.",
-    images: ["/og-image.png"],
+    description: "Oral-systemic science, translated for the dental chair.",
+    images: ["/clinical-brief-og.png"],
   },
   authors: [{ name: "S. Thaddeus Connelly, DDS, MD, PhD, FACS" }],
   robots: {

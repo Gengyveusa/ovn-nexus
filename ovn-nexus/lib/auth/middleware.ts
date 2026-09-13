@@ -24,6 +24,12 @@ export async function updateSession(request: NextRequest) {
     request: { headers: requestHeaders },
   });
 
+  // These editorial routes are public and do not depend on an auth round trip.
+  // Keep the exact allowlist narrow: research and account routes still run below.
+  if (["/", "/for-dentists", "/for-dentists/guide"].includes(request.nextUrl.pathname)) {
+    return response;
+  }
+
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,

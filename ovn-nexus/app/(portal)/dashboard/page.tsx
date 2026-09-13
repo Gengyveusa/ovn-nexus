@@ -127,7 +127,7 @@ function formatActivityAction(action: string, resourceType: string, resourceId: 
 }
 
 export default async function DashboardPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   // Fetch platform stats
   const [clinics, patients, biomarkers, experiments, datasets, papers, trials, users] = await Promise.all([

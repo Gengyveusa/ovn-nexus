@@ -16,7 +16,7 @@ const STATUS_COLORS: Record<string, "default" | "secondary" | "destructive" | "o
 };
 
 export default async function ExperimentsPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: experiments } = await supabase
     .from("experiments")
     .select("*, profiles!experiments_pi_id_fkey(full_name), projects(name)")

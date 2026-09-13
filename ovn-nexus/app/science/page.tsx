@@ -51,7 +51,7 @@ export default function SciencePage() {
           <div className="mt-6 text-sm text-muted-foreground">
             <p className="font-medium">S. Thaddeus Connelly, DDS, MD, PhD, FACS</p>
             <p>San Francisco Veterans Affairs Healthcare System</p>
-            <p>University of California San Francisco | GengyeUSA | 2026</p>
+            <p>University of California San Francisco | Gengyve USA | 2026</p>
           </div>
         </section>
 
@@ -99,29 +99,11 @@ export default function SciencePage() {
           </div>
         </section>
 
-        {/* Why the Mouth-Body Interface Matters */}
         <section className="py-12">
-          <div className="container max-w-4xl">
-            <h2 className="text-2xl font-bold text-center mb-4">Why the Mouth-Body Interface Matters</h2>
-            <p className="text-center text-muted-foreground mb-8">The opportunity is not to collapse diseases into one disease, but to identify shared upstream interfaces worth measuring and testing.</p>
-            <div className="grid gap-6 md:grid-cols-3 text-center">
-              <div className="rounded-xl border bg-card p-6">
-                <div className="text-4xl font-bold text-primary">32%</div>
-                <div className="mt-1 font-semibold">CVD Global Deaths</div>
-                <p className="mt-2 text-sm text-muted-foreground">Cardiovascular disease is the leading cause of global mortality</p>
-              </div>
-              <div className="rounded-xl border bg-card p-6">
-                <div className="text-4xl font-bold text-primary">1 in 6</div>
-                <div className="mt-1 font-semibold">Cancer Deaths</div>
-                <p className="mt-2 text-sm text-muted-foreground">Cancer accounts for nearly 1 in 6 deaths worldwide</p>
-              </div>
-              <div className="rounded-xl border bg-card p-6">
-                <div className="text-4xl font-bold text-primary">~1B</div>
-                <div className="mt-1 font-semibold">Dementia Burden</div>
-                <p className="mt-2 text-sm text-muted-foreground">Dementia is a major cause of disability and death globally</p>
-              </div>
-            </div>
-            <p className="mt-6 text-center text-sm text-muted-foreground italic">Even a modest upstream risk signal could matter clinically if it is measurable and modifiable.</p>
+          <div className="container max-w-4xl rounded-xl border bg-card p-8">
+            <h2 className="text-2xl font-bold mb-4">Put the research in clinical context</h2>
+            <p className="text-muted-foreground leading-relaxed">Population disease burden does not tell us how much disease is attributable to oral pathways. Our clinical brief separates cardiovascular associations, periodontal treatment trials, and experimental neural mechanisms, with original sources and explicit limitations.</p>
+            <Link href="/for-dentists" className="mt-5 inline-block font-semibold text-primary underline underline-offset-4">Read the sourced clinical brief →</Link>
           </div>
         </section>
 
@@ -236,7 +218,7 @@ export default function SciencePage() {
       <footer className="border-t py-8">
         <div className="container text-center text-sm text-muted-foreground">
           <p className="font-medium">S. Thaddeus Connelly, DDS, MD, PhD, FACS</p>
-          <p>UCSF / SFVAMC / GengyeUSA</p>
+          <p>UCSF / SFVAMC / Gengyve USA</p>
           <p className="mt-4 text-xs">Content on this platform is for professional education. It does not constitute medical advice and does not establish a causal relationship between periodontal disease and any systemic condition.</p>
         </div>
       </footer>

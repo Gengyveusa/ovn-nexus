@@ -25,7 +25,7 @@ export default function EducationPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader active="education" />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── Hero ─────────────────────────────────────────────── */}
         <section className="bg-aurora">
           <div className="container py-20 sm:py-28 text-center">

@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader active="blog" />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── Hero ──────────────────────────────────────────────── */}
         <section className="container py-16 sm:py-20">
           <div className="mx-auto max-w-3xl">

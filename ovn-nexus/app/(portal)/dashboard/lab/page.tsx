@@ -3,7 +3,7 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { KnowledgeGraphClient } from "./client";
 
 export default async function KnowledgeGraphPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   const { data: edges, count } = await supabase
     .from("knowledge_graph_edges")

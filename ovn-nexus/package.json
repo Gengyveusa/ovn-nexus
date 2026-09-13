@@ -11,7 +11,10 @@
     "db:seed": "tsx scripts/seed.ts",
     "db:reset": "supabase db reset",
     "video:pipeline": "tsx video-pipeline/run.ts",
-    "video:templates": "tsx video-pipeline/run.ts --list-templates"
+    "video:templates": "tsx video-pipeline/run.ts --list-templates",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "verify:clinical": "node scripts/verify-clinical-build.cjs"
   },
   "dependencies": {
     "@elevenlabs/react": "^0.2.0",
@@ -31,14 +34,14 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "date-fns": "^3.3.0",
-    "gray-matter": "^4.0.3",
-    "marked": "^12.0.2",
     "elevenlabs": "^1.57.0",
     "formidable": "^3.5.2",
     "framer-motion": "^11.18.2",
+    "gray-matter": "^4.0.3",
     "jszip": "^3.10.1",
     "lucide-react": "^0.312.0",
-    "next": "14.1.0",
+    "marked": "^12.0.2",
+    "next": "15.5.24",
     "openai": "^4.86.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -49,16 +52,19 @@
     "zod": "^3.22.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.3.3",
     "@types/jszip": "^3.4.0",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.17",
+    "jsdom": "^26.1.0",
     "pg": "^8.20.0",
     "postcss": "^8.4.33",
     "supabase": "^2.78.1",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.7.0",
-    "typescript": "^5.3.0"
+    "typescript": "^5.3.0",
+    "vitest": "^3.2.7"
   }
 }

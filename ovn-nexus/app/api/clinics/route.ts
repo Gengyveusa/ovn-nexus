@@ -4,7 +4,7 @@ import { clinicSchema } from "@/lib/validations/schemas";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { searchParams } = new URL(request.url);
   const country = searchParams.get("country");
   const limit = parseInt(searchParams.get("limit") || "50");
@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const body = await request.json();
   const parsed = clinicSchema.safeParse(body);
 

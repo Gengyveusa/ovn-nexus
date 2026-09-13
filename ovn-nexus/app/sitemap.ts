@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticEntries: MetadataRoute.Sitemap = [
     { url: `${SITE}/`, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${SITE}/for-dentists`, lastModified: "2026-09-13", changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE}/for-dentists/guide`, lastModified: "2026-09-13", changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/science`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE}/education`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE}/blog`, changeFrequency: "weekly", priority: 0.9 },

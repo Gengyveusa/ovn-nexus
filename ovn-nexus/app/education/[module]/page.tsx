@@ -11,8 +11,8 @@ export function generateStaticParams() {
   return getAllModules().map((m) => ({ module: m.slug }));
 }
 
-export function generateMetadata({ params }: { params: { module: string } }): Metadata {
-  const data = getModule(params.module);
+export async function generateMetadata({ params }: { params: Promise<{ module: string }> }): Promise<Metadata> {
+  const data = getModule((await params).module);
   if (!data) return { title: "Not found — OVN Nexus" };
   return {
     title: `${data.meta.title} — OVN Nexus Education`,
@@ -27,8 +27,8 @@ const TIER_LEGEND = [
   { name: "Hypothesis", cls: "tier-hypothesis", desc: "A working model under active investigation — not a claim." },
 ];
 
-export default function ModulePage({ params }: { params: { module: string } }) {
-  const data = getModule(params.module);
+export default async function ModulePage({ params }: { params: Promise<{ module: string }> }) {
+  const data = getModule((await params).module);
   if (!data) notFound();
   const { meta, html } = data;
 
@@ -39,7 +39,7 @@ export default function ModulePage({ params }: { params: { module: string } }) {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader active="education" />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <article className="container max-w-3xl py-14 sm:py-20">
           <Link
             href="/education"

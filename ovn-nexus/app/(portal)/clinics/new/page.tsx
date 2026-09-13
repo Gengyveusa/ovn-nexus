@@ -3,7 +3,7 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 import { ClinicForm } from "@/components/forms/clinic-form";
 
 export default async function NewClinicPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   const { data: institutions } = await supabase
     .from("institutions")

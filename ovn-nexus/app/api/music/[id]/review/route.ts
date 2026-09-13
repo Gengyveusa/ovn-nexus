@@ -7,9 +7,9 @@ import { musicReviewSchema } from "@/lib/music/validations";
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   try {
     const body = await req.json();
@@ -27,7 +27,7 @@ export async function POST(
       .from("music_versions")
       .select("id, request_id")
       .eq("id", parsed.data.version_id)
-      .eq("request_id", params.id)
+      .eq("request_id", (await params).id)
       .single();
 
     if (fetchErr || !version) {
@@ -51,7 +51,7 @@ export async function POST(
       await supabase
         .from("music_versions")
         .update({ is_selected: false })
-        .eq("request_id", params.id)
+        .eq("request_id", (await params).id)
         .neq("id", parsed.data.version_id);
     }
 
@@ -70,7 +70,7 @@ export async function POST(
       await supabase
         .from("music_requests")
         .update({ status: "review" })
-        .eq("id", params.id)
+        .eq("id", (await params).id)
         .eq("status", "generated");
     }
 

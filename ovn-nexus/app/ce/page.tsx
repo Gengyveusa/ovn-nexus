@@ -16,7 +16,7 @@ export default function CeHub() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-aurora">
           <div className="container py-16 sm:py-24 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-5">Continuing Education · by Gengyve</p>

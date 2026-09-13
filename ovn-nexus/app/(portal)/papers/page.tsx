@@ -9,7 +9,7 @@ import Link from "next/link";
 import { formatDate } from "@/lib/utils/format";
 
 export default async function PapersPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: papers } = await supabase
     .from("papers")
     .select("*")

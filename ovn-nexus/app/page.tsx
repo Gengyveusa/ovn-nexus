@@ -1,308 +1,34 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle, AlertTriangle, FlaskConical, ArrowRight, ExternalLink } from "lucide-react";
-import { OvnAxisDiagram } from "@/components/diagrams/ovn-axis-diagram";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { Reveal } from "@/components/reveal";
+import { EvidenceExplorer } from "@/components/clinical/evidence-explorer";
+import { EditorialNote, FounderNote } from "@/components/clinical/editorial";
+
+function SignalFigure() {
+  return <figure className="hero-figure"><div className="hero-figure-top"><span>Oral · Vascular · Neural</span><span>Field notes / 01</span></div>
+    <svg viewBox="0 0 510 370" role="img" aria-labelledby="signal-title signal-description">
+      <title id="signal-title">Exploring connections beyond the mouth</title><desc id="signal-description">An abstract research map of the oral environment and systemic pathways. Dotted lines represent questions under investigation, not proven causation.</desc>
+      <defs><radialGradient id="signal-glow"><stop stopColor="#daa17b" stopOpacity=".13"/><stop offset="1" stopColor="#daa17b" stopOpacity="0"/></radialGradient><pattern id="signal-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#829b83" opacity=".3"/></pattern></defs>
+      <rect width="510" height="370" fill="url(#signal-dots)"/>
+      <circle cx="210" cy="185" r="168" fill="url(#signal-glow)"/>
+      <g fill="none" stroke="#d09b7b"><circle cx="198" cy="185" r="60" strokeWidth="1.2"/><circle cx="198" cy="185" r="91" opacity=".4"/><circle cx="198" cy="185" r="122" opacity=".15"/></g>
+      <g fill="#e1a684"><rect x="175" y="150" width="16" height="34" rx="8" transform="rotate(-32 183 167)"/><rect x="209" y="169" width="13" height="28" rx="6.5" transform="rotate(35 215 183)"/><rect x="183" y="202" width="12" height="22" rx="6" transform="rotate(26 189 213)"/><circle cx="217" cy="211" r="6"/><circle cx="165" cy="193" r="4"/><circle cx="207" cy="144" r="3"/></g>
+      <g stroke="#9ba98c" fill="none" strokeDasharray="3 5"><path d="M247 145 Q320 70 378 82"/><path d="M259 186 H389"/><path d="M247 222 Q320 298 378 293"/></g>
+      <g fill="#e3eadb" stroke="#728c77"><circle cx="395" cy="83" r="18"/><circle cx="405" cy="185" r="18"/><circle cx="395" cy="293" r="18"/></g>
+      <g fontFamily="Arial,sans-serif" fill="#dbe4d6" fontSize="10" letterSpacing="1.5"><text x="362" y="121">VASCULAR</text><text x="367" y="226">METABOLIC</text><text x="371" y="334">NEURAL</text><text x="130" y="280" fill="#e0b297">THE ORAL ENVIRONMENT</text></g>
+      <g fill="none" stroke="#244743" strokeWidth="1.3"><path d="M387 81 C385 72 395 75 395 79 C396 73 405 75 403 81 Q401 86 395 91 Q389 86 387 81"/><path d="M395 185 H400 L403 178 L407 193 L410 185 H415"/><path d="M390 287 C382 287 384 296 389 296 C387 302 396 302 395 296 V284 C391 281 389 283 390 287 M397 284 C403 280 406 286 402 289 C409 291 405 299 398 298"/></g>
+    </svg><figcaption className="hero-figure-caption">Follow the evidence. Keep the open questions visible.</figcaption></figure>;
+}
 
 export default function HomePage() {
-  return (
-    <div className="flex min-h-screen flex-col">
-      <SiteHeader />
-
-      <main className="flex-1">
-        {/* ── Hero ────────────────────────────────────────────────── */}
-        <section className="bg-aurora">
-          <div className="container py-24 sm:py-32">
-            <div className="mx-auto max-w-3xl text-center">
-              <Reveal>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-5">The research arm of Gengyve</p>
-              </Reveal>
-              <Reveal>
-                <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl lg:text-7xl text-balance">
-                  Everyone else stops at the gums.{" "}
-                  <span className="text-primary">We follow the signal into the body.</span>
-                </h1>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground text-balance">
-                  Gengyve was built by clinicians and academic scientists who refused to accept
-                  an oral-care industry that masks symptoms.{" "}
-                  <strong className="text-foreground">OVN Nexus</strong> is where we map how oral
-                  disease reaches the heart, brain, and beyond — and turn that science into
-                  products that make a measurable difference.
-                </p>
-              </Reveal>
-              <Reveal delay={0.2}>
-                <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-                  <Link href="/signup">
-                    <Button size="lg" className="gap-2">
-                      Join the OVN Research Network <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="lg" className="gap-2">
-                      Shop Gengyve <ExternalLink className="h-4 w-4" />
-                    </Button>
-                  </a>
-                </div>
-              </Reveal>
-            </div>
-
-            <Reveal delay={0.25}>
-              <div className="mt-20 sm:mt-24">
-                <OvnAxisDiagram />
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ── Why This Matters — rounded panel ──────────────────── */}
-        <section className="container py-16 sm:py-20">
-          <Reveal>
-            <div className="rounded-3xl bg-secondary/60 p-10 sm:p-16 shadow-soft">
-              <div className="text-center mb-14 max-w-2xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-                  Why periodontal health is a systemic issue
-                </h2>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The global burden of diseases now linked to chronic systemic inflammation is
-                  staggering. Even a modest, measurable, upstream risk signal — one that is
-                  modifiable in the dental chair — could matter clinically at population scale.
-                </p>
-              </div>
-              <div className="grid gap-6 md:grid-cols-3 text-center">
-                {[
-                  { stat: "32%", label: "of global deaths", context: "attributed to cardiovascular disease — the leading cause of mortality worldwide" },
-                  { stat: "1 in 6", label: "cancer deaths", context: "involve pathways now under investigation for oral microbial contributions" },
-                  { stat: "~1 Billion", label: "dementia burden", context: "individuals projected to be affected globally by 2050, with neuroinflammatory drivers under active study" },
-                ].map((item, i) => (
-                  <Reveal key={item.stat} delay={i * 0.08}>
-                    <div className="rounded-2xl border bg-card p-8 shadow-soft transition-shadow hover:shadow-lift h-full">
-                      <div className="text-5xl sm:text-6xl font-semibold tracking-tight text-primary">{item.stat}</div>
-                      <div className="mt-3 text-base font-medium">{item.label}</div>
-                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{item.context}</p>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-              <p className="mt-10 text-center text-sm text-muted-foreground max-w-2xl mx-auto italic">
-                These statistics do not imply that periodontitis is a proven causal driver of any
-                systemic disease. They frame the scale of the problem and the potential significance
-                of upstream modifiable risk signals.
-              </p>
-            </div>
-          </Reveal>
-        </section>
-
-        {/* ── Evidence Tiers ─────────────────────────────────────── */}
-        <section id="education" className="container py-16 sm:py-20">
-          <Reveal>
-            <div className="text-center mb-14 max-w-2xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">The science — evidence tiers</h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                Not all science is created equal. Here is how the current evidence stacks up,
-                presented with the same epistemic honesty you would apply to any clinical literature.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                icon: CheckCircle,
-                tier: "Established",
-                title: "Systemic Inflammatory Exposure",
-                body: "Periodontitis generates measurable systemic inflammatory exposure. Multiple meta-analyses show significant association between periodontal disease and atherosclerotic cardiovascular disease (ASCVD), with periodontal intervention linked to improvement in surrogate cardiometabolic markers.",
-                tone: "bg-emerald-50/60 border-emerald-200 dark:bg-emerald-950/20 dark:border-emerald-900",
-                ic: "text-emerald-600 dark:text-emerald-400",
-                bd: "border-emerald-400 text-emerald-700 dark:text-emerald-300",
-              },
-              {
-                icon: AlertTriangle,
-                tier: "Supported",
-                title: "OMV Virulence Cargo",
-                body: "P. gingivalis outer membrane vesicles (OMVs) carry concentrated virulence factors — gingipains, LPS, and fimbriae — that can translocate across epithelial and endothelial barriers, promoting endothelial activation and local inflammatory responses in preclinical models.",
-                tone: "bg-amber-50/60 border-amber-200 dark:bg-amber-950/20 dark:border-amber-900",
-                ic: "text-amber-600 dark:text-amber-400",
-                bd: "border-amber-400 text-amber-700 dark:text-amber-300",
-              },
-              {
-                icon: FlaskConical,
-                tier: "Hypothesis Under Test",
-                title: "A Conserved OMV-Driven Program",
-                body: "A working hypothesis proposes that oral bacterial OMVs trigger a conserved cellular reprogramming program — mitochondrial dysfunction, phenotypic plasticity, and secondary EV signaling — that may contribute to vascular, neurodegenerative, and oncological tissue endpoints. Under active investigation.",
-                tone: "bg-sky-50/60 border-sky-200 dark:bg-sky-950/20 dark:border-sky-900",
-                ic: "text-sky-600 dark:text-sky-400",
-                bd: "border-sky-400 text-sky-700 dark:text-sky-300",
-              },
-            ].map((card, i) => (
-              <Reveal key={card.title} delay={i * 0.08}>
-                <div className={`rounded-2xl border p-7 h-full shadow-soft transition-shadow hover:shadow-lift ${card.tone}`}>
-                  <div className="flex items-center gap-2 mb-5">
-                    <card.icon className={`h-5 w-5 shrink-0 ${card.ic}`} />
-                    <Badge variant="outline" className={`text-xs ${card.bd}`}>{card.tier}</Badge>
-                  </div>
-                  <h3 className="font-semibold text-lg tracking-tight">{card.title}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{card.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          {/* OMV explainer */}
-          <Reveal>
-            <div className="mt-12 rounded-3xl border bg-card p-8 sm:p-12 shadow-soft">
-              <h3 className="text-2xl font-semibold tracking-tight mb-4">What are outer membrane vesicles (OMVs)?</h3>
-              <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                OMVs are nanoscale particles (20–250 nm) constitutively shed from the outer
-                membrane of gram-negative bacteria like <em>P. gingivalis</em> and{" "}
-                <em>Fusobacterium nucleatum</em>. Unlike planktonic bacteria, OMVs can cross
-                epithelial barriers, evade immune clearance, and deliver concentrated virulence
-                cargo — including proteases, lipopolysaccharide, and nucleic acids — directly to
-                host cells at distant sites.
-              </p>
-
-              <div className="mt-10">
-                <h4 className="font-medium mb-5 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                  The proposed 5-step cascade
-                </h4>
-                <div className="grid gap-3 md:grid-cols-5">
-                  {[
-                    { step: "1", title: "Barrier Disruption", desc: "OMVs breach periodontal epithelium and enter systemic circulation" },
-                    { step: "2", title: "Mitochondrial Dysfunction", desc: "Virulence cargo impairs mitochondrial respiration in target cells" },
-                    { step: "3", title: "Phenotypic Reprogramming", desc: "Host cells shift toward a pro-inflammatory, pro-remodeling phenotype" },
-                    { step: "4", title: "Secondary EV Signals", desc: "Reprogrammed cells shed their own EVs, amplifying the signal" },
-                    { step: "5", title: "Tissue Endpoints", desc: "Cumulative effects manifest as vascular, neural, or oncological pathology" },
-                  ].map((item) => (
-                    <div key={item.step} className="rounded-2xl border bg-muted/40 p-5">
-                      <div className="text-xs font-semibold text-primary mb-2">Step {item.step}</div>
-                      <div className="font-medium text-sm tracking-tight">{item.title}</div>
-                      <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-8 flex justify-end">
-                <Link
-                  href="/science"
-                  className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                >
-                  Full presentation at Explore the Science <ExternalLink className="h-3 w-3" />
-                </Link>
-              </div>
-            </div>
-          </Reveal>
-        </section>
-
-        {/* ── What You Can Do Today — rounded panel ──────────────── */}
-        <section className="container py-16 sm:py-20">
-          <Reveal>
-            <div className="rounded-3xl bg-secondary/60 p-10 sm:p-16 shadow-soft">
-              <div className="text-center mb-12 max-w-2xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">What you can do today</h2>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The evidence does not yet support claiming periodontal disease as a validated
-                  causal driver of ASCVD, cancer, or Alzheimer&apos;s disease. But there is
-                  plenty of justified clinical action right now.
-                </p>
-              </div>
-              <div className="mx-auto max-w-2xl space-y-3">
-                {[
-                  { icon: "✅", text: "Treat periodontitis as a systemic health issue — not just a local dental problem", positive: true },
-                  { icon: "✅", text: "Capture periodontal status in cardiometabolic and neurological histories", positive: true },
-                  { icon: "✅", text: "Anticipate and communicate biomarker improvement (hsCRP, IL-6) after periodontal therapy", positive: true },
-                  { icon: "❌", text: 'Do NOT claim periodontal disease is a proven causal driver of ASCVD, cancer, or Alzheimer\'s disease — the causal evidence is not yet there', positive: false },
-                ].map((item) => (
-                  <div
-                    key={item.text}
-                    className={`flex gap-4 rounded-2xl border p-5 ${
-                      item.positive
-                        ? "border-emerald-200/70 bg-emerald-50/50 dark:border-emerald-900 dark:bg-emerald-950/20"
-                        : "border-red-200/70 bg-red-50/50 dark:border-red-900 dark:bg-red-950/20"
-                    }`}
-                  >
-                    <span className="text-lg shrink-0">{item.icon}</span>
-                    <p className="text-sm leading-relaxed">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </section>
-
-        {/* ── Community ──────────────────────────────────────────── */}
-        <section id="community" className="container py-16 sm:py-20 scroll-mt-20">
-          <Reveal>
-            <div className="text-center mb-14 max-w-2xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-                Join dental professionals building the evidence base
-              </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                OVN Nexus is a professional community and research platform for clinicians who
-                want to stay current on the oral-systemic connection and contribute to the science.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
-            {[
-              { title: "Education Modules", desc: "Curated, evidence-tiered content on the oral-vascular-neural axis — written for clinicians, not just researchers.", badge: "Available Now" },
-              { title: "Case Discussions", desc: "Share and discuss cases where periodontal findings intersected with systemic disease presentations.", badge: "Coming Soon" },
-              { title: "Biomarker Tracking", desc: "Contribute to and access aggregated, de-identified data linking periodontal therapy to systemic biomarker changes.", badge: "Coming Soon" },
-            ].map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.08}>
-                <div className="rounded-2xl border bg-card p-7 shadow-soft transition-shadow hover:shadow-lift h-full">
-                  <div className="flex items-start justify-between gap-2 mb-4">
-                    <h3 className="font-semibold tracking-tight">{item.title}</h3>
-                    <Badge
-                      variant={item.badge === "Available Now" ? "default" : "secondary"}
-                      className="text-[10px] shrink-0"
-                    >
-                      {item.badge}
-                    </Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal>
-            <div className="mt-12 flex justify-center gap-3">
-              <Link href="/signup">
-                <Button size="lg" className="gap-2">
-                  Create your account <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/login">
-                <Button variant="outline" size="lg">Sign in</Button>
-              </Link>
-            </div>
-          </Reveal>
-        </section>
-      </main>
-
-      {/* ── Living Document banner ───────────────────────────────── */}
-      <section className="container pb-16">
-        <Reveal>
-          <div className="rounded-3xl bg-primary/5 border border-primary/10 px-8 py-10 text-center max-w-3xl mx-auto">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary mb-3">
-              This platform is a living document
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              OVN Nexus is continuously evolving, shaped by the clinicians and researchers who use it.
-              We welcome your feedback and suggestions as we build new features to strengthen your
-              educational experience — so you can deliver the highest standard of care to your patients.
-            </p>
-          </div>
-        </Reveal>
-      </section>
-
-      <SiteFooter />
-    </div>
-  );
+  return <div className="clinical"><SiteHeader /><main id="main-content" className="clinical-wrap">
+    <section className="clinical-hero"><div><span className="clinical-eyebrow">OVN Nexus / Research & clinical education</span><h1>The mouth is<br />part of a<br /><em>bigger story.</em></h1><p className="hero-description">Oral-systemic science, translated for the dental chair. Explore the connections, understand the evidence, and bring a better conversation into your practice.</p><div className="clinical-actions"><Link href="/for-dentists" className="clinical-button">Read the clinical brief <ArrowRight size={17} aria-hidden="true" /></Link><a href="#evidence" className="clinical-button secondary">Explore the evidence</a></div><p className="hero-small">A two-minute introduction. Free to read. No sign-up.</p></div><SignalFigure /></section>
+    <div className="clinical-trust"><div><strong>Built around clinical questions</strong>For dentists and their teams</div><div><strong>Sources alongside the science</strong>Human studies and models clearly labeled</div><div><strong>Room for uncertainty</strong>What we know, and what remains open</div></div>
+    <section className="clinical-section" id="evidence"><div className="section-heading"><div><span className="clinical-eyebrow">From association to understanding</span><h2>Three connections.<br />Different kinds of evidence.</h2></div><p>“Connected” can mean many things. Select a pathway to see what was studied, what was found, and where the clinical conclusions stop.</p></div><EvidenceExplorer /></section>
+    <section className="brief-invitation"><div><span className="clinical-eyebrow">Made for a busy practice</span><h2>Read it today.<br />Discuss it tomorrow.</h2></div><p>The clinical brief puts the essentials in one place, with a patient-friendly explanation and a one-page guide for your next team conversation.</p><Link href="/for-dentists" className="clinical-button">Open the brief <ArrowRight size={17} aria-hidden="true" /></Link></section>
+    <FounderNote />
+    <div className="resource-grid"><Link href="/science"><span className="clinical-eyebrow">01 / Go deeper</span><h3>The research framework</h3><p>Explore the oral-vascular-neural axis and the hypotheses driving the next questions.</p><ArrowUpRight size={19} aria-hidden="true" /></Link><Link href="/education"><span className="clinical-eyebrow">02 / Keep learning</span><h3>Clinical education</h3><p>Build your understanding through modules on oral-systemic science.</p><ArrowUpRight size={19} aria-hidden="true" /></Link><Link href="/blog"><span className="clinical-eyebrow">03 / Follow the field</span><h3>The Oral Health Bulletin</h3><p>Read perspectives on the research and the questions it raises for practice.</p><ArrowUpRight size={19} aria-hidden="true" /></Link></div>
+    <EditorialNote />
+  </main><SiteFooter /></div>;
 }

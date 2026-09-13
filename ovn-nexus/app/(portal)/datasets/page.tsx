@@ -9,7 +9,7 @@ import Link from "next/link";
 import { formatDate, formatCompact } from "@/lib/utils/format";
 
 export default async function DatasetsPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: datasets } = await supabase
     .from("datasets")
     .select("*, profiles!datasets_uploaded_by_fkey(full_name), experiments(experiment_code)")

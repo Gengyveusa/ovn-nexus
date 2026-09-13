@@ -9,7 +9,7 @@ import Link from "next/link";
 import { formatDate } from "@/lib/utils/format";
 
 export default async function PatientsPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: patients } = await supabase
     .from("patients")
     .select("*, clinics(name, clinic_code)")

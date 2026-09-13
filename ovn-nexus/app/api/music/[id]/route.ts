@@ -6,14 +6,14 @@ import { createServerSupabaseClient } from "@/lib/db/supabase-server";
 
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
 
   const { data: request, error } = await supabase
     .from("music_requests")
     .select("*")
-    .eq("id", params.id)
+    .eq("id", (await params).id)
     .single();
 
   if (error) return NextResponse.json({ error: "Music request not found" }, { status: 404 });
@@ -22,7 +22,7 @@ export async function GET(
   const { data: versions } = await supabase
     .from("music_versions")
     .select("*")
-    .eq("request_id", params.id)
+    .eq("request_id", (await params).id)
     .order("version_number", { ascending: true });
 
   return NextResponse.json({ data: { ...request, versions: versions || [] } });

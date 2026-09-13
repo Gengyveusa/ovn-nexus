@@ -29,7 +29,7 @@ export default function ForHygienistsPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader active={null} />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── Hero ──────────────────────────────────────────────── */}
         <section className="bg-aurora">
           <div className="container py-20 sm:py-28">

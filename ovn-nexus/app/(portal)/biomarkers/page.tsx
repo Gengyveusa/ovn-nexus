@@ -7,7 +7,7 @@ import { Activity } from "lucide-react";
 import { formatDate, formatBiomarkerValue } from "@/lib/utils/format";
 
 export default async function BiomarkersPage() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   const { data: biomarkers } = await supabase
     .from("biomarkers")
     .select("*, patients(patient_code)")
