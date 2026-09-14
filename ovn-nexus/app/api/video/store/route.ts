@@ -10,6 +10,8 @@ import { createServiceClient } from "@/lib/db/supabase-client";
 //   Returns: { slides: [{ index, url, filename, size }] }
 
 const BUCKET = "presentation-audio";
+const safeStorageSegment = (value: unknown): value is string =>
+  typeof value === "string" && /^[A-Za-z0-9][A-Za-z0-9_.-]{0,159}$/.test(value) && !value.includes("..");
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,6 +28,11 @@ export async function POST(req: NextRequest) {
     }
     if (slideIndex === undefined || slideIndex === null) {
       return NextResponse.json({ error: "slideIndex is required" }, { status: 400 });
+    }
+    // Keep this service-role media uploader inside its own bucket.
+    if (!safeStorageSegment(presentationId) || (filename !== undefined && !safeStorageSegment(filename)) ||
+        !Number.isInteger(slideIndex) || slideIndex < 0 || slideIndex > 10000) {
+      return NextResponse.json({ error: "Invalid presentation ID, filename, or slide index" }, { status: 400 });
     }
 
     const supabase = createServiceClient();
@@ -78,6 +85,9 @@ export async function POST(req: NextRequest) {
 export async function GET(req: NextRequest) {
   try {
     const presentationId = req.nextUrl.searchParams.get("presentationId") || "gingival-immunity-v2";
+    if (!safeStorageSegment(presentationId)) {
+      return NextResponse.json({ error: "Invalid presentation ID" }, { status: 400 });
+    }
     const supabase = createServiceClient();
 
     const { data: files, error } = await supabase.storage
