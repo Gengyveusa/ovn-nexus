@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/blog`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE}/about`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/for-hygienists`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/hygienists-first`, lastModified: "2026-09-14", changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/privacy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE}/terms`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE}/signup`, changeFrequency: "yearly", priority: 0.5 },

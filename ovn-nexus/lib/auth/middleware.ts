@@ -26,7 +26,7 @@ export async function updateSession(request: NextRequest) {
 
   // These editorial routes are public and do not depend on an auth round trip.
   // Keep the exact allowlist narrow: research and account routes still run below.
-  if (["/", "/for-dentists", "/for-dentists/guide"].includes(request.nextUrl.pathname)) {
+  if (["/", "/for-dentists", "/for-dentists/guide", "/hygienists-first", "/api/cohort-interest"].includes(request.nextUrl.pathname)) {
     return response;
   }
 

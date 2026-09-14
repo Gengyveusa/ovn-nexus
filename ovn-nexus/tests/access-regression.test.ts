@@ -15,14 +15,14 @@ beforeEach(() => {
 });
 
 describe("public briefs and existing access boundaries", () => {
-  it.each(["/", "/for-dentists", "/for-dentists/guide"])("serves %s without an auth dependency", async pathname => {
+  it.each(["/", "/for-dentists", "/for-dentists/guide", "/hygienists-first", "/api/cohort-interest"])("serves %s without an auth dependency", async pathname => {
     const response = await updateSession(new NextRequest(`https://example.test${pathname}`));
     expect(response.status).toBe(200);
     expect(state.factory).not.toHaveBeenCalled();
     expect(response.headers.get("x-middleware-request-x-pathname")).toBe(pathname);
   });
 
-  it.each(["/hub", "/patients", "/admin", "/for-dentists/private", "/for-dentists-other"])("still requires login for %s", async pathname => {
+  it.each(["/hub", "/patients", "/admin", "/for-dentists/private", "/for-dentists-other", "/hygienists-first/private"])("still requires login for %s", async pathname => {
     const response = await updateSession(new NextRequest(`https://example.test${pathname}`));
     expect(response.status).toBe(307);
     expect(response.headers.get("location")).toBe("https://example.test/login");

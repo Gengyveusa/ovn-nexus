@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "How OVN Nexus collects, uses, and protects information from researchers and clinicians using the Oral-Vascular-Neural research platform.",
 };
 
-const LAST_UPDATED = "May 25, 2026";
+const LAST_UPDATED = "September 14, 2026";
 
 export default function PrivacyPage() {
   return (
@@ -54,6 +54,14 @@ export default function PrivacyPage() {
                   (IP address, browser, device, pages visited, timestamps) to operate and secure the site.
                 </li>
                 <li>
+                  <strong>Course interest lists.</strong> When you ask for course updates, we store your
+                  name, email address, profession, any optional question, your email permission and its
+                  timestamp, and campaign details included in the page link. We use these details to
+                  plan the course, send the updates you requested, and understand which invitations
+                  brought readers to the course. Please do not include patient-identifying details.
+                  Joining a course interest list does not subscribe you to product marketing or other newsletters.
+                </li>
+                <li>
                   <strong>Cookies.</strong> We use first-party cookies that are strictly necessary for
                   authentication and session management. We do not use third-party advertising cookies.
                 </li>
@@ -64,6 +72,7 @@ export default function PrivacyPage() {
                 <li>To operate, secure, and improve the platform.</li>
                 <li>To authenticate you and enforce role-based access (e.g., research access, admin).</li>
                 <li>To send the Oral Health Bulletin and operational notifications you have requested.</li>
+                <li>To send course dates and enrollment information when you have requested course updates.</li>
                 <li>To respond to questions, support requests, and legal obligations.</li>
                 <li>
                   To produce aggregated, de-identified analytics about platform usage and the research it
