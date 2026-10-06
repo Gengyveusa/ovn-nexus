@@ -1,5 +1,8 @@
 "use client";
 
+import { CampaignLink } from "@/components/campaign-link";
+
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Lock, Award, ArrowRight, ArrowLeft, CheckCircle2, XCircle, ShoppingBag } from "lucide-react";
@@ -254,7 +257,7 @@ export function CeCourse({ course }: { course: Course }) {
       <p className="mt-2 text-muted-foreground">Your certificate is issued and your evaluation is recorded. In the live version, your credit is reported to the accrediting body automatically.</p>
       <div className="mt-8 flex justify-center gap-3">
         <Button variant="outline" onClick={() => setStep("certificate")}>View certificate</Button>
-        <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer"><Button>Shop Gengyve</Button></a>
+        <CampaignLink href="https://gengyveusa.com" placement="course-completion-shop" target="_blank" rel="noopener noreferrer"><Button>Shop Gengyve</Button></CampaignLink>
       </div>
     </div>
   );

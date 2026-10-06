@@ -1,3 +1,4 @@
+import { CampaignLink } from "@/components/campaign-link";
 import Link from "next/link";
 
 /**
@@ -19,9 +20,9 @@ export function SiteFooter() {
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
               Oral-systemic research and clinical education, supported in part by <span className="font-medium text-foreground">Gengyve USA</span>. Explore the evidence, its limitations, and its relevance to practice.
             </p>
-            <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+            <CampaignLink href="https://gengyveusa.com" placement="footer-store" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
               Visit Gengyve USA ↗
-            </a>
+            </CampaignLink>
             <p className="mt-6 text-xs text-muted-foreground">
               <span className="font-medium text-foreground">S. Thaddeus Connelly, DDS, MD, PhD, FACS</span>
               <span className="mx-2">·</span>Founder, OVN Nexus and Gengyve USA
@@ -37,7 +38,7 @@ export function SiteFooter() {
               <li><Link href="/science" className="text-muted-foreground hover:text-foreground">Science</Link></li>
               <li><Link href="/education" className="text-muted-foreground hover:text-foreground">Education</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-foreground">The Bulletin</Link></li>
-              <li><a href="https://ledger.gengyveusa.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">The Practice Ledger ↗</a></li>
+              <li><CampaignLink href="https://ledger.gengyveusa.com" placement="footer-ledger" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">The Practice Ledger ↗</CampaignLink></li>
               <li><Link href="/for-hygienists" className="text-muted-foreground hover:text-foreground">For Hygienists</Link></li>
               <li><Link href="/hygienists-first" className="text-muted-foreground hover:text-foreground">1840: Hygienists First</Link></li>
               <li><Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link></li>

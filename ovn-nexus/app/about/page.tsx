@@ -1,3 +1,4 @@
+import { CampaignLink } from "@/components/campaign-link";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -80,7 +81,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   He writes <Link href="/blog">The Oral Health Bulletin</Link>, a weekly clinical
-                  newsletter on the oral-vascular-neural axis, and <a href="https://ledger.gengyveusa.com" target="_blank" rel="noopener noreferrer">The Practice Ledger</a>, a weekly briefing on the business of dentistry. The point of the writing — and of OVN Nexus — isn&rsquo;t to
+                  newsletter on the oral-vascular-neural axis, and <CampaignLink href="https://ledger.gengyveusa.com" placement="about-ledger" target="_blank" rel="noopener noreferrer">The Practice Ledger</CampaignLink>, a weekly briefing on the business of dentistry. The point of the writing — and of OVN Nexus — isn&rsquo;t to
                   overclaim. It&rsquo;s to give the field a careful, evidence-tiered way to talk
                   about what we know, what we suspect, and what we are still testing.
                 </p>
@@ -166,24 +167,22 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://gengyveusa.com/products/gengyve"
+                <CampaignLink href="https://gengyveusa.com/products/gengyve" placement="about-product"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Button size="lg" className="gap-2 w-full sm:w-auto">
                     Try Gengyve Mouthwash <ExternalLink className="h-4 w-4" />
                   </Button>
-                </a>
-                <a
-                  href="https://gengyveusa.com"
+                </CampaignLink>
+                <CampaignLink href="https://gengyveusa.com" placement="about-store"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Button variant="outline" size="lg" className="gap-2 w-full sm:w-auto">
                     Visit gengyveusa.com <ArrowRight className="h-4 w-4" />
                   </Button>
-                </a>
+                </CampaignLink>
               </div>
 
               <p className="mt-6 text-xs text-muted-foreground">

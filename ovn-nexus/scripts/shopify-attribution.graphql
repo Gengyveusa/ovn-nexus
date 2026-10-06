@@ -1,0 +1,17 @@
+# Read-only. Requires read_orders. Supply a created_at filter and paginate until
+# hasNextPage is false. Null/not-ready journeys are unknown, not zero conversions.
+# Source: https://shopify.dev/docs/api/admin-graphql/2026-07/objects/CustomerJourneySummary
+query OVNOrderAttribution($after: String, $filter: String) {
+  orders(first: 50, after: $after, query: $filter) {
+    nodes {
+      id
+      createdAt
+      customerJourneySummary {
+        ready
+        firstVisit { landingPage utmParameters { source medium campaign content } }
+        lastVisit { landingPage utmParameters { source medium campaign content } }
+      }
+    }
+    pageInfo { hasNextPage endCursor }
+  }
+}

@@ -62,6 +62,14 @@ export default function PrivacyPage() {
                   Joining a course interest list does not subscribe you to product marketing or other newsletters.
                 </li>
                 <li>
+                  <strong>Campaign attribution.</strong> For up to 30 minutes in the current browser tab,
+                  session storage remembers invitation labels such as publication, campaign, and installment.
+                  This lets a course signup retain its source after you browse another page. Store and
+                  Practice Ledger links include campaign labels and the public page and link placement
+                  you used. We do not put your name, email, or research-portal paths in these links.
+                  This feature does not create a visitor identifier or use advertising cookies.
+                </li>
+                <li>
                   <strong>Cookies.</strong> We use first-party cookies that are strictly necessary for
                   authentication and session management. We do not use third-party advertising cookies.
                 </li>

@@ -25,3 +25,22 @@ for (const route of ["index", "for-dentists", "for-dentists/guide", "science", "
 assert.equal(fs.readFileSync("public/downloads/ovn-clinical-conversation-guide.pdf").subarray(0, 5).toString(), "%PDF-");
 assert(fs.readFileSync(".next/server/app/sitemap.xml.body", "utf8").includes("/for-dentists/guide"));
 console.log("Guide PDF and sitemap verified.");
+
+// Check actual rendered anchors, including shared footer and course placements.
+let taggedLinks = 0;
+for (const entry of fs.readdirSync(".next/server/app", { recursive: true })) {
+  if (!entry.endsWith(".html")) continue;
+  const doc = new JSDOM(fs.readFileSync(`.next/server/app/${entry}`, "utf8")).window.document;
+  for (const anchor of doc.querySelectorAll("a[href]")) {
+    let url;
+    try { url = new URL(anchor.getAttribute("href")); } catch { continue; }
+    if (!["gengyveusa.com", "www.gengyveusa.com", "ledger.gengyveusa.com"].includes(url.hostname)) continue;
+    assert.equal(url.searchParams.get("utm_source"), "ovn_nexus", `${entry}: untagged source`);
+    assert.equal(url.searchParams.get("utm_medium"), "referral", `${entry}: untagged medium`);
+    assert(url.searchParams.get("utm_campaign"), `${entry}: missing campaign`);
+    assert(url.searchParams.get("utm_content"), `${entry}: missing placement`);
+    taggedLinks++;
+  }
+}
+assert(taggedLinks > 0, "Expected tagged links in built HTML");
+console.log(`Verified ${taggedLinks} rendered Gengyve / Practice Ledger links.`);

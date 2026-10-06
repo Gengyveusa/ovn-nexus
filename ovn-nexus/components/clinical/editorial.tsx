@@ -1,3 +1,4 @@
+import { CampaignLink } from "@/components/campaign-link";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -6,13 +7,13 @@ export function GengyveBrandNote() {
     <section id="gengyve" className="gengyve-brand-note" aria-labelledby="gengyve-brand-heading">
       <div className="gengyve-brand-signature">
         <span className="clinical-eyebrow">The thinking behind our products</span>
-        <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="gengyve-wordmark" aria-label="Visit Gengyve (opens in a new tab)">gengyve</a>
+        <CampaignLink href="https://gengyveusa.com" placement="brand-wordmark" target="_blank" rel="noopener noreferrer" className="gengyve-wordmark" aria-label="Visit Gengyve (opens in a new tab)">gengyve</CampaignLink>
         <span className="gengyve-brand-caption">Oral care with purpose.</span>
       </div>
       <div>
         <h2 id="gengyve-brand-heading">Built to be real.</h2>
         <p>This is the thinking and the science we put behind our products. We build them with purpose, care, and respect for the evidence—not just another rinse of the week.</p>
-        <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer" className="clinical-button">Explore Gengyve <ArrowUpRight size={16} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
+        <CampaignLink href="https://gengyveusa.com/products/gengyve" placement="brand-shop" target="_blank" rel="noopener noreferrer" className="clinical-button">Shop Gengyve mouthwash <ArrowUpRight size={16} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></CampaignLink>
       </div>
     </section>
   );
