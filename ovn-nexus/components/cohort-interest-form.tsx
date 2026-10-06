@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowRight, Check } from "lucide-react";
-import { COHORT_CONSENT, COHORT_SUCCESS, cohortAttribution, professions } from "@/lib/cohort-interest";
+import { COHORT_CONSENT, COHORT_SUCCESS, professions } from "@/lib/cohort-interest";
+import { currentCampaign } from "@/lib/campaign-attribution";
 import styles from "./cohort-interest-form.module.css";
 
 export function CohortInterestForm() {
@@ -28,7 +29,7 @@ export function CohortInterestForm() {
         body: JSON.stringify({
           name: form.get("name"), email: form.get("email"), profession: form.get("profession"),
           question: form.get("question"), website: form.get("website"), consent: form.get("consent") === "on",
-          ...cohortAttribution(window.location.search),
+          ...currentCampaign(),
         }),
       });
       const result = await response.json();

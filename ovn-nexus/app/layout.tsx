@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./clinical.css";
 import { siteGraph, jsonLd, SITE_URL } from "@/lib/structured-data";
+import { CaptureCampaign } from "@/components/campaign-link";
 
 const TITLE = "OVN Nexus | Oral-systemic science for the dental chair";
 const DESCRIPTION = "Explore the oral-systemic connection with a free clinical brief, an interactive evidence map, and a discussion guide for dental teams. Sources and limitations included.";
@@ -54,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={jsonLd(siteGraph())}
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased"><CaptureCampaign />{children}</body>
     </html>
   );
 }

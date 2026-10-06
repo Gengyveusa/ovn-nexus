@@ -8,6 +8,7 @@ afterEach(() => {
   vi.restoreAllMocks();
   vi.unstubAllGlobals();
   window.history.replaceState({}, "", "/");
+  window.sessionStorage.clear();
 });
 
 function fillInterest() {

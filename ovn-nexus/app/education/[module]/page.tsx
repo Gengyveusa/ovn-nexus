@@ -1,3 +1,4 @@
+import { CampaignLink } from "@/components/campaign-link";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -109,9 +110,9 @@ export default async function ModulePage({ params }: { params: Promise<{ module:
               <span />
             )}
             <div className="flex gap-3">
-              <a href="https://gengyveusa.com" target="_blank" rel="noopener noreferrer">
+              <CampaignLink href="https://gengyveusa.com" placement="education-shop" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="gap-2">Shop Gengyve</Button>
-              </a>
+              </CampaignLink>
               <Link href="/signup">
                 <Button>Join the Network</Button>
               </Link>

@@ -1,3 +1,4 @@
+import { CampaignLink } from "@/components/campaign-link";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -453,24 +454,22 @@ export default function ForHygienistsPage() {
                   if it works for your patients, tell them about it.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="https://gengyveusa.com/products/gengyve"
+                  <CampaignLink href="https://gengyveusa.com/products/gengyve" placement="hygienist-product"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Button size="lg" className="gap-2 w-full sm:w-auto">
                       Try Gengyve Mouthwash <ExternalLink className="h-4 w-4" />
                     </Button>
-                  </a>
-                  <a
-                    href="https://gengyveusa.com"
+                  </CampaignLink>
+                  <CampaignLink href="https://gengyveusa.com" placement="hygienist-store"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Button variant="outline" size="lg" className="gap-2 w-full sm:w-auto">
                       Visit gengyveusa.com <ArrowRight className="h-4 w-4" />
                     </Button>
-                  </a>
+                  </CampaignLink>
                 </div>
                 <p className="mt-5 text-xs text-muted-foreground">
                   Gengyve USA is a separate company from OVN Nexus. Nothing on this page
