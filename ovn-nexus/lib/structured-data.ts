@@ -25,17 +25,24 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const personNode = {
   "@type": "Person",
   "@id": PERSON_ID,
-  name: "Stephen Thaddeus Connelly",
+  name: "Thad Connelly",
   alternateName: [
+    "Stephen Thaddeus Connelly",
     "S. Thaddeus Connelly",
-    "Stephen Connelly",
     "Thaddeus Connelly",
-    "Thad Connelly",
+    "Dr Thaddeus Connelly",
+    "Stephen Connelly",
   ],
   honorificSuffix: "DDS, MD, PhD, FACS",
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "ORCID",
+    value: "0009-0003-4800-3913",
+    url: "https://orcid.org/0009-0003-4800-3913",
+  },
   jobTitle: "Founder",
   description:
-    "Oral and maxillofacial surgeon-scientist. Residency Program Director in Oral and Maxillofacial Surgery at the San Francisco VA Health Care System and clinical faculty at the University of California, San Francisco.",
+    "Oral and maxillofacial surgeon-scientist. Clinical Professor of Oral and Maxillofacial Surgery at the University of California, San Francisco, and staff surgeon at the San Francisco VA Medical Center. Writes 1840, The Practice Ledger and The Quantum Distillery.",
   affiliation: [
     { "@type": "Organization", name: "University of California, San Francisco" },
     { "@type": "Organization", name: "San Francisco VA Health Care System" },
@@ -48,10 +55,16 @@ export const personNode = {
     "Periodontal medicine",
     "Outer membrane vesicles",
   ],
+  // Same person as the #founder entity on thequantumdistillery.com/about/.
   sameAs: [
+    "https://orcid.org/0009-0003-4800-3913",
     "https://www.linkedin.com/in/stephen-thaddeus-connelly-8954024b",
     "https://www.ucsfdentalcenter.org/providers/stephen-connelly-dds-md-phd",
-    "https://thequantumdistillery.com/",
+    "https://www.youtube.com/channel/UC3thFE5bh0MLD2ywJ1KQ-rg",
+    "https://www.threads.net/@connelly.thad",
+    "https://letters.ovnnexus.com/author/thad/",
+    "https://pours.thequantumdistillery.com/author/thad/",
+    "https://thequantumdistillery.com/about/",
   ],
 };
 

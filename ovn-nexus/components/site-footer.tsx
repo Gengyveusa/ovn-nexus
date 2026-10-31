@@ -38,9 +38,11 @@ export function SiteFooter() {
               <li><Link href="/science" className="text-muted-foreground hover:text-foreground">Science</Link></li>
               <li><Link href="/education" className="text-muted-foreground hover:text-foreground">Education</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-foreground">The Bulletin</Link></li>
-              <li><CampaignLink href="https://ledger.gengyveusa.com" placement="footer-ledger" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">The Practice Ledger ↗</CampaignLink></li>
+              <li><CampaignLink href="https://letters.ovnnexus.com/" placement="footer-ledger" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">The Practice Ledger ↗</CampaignLink></li>
               <li><Link href="/for-hygienists" className="text-muted-foreground hover:text-foreground">For Hygienists</Link></li>
               <li><Link href="/hygienists-first" className="text-muted-foreground hover:text-foreground">1840: Hygienists First</Link></li>
+              <li><Link href="/#letters" className="text-muted-foreground hover:text-foreground">Subscribe to the letters</Link></li>
+              <li><a href="https://www.youtube.com/channel/UC3thFE5bh0MLD2ywJ1KQ-rg" className="text-muted-foreground hover:text-foreground">Watch on YouTube ↗</a></li>
               <li><Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link></li>
             </ul>
           </div>
