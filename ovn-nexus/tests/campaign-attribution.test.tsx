@@ -65,4 +65,14 @@ describe("publication to OVN to signup or store attribution", () => {
     expect(() => campaignLink("https://gengyveusa.com.evil.test", "shop")).toThrow();
     expect(() => campaignLink("http://gengyveusa.com", "shop")).toThrow();
   });
+
+  it("tags the letters signups on letters.ovnnexus.com and keeps the Portal hash", () => {
+    const url = new URL(campaignLink("https://letters.ovnnexus.com/#/portal/signup", "letters-1840-subscribe"));
+    expect(url.hostname).toBe("letters.ovnnexus.com");
+    expect(url.hash).toBe("#/portal/signup");
+    expect(url.searchParams.get("utm_campaign")).toBe("ovn-letters");
+    expect(url.searchParams.get("utm_source")).toBe("ovn_nexus");
+    expect(new URL(campaignLink("https://pours.thequantumdistillery.com/", "letters-pours-read")).searchParams.get("utm_campaign")).toBe("quantum-distillery");
+    expect(() => campaignLink("https://constructor/", "x")).toThrow();
+  });
 });

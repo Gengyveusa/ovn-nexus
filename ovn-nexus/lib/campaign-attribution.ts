@@ -34,16 +34,25 @@ export function currentCampaign(): Campaign {
   return incoming;
 }
 
+/** Approved outbound hosts, each with its default campaign label. */
+const DESTINATION_CAMPAIGN: Record<string, string> = {
+  "gengyveusa.com": "gengyve-discovery",
+  "www.gengyveusa.com": "gengyve-discovery",
+  "ledger.gengyveusa.com": "practice-ledger",
+  "letters.ovnnexus.com": "ovn-letters",
+  "pours.thequantumdistillery.com": "quantum-distillery",
+};
+
 export function campaignLink(href: string, placement: string, path = "/", campaign?: Campaign) {
   const url = new URL(href);
-  if (url.protocol !== "https:" || !["gengyveusa.com", "www.gengyveusa.com", "ledger.gengyveusa.com"].includes(url.hostname)) {
+  if (url.protocol !== "https:" || !Object.prototype.hasOwnProperty.call(DESTINATION_CAMPAIGN, url.hostname)) {
     throw new Error("Campaign links require an approved destination.");
   }
   const page = editorialPath(path).replace(/^\/+|\/+$/g, "").replace(/[^a-zA-Z0-9_-]+/g, "-") || "home";
   const cleanPlacement = placement.replace(/[^a-zA-Z0-9_-]/g, "-").slice(0, 60);
   url.searchParams.set("utm_source", "ovn_nexus");
   url.searchParams.set("utm_medium", "referral");
-  url.searchParams.set("utm_campaign", campaign?.utm_campaign || (url.hostname === "ledger.gengyveusa.com" ? "practice-ledger" : "gengyve-discovery"));
+  url.searchParams.set("utm_campaign", campaign?.utm_campaign || DESTINATION_CAMPAIGN[url.hostname]);
   url.searchParams.set("utm_content", `${page}--${cleanPlacement}`.slice(0, 160));
   // Preserve the publication and installment separately from the OVN placement.
   for (const [key, value] of Object.entries(campaign || {})) {
