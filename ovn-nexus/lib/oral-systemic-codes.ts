@@ -14,7 +14,7 @@ export interface CodeRow {
 export const dentalCodes: CodeRow[] = [
   { code: "D9994", label: "Case management: patient education to improve oral health literacy", note: "The closest fit for oral-systemic teaching. Rarely reimbursed; useful for tracking and patient-pay." },
   { code: "D9993", label: "Case management: motivational interviewing", note: "Must be distinct from routine hygiene instruction. Rarely reimbursed." },
-  { code: "D9992", label: "Case management: care coordination", note: "Coordinating care with the patient’s physician or other providers." },
+  { code: "D9992", label: "Case management: care coordination", note: "Helping the patient coordinate oral health care across multiple providers, including their physician." },
   { code: "D9311", label: "Consultation with a medical health care professional", note: "The dentist confers with a medical provider about the patient’s care." },
   { code: "D1330", label: "Oral hygiene instructions", note: "Most plans treat it as part of the prophylaxis or periodontal visit." },
   { code: "D1310", label: "Nutritional counseling for control of dental disease", note: "Fits diet and diabetes discussions. Paid more often by Medicaid programs than by commercial plans." },
@@ -27,13 +27,13 @@ export const dentalCodes: CodeRow[] = [
 ];
 
 export const medicalCodes: CodeRow[] = [
-  { code: "99401–99404", label: "Preventive medicine counseling, individual", note: "Time-based: about 15, 30, 45, or 60 minutes." },
-  { code: "99411–99412", label: "Preventive medicine counseling, group", note: "About 30 or 60 minutes." },
+  { code: "99401–99404", label: "Preventive medicine counseling, individual", note: "Time-based: about 15, 30, 45, or 60 minutes. Meant for patients without an established illness; a payer may reject them when the counseling addresses a diagnosed condition." },
+  { code: "99411–99412", label: "Preventive medicine counseling, group", note: "About 30 or 60 minutes. The same limit applies: for patients without an established illness." },
   { code: "99406 / 99407", label: "Tobacco cessation counseling", note: "3 to 10 minutes, or more than 10 minutes." },
   { code: "98960–98962", label: "Self-management education by a qualified non-physician", note: "Per 30 minutes, for one patient, 2 to 4, or 5 to 8. Requires a standardized curriculum." },
   { code: "S9445 / S9446", label: "Patient education by a non-physician, individual or group", note: "Recognized by some commercial payers; not by Medicare." },
   { code: "96160", label: "Patient-focused health risk assessment instrument", note: "A scored, standardized questionnaire." },
-  { code: "83036 / 83037", label: "HbA1c, laboratory or point-of-care device", note: "The medical-claim counterpart to D0411." },
+  { code: "83036 / 83037", label: "HbA1c: by laboratory method (83036) or by a device the FDA has cleared for home use (83037)", note: "The medical-claim counterpart to D0411. Report 83037 only for a home-use-cleared device; in-office testing needs a CLIA certificate of waiver." },
 ];
 
 export const diagnosisCodes: CodeRow[] = [
