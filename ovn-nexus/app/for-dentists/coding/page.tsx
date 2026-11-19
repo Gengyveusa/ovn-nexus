@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { EditorialNote } from "@/components/clinical/editorial";
+import { AskAndShop, EditorialNote, GengyveBrandNote } from "@/components/clinical/editorial";
 import { codesReviewed, codingUrl, dentalCodes, diagnosisCodes, medicalCodes, type CodeRow } from "@/lib/oral-systemic-codes";
 
 const title = "Coding the oral-systemic conversation | OVN Nexus";
@@ -39,6 +39,6 @@ export default function CodingReference() {
     <section className="clinical-section" id="diagnosis"><div className="section-heading"><div><span className="clinical-eyebrow">Supporting the claim</span><h2>ICD-10-CM diagnosis codes.</h2></div><p>Medical claims need a diagnosis, and more dental payers now ask for one. Use only the codes the chart supports.</p></div><CodeTable caption="ICD-10-CM diagnosis codes that support counseling" noteHeading="When to use it" rows={diagnosisCodes} /></section>
     <div className="brief-invitation"><div><span className="clinical-eyebrow">Start with the science</span><h2>The clinical brief</h2></div><p>The evidence behind the conversation you are coding: what was studied, what was found, and where the clinical conclusions stop.</p><Link href="/for-dentists" className="clinical-button">Read the clinical brief <ArrowRight size={17} aria-hidden="true" /></Link></div>
     <aside className="editorial-note"><span className="clinical-eyebrow">Before you file a claim</span><p>This page is professional education, not coding, legal, or reimbursement advice. Coverage, provider eligibility, and documentation rules vary by payer and state, and code sets change every year. Confirm each code against the current CDT and CPT manuals and the payer’s policy. Descriptions are plain-language summaries, not official nomenclature. CDT is a registered trademark of the American Dental Association. CPT is a registered trademark of the American Medical Association.</p></aside>
-    <EditorialNote />
+    <AskAndShop /><GengyveBrandNote /><EditorialNote />
   </main><SiteFooter /></div>;
 }

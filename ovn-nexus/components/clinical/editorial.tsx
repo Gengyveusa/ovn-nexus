@@ -1,6 +1,7 @@
 import { CampaignLink } from "@/components/campaign-link";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { InquiryForm } from "@/components/inquiry-form";
 
 export function GengyveBrandNote() {
   return (
@@ -24,5 +25,22 @@ export function EditorialNote() {
 }
 
 export function FounderNote() {
-  return <section className="founder-note" id="community"><div className="founder-monogram" aria-hidden="true">TC<span>DDS · MD · PhD</span></div><div><span className="clinical-eyebrow">Meet the founder</span><h2>A clinician’s curiosity.<br />A scientist’s standard of proof.</h2><p>S. Thaddeus Connelly, DDS, MD, PhD, FACS is an oral and maxillofacial surgeon-scientist and the founder of OVN Nexus. This platform brings clinical questions into conversation with the oral-systemic literature.</p><div className="clinical-inline-links"><Link href="/about">Meet Thad <ArrowUpRight size={16} aria-hidden="true" /></Link><a href="mailto:thad@gengyveusa.com?subject=Question%20about%20the%20OVN%20clinical%20brief">Ask a question <ArrowUpRight size={16} aria-hidden="true" /></a></div></div></section>;
+  return <section className="founder-note" id="community"><div className="founder-monogram" aria-hidden="true">TC<span>DDS · MD · PhD</span></div><div><span className="clinical-eyebrow">Meet the founder</span><h2>A clinician’s curiosity.<br />A scientist’s standard of proof.</h2><p>S. Thaddeus Connelly, DDS, MD, PhD, FACS is an oral and maxillofacial surgeon-scientist and the founder of OVN Nexus. This platform brings clinical questions into conversation with the oral-systemic literature.</p><div className="clinical-inline-links"><Link href="/about">Meet Thad <ArrowUpRight size={16} aria-hidden="true" /></Link><a href="#ask">Ask a question <ArrowUpRight size={16} aria-hidden="true" /></a></div></div></section>;
+}
+
+export function AskAndShop() {
+  return (
+    <section id="ask" className="ask-shop" aria-labelledby="ask-heading">
+      <div>
+        <span className="clinical-eyebrow">Ask a question, or visit Gengyve</span>
+        <h2 id="ask-heading">Talk to Thad.<br />Or go to the product.</h2>
+        <p>Bring a clinical question, ask about Gengyve, or ask about ordering for your practice. Your message goes to Thad directly, and he replies by email.</p>
+        <div className="clinical-actions">
+          <CampaignLink href="https://gengyveusa.com/products/gengyve" placement="ask-shop" target="_blank" rel="noopener noreferrer" className="clinical-button">Shop Gengyve mouthwash <ArrowUpRight size={16} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></CampaignLink>
+          <CampaignLink href="https://gengyveusa.com" placement="ask-store" target="_blank" rel="noopener noreferrer" className="clinical-button secondary">Visit gengyveusa.com <ArrowUpRight size={16} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></CampaignLink>
+        </div>
+      </div>
+      <InquiryForm />
+    </section>
+  );
 }
