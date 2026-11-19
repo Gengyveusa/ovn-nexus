@@ -15,7 +15,7 @@ beforeEach(() => {
 });
 
 describe("public briefs and existing access boundaries", () => {
-  it.each(["/", "/for-dentists", "/for-dentists/guide", "/hygienists-first", "/api/cohort-interest"])("serves %s without an auth dependency", async pathname => {
+  it.each(["/", "/for-dentists", "/for-dentists/guide", "/for-dentists/coding", "/hygienists-first", "/api/cohort-interest"])("serves %s without an auth dependency", async pathname => {
     const response = await updateSession(new NextRequest(`https://example.test${pathname}`));
     expect(response.status).toBe(200);
     expect(state.factory).not.toHaveBeenCalled();
