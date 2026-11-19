@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { EvidenceExplorer } from "@/components/clinical/evidence-explorer";
-import { EditorialNote, FounderNote, GengyveBrandNote } from "@/components/clinical/editorial";
+import { AskAndShop, EditorialNote, FounderNote, GengyveBrandNote } from "@/components/clinical/editorial";
 import { LettersSection } from "@/components/letters-section";
 import { LETTERS_SITE } from "@/lib/letters";
 
@@ -33,6 +33,6 @@ export default function HomePage() {
     <LettersSection />
     <FounderNote />
     <div className="resource-grid"><Link href="/science"><span className="clinical-eyebrow">01 / Go deeper</span><h3>The research framework</h3><p>Explore the oral-vascular-neural axis and the hypotheses driving the next questions.</p><ArrowUpRight size={19} aria-hidden="true" /></Link><Link href="/education"><span className="clinical-eyebrow">02 / Keep learning</span><h3>Clinical education</h3><p>Build your understanding through modules on oral-systemic science.</p><ArrowUpRight size={19} aria-hidden="true" /></Link><Link href="/blog"><span className="clinical-eyebrow">03 / Follow the field</span><h3>The Oral Health Bulletin</h3><p>Read perspectives on the research and the questions it raises for practice.</p><ArrowUpRight size={19} aria-hidden="true" /></Link><CampaignLink href={`${LETTERS_SITE}/`} placement="home-ledger-card" target="_blank" rel="noopener noreferrer"><span className="clinical-eyebrow">04 / Run the numbers</span><h3>The Practice Ledger</h3><p>The weekly briefing on the business of dentistry: practice economics, DSO intelligence, and the Bench Test scorecard on dental AI tools.</p><ArrowUpRight size={19} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></CampaignLink></div>
-    <GengyveBrandNote /><EditorialNote />
+    <AskAndShop /><GengyveBrandNote /><EditorialNote />
   </main><SiteFooter /></div>;
 }

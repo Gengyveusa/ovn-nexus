@@ -141,3 +141,8 @@
 .code-table td:last-child { color:var(--c-muted); font-size:13px; }
 #dental,#medical,#diagnosis { scroll-margin-top:95px; }
 #medical,#diagnosis { padding-top:0; }
+.ask-shop { display:grid; grid-template-columns:1fr 1fr; align-items:start; gap:64px; padding-block:72px; border-top:1px solid var(--c-rule); scroll-margin-top:95px; }
+.ask-shop h2 { font-size:36px; margin:14px 0 16px; }
+.ask-shop > div > p { font-size:15px; color:var(--c-muted); max-width:460px; }
+.ask-shop .clinical-actions { margin-top:26px; }
+@media (max-width:860px) { .ask-shop { grid-template-columns:1fr; gap:36px; padding-block:48px; } .ask-shop h2 { font-size:32px; } }
